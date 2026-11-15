@@ -368,6 +368,7 @@
   .pk-sum dl div{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
   .pk-sum dt{color:var(--muted)} .pk-sum dd{margin:0;font-weight:600;text-align:right;color:var(--ink)}
   .pk-sum .empty{color:#b5bac2;font-weight:500}
+  .pk-sum .s-img:empty{display:none}
   .pk-ex{font-size:12.5px;margin:12px 0 0}
   @media (max-width:960px){ .pk-grid{grid-template-columns:1fr} .pk-sum{position:static;order:-1} .pk-models{grid-template-columns:repeat(3,1fr)} }
   @media (max-width:600px){ .pk-models{grid-template-columns:1fr 1fr} .pk-card{padding:22px 18px} .pk-zip{flex-direction:column;max-width:none} }
@@ -628,7 +629,7 @@
     <div class="dots" id="dots"></div>
   </header>
   <div class="quick home-quick"><div class="wrap"><ul>
-    <li><a href="#/erbjudanden"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12 12 20 4 12V4h8z"/><circle cx="8.5" cy="8.5" r="1.3"/></svg></span><span><small>Erbjudanden</small><h2>Privatleasing från <span style="white-space:nowrap">4 695 kr/mån</span></h2><p>Se alla kampanjer per modell och begär offert.</p></span><span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+    <li><a href="#/erbjudanden"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12 12 20 4 12V4h8z"/><circle cx="8.5" cy="8.5" r="1.3"/></svg></span><span><small>Erbjudanden</small><h2>Privatleasing från <span style="white-space:nowrap">4 695 kr/mån</span></h2><p>Se alla kampanjer per modell och begär offert.</p></span><span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
     <li><a href="#/info/super-dm"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="16" height="10" rx="2"/><path d="M8 7V5M16 7V5M9 12h6"/></svg></span><span><small>Teknik</small><h2>Super DM-teknologi</h2><p>Nästa generation av effektiva laddhybrider.</p></span><span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
     <li><a href="#/provkorning"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span><small>Återförsäljare</small><h2>Hitta en BYD-handlare</h2><p>Hitta din närmaste handlare och boka provkörning.</p></span><span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
   </ul></div></div>
@@ -653,7 +654,7 @@
   </section>
 
   <section class="steps"><div class="wrap" style="display:flex;justify-content:space-between;gap:24px;align-items:center;flex-wrap:wrap">
-    <div><h2 class="title">Privatleasa från 4 695 kr/mån</h2><p class="sub">Seal U DM-i och Seal 6 DM-i Touring. 36 månader, 1 000 mil/år, service och försäkring ingår. Gäller t.o.m. 30 november.</p></div>
+    <div><h2 class="title">Privatleasa från 4 695 kr/mån</h2><p class="sub">Seal U DM-i och Seal 6 DM-i Touring. 36 månader, 1 000 mil/år, service och försäkring ingår. Gäller t.o.m. 30 november.</p></div>
     <div class="ctas"><a class="btn btn-white" href="#/erbjudanden">Se erbjudanden</a><a class="btn btn-ghost" href="#/provkorning">Boka provkörning</a></div></div></section>
 </main>
 
@@ -665,14 +666,14 @@
       <nav class="crumbs" aria-label="Brödsmulor"><a href="#/">BYD</a><i>/</i><span aria-current="page">Erbjudanden</span></nav>
       <span class="pill-dl">Gäller nybeställning t.o.m. 30 november</span>
       <h1>Erbjudanden på hela <span style="white-space:nowrap">BYD-familjen</span></h1>
-      <p class="lead">Välj din modell och se alla dess kampanjer på ett ställe. Privatleasa från 4 695 kr/mån, 36 månader, 1 000 mil/år, service och försäkring ingår.</p>
+      <p class="lead">Välj din modell och se alla dess kampanjer på ett ställe. Privatleasa från 4 695 kr/mån, 36 månader, 1 000 mil/år, service och försäkring ingår.</p>
       <div class="ctas"><a class="btn btn-white" href="#modeller">Välj modell</a><a class="btn btn-ghost" href="#/provkorning">Boka provkörning</a></div>
     </div>
   </header>
   <div class="quick"><div class="wrap"><ul>
-    <li><a href="#/erbjudanden/leasing"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 12h4"/></svg></span><span><small>Privatleasing</small><h2>Från 4 695 kr/mån</h2><p>Ingen kontantinsats. Service och försäkring ingår.</p></span><span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+    <li><a href="#/erbjudanden/leasing"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 12h4"/></svg></span><span><small>Privatleasing</small><h2>Från 4 695 kr/mån</h2><p>Ingen kontantinsats. Service och försäkring ingår.</p></span><span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
     <li><a href="#/erbjudanden/billan"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5 5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg></span><span><small>Billån</small><h2>0,95 % ränta</h2><p>Rörlig ränta via Santander, 36 månader.</p></span><span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
-    <li><a href="#/erbjudanden/kontant"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/></svg></span><span><small>Kontantrabatt</small><h2>20 000 kr</h2><p>På lagerbilar, så långt lagret räcker.</p></span><span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+    <li><a href="#/erbjudanden/kontant"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/></svg></span><span><small>Kontantrabatt</small><h2>20 000 kr</h2><p>På lagerbilar, så långt lagret räcker.</p></span><span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
   </ul></div></div>
 
   <section class="block" id="modeller">
@@ -696,7 +697,7 @@
   <section class="block" style="padding-top:0">
     <div class="wrap"><div class="dealer"><div class="box">
       <div><h2 class="title">Erbjudanden för företag</h2>
-        <p class="sub">Operationell leasing från 5 945 kr/mån ex. moms, service och försäkring ingår. Förmånsvärde från 1 828 kr/mån netto och företagsrabatt upp till 10 %. Finansiell leasing för alla modeller med egen kalkyl.</p></div>
+        <p class="sub">Operationell leasing från 5 945 kr/mån ex. moms, service och försäkring ingår. Förmånsvärde från 1 828 kr/mån netto och företagsrabatt upp till 10 %. Finansiell leasing för alla modeller med egen kalkyl.</p></div>
       <div class="ctas"><a class="btn btn-dark" href="#/foretag">Se företagserbjudanden</a></div>
     </div></div></div>
   </section>
@@ -747,6 +748,39 @@
 <div class="sticky-cta" id="sticky"><a class="btn btn-line btn-sm" href="#modeller">Modeller</a><a class="btn btn-dark btn-sm" href="#/provkorning">Boka provkörning</a></div>
 
 <script>
+/* Mobilbilder: på smala skärmar byts bilder och filmer mot byd.com:s mobilversioner (/mob/ i stället för /pc/). */
+const MOBILE_MQ = matchMedia('(max-width: 760px)');
+const MOB_FILES = new Set([
+  'media/__EU/byd-site/eu-v3/model/seal6-dm-i-touring/pc/herobanner/bc-1.mp4',
+  'media/byd-site/eu-v3/homepage/pc/herobannner/seal6-dm-i-touring.webp',
+  'media/byd-site/eu-v3/homepage/pc/herobannner/atto2-dm-i.mp4',
+  'media/byd-site/eu-v3/model/sealu-dm-i/pc/performance/bc-1.mp4',
+  'media/byd-site/eu-v3/homepage/pc/tech/1.webp',
+  'media/byd-site/eu-v3/homepage/pc/tech/2.webp',
+  'media/byd-site/eu-v3/homepage/pc/tech/3.webp',
+  'media/byd-site/eu-v3/homepage/pc/tech/bc-1.webp'
+]);
+function mediaFor(u, mobile){
+  if(!u) return u;
+  const pc = u.replace('/mob/', '/pc/');
+  return mobile && MOB_FILES.has(pc) ? pc.replace('/pc/', '/mob/') : pc;
+}
+function swapMedia(root){
+  const mobile = MOBILE_MQ.matches;
+  const els = root.querySelectorAll ? root.querySelectorAll('img[src], video[src], video[poster]') : [];
+  [root, ...els].forEach(el => {
+    if(!el.getAttribute) return;
+    ['src','poster'].forEach(a => {
+      const v = el.getAttribute(a);
+      if(!v || !v.startsWith('media/')) return;
+      const n = mediaFor(v, mobile);
+      if(n !== v){ el.setAttribute(a, n); if(el.tagName === 'VIDEO' && a === 'src' && el.hasAttribute('autoplay')) el.play && el.play().catch(()=>{}); }
+    });
+  });
+}
+swapMedia(document);
+new MutationObserver(ms => ms.forEach(m => m.addedNodes.forEach(n => n.nodeType === 1 && swapMedia(n)))).observe(document.documentElement, {childList: true, subtree: true});
+MOBILE_MQ.addEventListener('change', () => swapMedia(document));
 const fmt = n => Math.round(n).toLocaleString('sv-SE').replace(/,/g,' ');
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const NAV='media/byd-site/europe-public/navigation/';
@@ -821,7 +855,7 @@ function effRate(price){
 }
 const pct = v => v.toFixed(2).replace('.',',')+' %';
 const minLoan  = m => m.offers.billan ? Math.min(...m.trims.map(t=>loanMonthly(t.loanBase,30,55))) : null;
-const loanHead = v => `Billån från ${fmt(v)} kr/mån · 0,95 % ränta`;
+const loanHead = v => `Billån från ${fmt(v)} kr/mån · 0,95 % ränta`;
 const arrow='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 
 /* ---------- Erbjudanden: kort ---------- */
@@ -834,8 +868,8 @@ function badges(m){
 }
 function priceBlock(m){
   const l=minLease(m), n=minLoan(m);
-  if(l) return `<span class="lbl">Privatleasing från</span><b>${fmt(l)} kr/mån</b><small>${loanHead(n)}</small>`;
-  if(n) return `<span class="lbl">Billån från</span><b>${fmt(n)} kr/mån</b><small>0,95 % ränta${m.offers.kontant?` · eller ${fmt(m.offers.kontant)} kr kontantrabatt`:''}</small>`;
+  if(l) return `<span class="lbl">Privatleasing från</span><b>${fmt(l)} kr/mån</b><small>${loanHead(n)}</small>`;
+  if(n) return `<span class="lbl">Billån från</span><b>${fmt(n)} kr/mån</b><small>0,95 % ränta${m.offers.kontant?` · eller ${fmt(m.offers.kontant)} kr kontantrabatt`:''}</small>`;
   return `<span class="lbl">Erbjudande</span><b><mark>Fyll i kampanj</mark></b><small>Pris från <mark>X kr</mark></small>`;
 }
 document.getElementById('cards').innerHTML = models.map(m=>`
@@ -869,16 +903,16 @@ document.getElementById('menu-offers').innerHTML=models.map(m=>`<a href="#/model
 function modelPage(m){
   const o=m.offers, tiles=[];
   if(o.leasing) tiles.push(`<div class="otile"><span class="tag dark">Privatleasing</span>
-    <h3>Privatleasing från ${fmt(minLease(m))} kr/mån</h3><p>Ett fast månadspris utan kontantinsats.</p>
-    <ul><li>36 månader, 1 000 mil/år</li><li>Service och försäkring ingår</li><li>Ingen kontantinsats</li><li>Fler mil och tillval går att välja</li></ul>
+    <h3>Privatleasing från ${fmt(minLease(m))} kr/mån</h3><p>Ett fast månadspris utan kontantinsats.</p>
+    <ul><li>36 månader, 1 000 mil/år</li><li>Service och försäkring ingår</li><li>Ingen kontantinsats</li><li>Fler mil och tillval går att välja</li></ul>
     <div class="ctas"><a class="btn btn-dark" href="#/ansok/${m.id}/leasing/0/0/0">${ctaName.leasing}</a><a class="btn btn-line" href="#leasingkalkyl">Räkna på leasing</a></div></div>`);
   if(o.billan) tiles.push(`<div class="otile"><span class="tag">Billån 0,95 %</span>
     <h3>${loanHead(minLoan(m))}</h3><p>Äg bilen, med rörlig ränta via Santander Consumer Bank.</p>
     <ul><li>Rörlig ränta 0,95 %, effektiv ränta enligt villkor</li><li>Kontantinsats från 20 %</li><li>Löptid 36 månader</li><li>Restvärde upp till 55 %</li></ul>
     <div class="ctas"><a class="btn btn-dark" href="#/ansok/${m.id}/billan/0/30/55">${ctaName.billan}</a><a class="btn btn-line" href="#kalkyl">Räkna på ditt lån</a></div></div>`);
   if(o.kontant) tiles.push(`<div class="otile"><span class="tag">Kontantrabatt</span>
-    <h3>${fmt(o.kontant)} kr rabatt vid kontantköp</h3><p>För dig som betalar bilen direkt.</p>
-    <ul><li>Kampanjpris från ${fmt(Math.min(...m.trims.map(t=>t.list))-o.kontant)} kr</li><li>Begränsat antal bilar</li><li>Kan inte kombineras med privatleasing eller billån</li></ul>
+    <h3>${fmt(o.kontant)} kr rabatt vid kontantköp</h3><p>För dig som betalar bilen direkt.</p>
+    <ul><li>Kampanjpris från ${fmt(Math.min(...m.trims.map(t=>t.list))-o.kontant)} kr</li><li>Begränsat antal bilar</li><li>Kan inte kombineras med privatleasing eller billån</li></ul>
     <div class="ctas"><a class="btn btn-dark" href="#/ansok/${m.id}/kontant/0">${ctaName.kontant}</a></div></div>`);
   const none=!tiles.length;
   if(none) tiles.push(`<div class="otile"><span class="tag">Kampanj</span><h3><mark>Fyll i aktuell kampanj</mark></h3>
@@ -890,8 +924,8 @@ function modelPage(m){
     <h2 class="title">Priser per utrustningsnivå</h2><p class="sub" style="margin-bottom:22px">Alla priser inklusive moms.</p>
     <div class="ptable"><table><thead><tr><th>Utrustningsnivå</th><th>Listpris</th>${cols.map(c=>`<th>${offerName[c]}</th>`).join('')}</tr></thead><tbody>
     ${m.trims.map((t,i)=>`<tr><td><b>${t.t}</b></td><td>${t.list?fmt(t.list)+' kr':'<mark>X kr</mark>'}</td>${cols.map(c=>
-      c==='leasing'?(t.lease?`<td><b>${fmt(t.lease[0])} kr/mån</b><small>1 000 mil/år, inkl. service och försäkring</small></td>`:'<td>–</td>'):
-      c==='billan'?`<td><b>${fmt(loanMonthly(t.loanBase,30,55))} kr/mån</b><small>30 % insats, 55 % restvärde</small></td>`:
+      c==='leasing'?(t.lease?`<td><b>${fmt(t.lease[0])} kr/mån</b><small>1 000 mil/år, inkl. service och försäkring</small></td>`:'<td>–</td>'):
+      c==='billan'?`<td><b>${fmt(loanMonthly(t.loanBase,30,55))} kr/mån</b><small>30 % insats, 55 % restvärde</small></td>`:
       `<td><b>${t.list?fmt(t.list-o.kontant)+' kr':'<mark>X kr</mark>'}</b><small>efter rabatt</small></td>`).join('')}</tr>`).join('')}
     </tbody></table></div></div></section>` : '';
 
@@ -904,7 +938,7 @@ function modelPage(m){
         <div class="field" style="margin-bottom:20px"><label>Körsträcka per år</label>
           <div class="choice" id="l-mil">${MIL.map((v,i)=>`<label><input type="radio" name="lmil" value="${i}" ${i?'':'checked'}> ${fmt(v)} mil</label>`).join('')}</div></div>
         <div class="field"><label>Tillval</label>
-          <div class="choice" id="l-tv">${Object.entries(m.tillval).map(([k,v],i)=>`<label><input type="checkbox" value="${i}"> ${k} <span style="color:var(--muted)">+${v} kr/mån</span></label>`).join('')}</div></div>
+          <div class="choice" id="l-tv">${Object.entries(m.tillval).map(([k,v],i)=>`<label><input type="checkbox" value="${i}"> ${k} <span style="color:var(--muted)">+${v} kr/mån</span></label>`).join('')}</div></div>
       </div>
       <div class="card calc-out" aria-live="polite">
         <div class="lbl">Din månadskostnad</div><div class="monthly" id="l-month"></div>
@@ -917,11 +951,11 @@ function modelPage(m){
   const ftg = `<section class="block" id="foretag" style="padding-bottom:0"><div class="wrap">
     <h2 class="title">För företag</h2><p class="sub" style="margin-bottom:22px">Erbjudanden för dig som kör ${m.name.replace('BYD ','')} i tjänsten. <a href="#/foretag?modell=${m.id}">Räkna på finansiell leasing</a></p>
     <div class="otiles">
-      ${minOpl(m)?`<div class="otile"><span class="tag">Operationell leasing</span><h3>Från ${fmt(minOpl(m))} kr/mån ex. moms</h3><p>Fast månadskostnad för företaget.</p>
-        <ul><li>36 månader, 1 500 mil/år</li><li>Service och försäkring ingår</li><li>Fler mil går att välja</li></ul>
+      ${minOpl(m)?`<div class="otile"><span class="tag">Operationell leasing</span><h3>Från ${fmt(minOpl(m))} kr/mån ex. moms</h3><p>Fast månadskostnad för företaget.</p>
+        <ul><li>36 månader, 1 500 mil/år</li><li>Service och försäkring ingår</li><li>Fler mil går att välja</li></ul>
         <div class="ctas"><a class="btn btn-dark" href="#/ansok/${m.id}/foretag/0">${ctaName.foretag}</a></div></div>`:''}
-      <div class="otile"><span class="tag">Förmånsvärde</span><h3>Från ${fmt(minFv(m))} kr/mån netto</h3><p>Kostnad för föraren vid 50 % marginalskatt.</p>
-        <ul>${m.trims.map(t=>`<li>${t.t}: ${fmt(t.fv)} kr/mån</li>`).join('')}</ul>
+      <div class="otile"><span class="tag">Förmånsvärde</span><h3>Från ${fmt(minFv(m))} kr/mån netto</h3><p>Kostnad för föraren vid 50 % marginalskatt.</p>
+        <ul>${m.trims.map(t=>`<li>${t.t}: ${fmt(t.fv)} kr/mån</li>`).join('')}</ul>
         <div class="ctas"><a class="btn btn-${minOpl(m)?'line':'dark'}" href="#/ansok/${m.id}/foretag/0">${ctaName.foretag}</a></div></div>
       <div class="otile"><span class="tag">Företagsrabatt</span><h3>${m.rabatt} rabatt</h3><p>Rabatt på listpriset för företag.</p>
         <ul><li>Nivån beror på företagets vagnpark</li><li>Gäller köp och finansiering</li></ul>
@@ -931,7 +965,7 @@ function modelPage(m){
     <h2 class="title">Räkna på ditt billån</h2><p class="sub" style="margin-bottom:22px">Ändra kontantinsats och restvärde och se din månadskostnad.</p>
     <div class="calc">
       <div class="card">
-        <div class="field" style="margin-bottom:22px"><label for="c-trim">Utrustningsnivå</label><select id="c-trim">${m.trims.map((t,i)=>`<option value="${i}">${t.t} – kampanjpris ${fmt(t.loanBase)} kr</option>`).join('')}</select>
+        <div class="field" style="margin-bottom:22px"><label for="c-trim">Utrustningsnivå</label><select id="c-trim">${m.trims.map((t,i)=>`<option value="${i}">${t.t} – kampanjpris ${fmt(t.loanBase)} kr</option>`).join('')}</select>
 </div>
         <div class="range"><div class="row"><label for="c-down">Kontantinsats</label><output id="o-down"></output></div>
           <input type="range" id="c-down" min="20" max="60" step="5" value="30"><div class="ends"><span>20 %</span><span>60 %</span></div></div>
@@ -946,7 +980,7 @@ function modelPage(m){
           <div><dt>Lånebelopp</dt><dd id="o-loan"></dd></div>
           <div><dt>Restvärde efter 36 mån</dt><dd id="o-ball"></dd></div>
           <div><dt>Rörlig ränta</dt><dd>0,95 %</dd></div>
-          <div><dt>Avgifter</dt><dd>${FEE_SETUP} kr + ${FEE_MONTH} kr/mån</dd></div>
+          <div><dt>Avgifter</dt><dd>${FEE_SETUP} kr + ${FEE_MONTH} kr/mån</dd></div>
         </dl>
         <div class="ctas"><a class="btn btn-dark" id="calc-apply" href="#">${ctaName.billan}</a><a class="btn btn-line" href="#/bygg/${m.id}">Bygg din bil</a></div>
         <p class="fine-s">Exempel för privatperson. Avgifter tillkommer. Sedvanlig kreditprövning via Santander Consumer Bank. Räntan är rörlig.</p>
@@ -954,13 +988,13 @@ function modelPage(m){
     </div></div></section>` : '';
 
   const terms=[];
-  if(o.leasing) terms.push(`<p><b>Privatleasing</b> via Ayvens: 36 månader, 1 000 mil/år (3 000 mil totalt). Service och försäkring ingår. Priser inkl. moms, ingen kontantinsats. Fler mil och tillval ger annan månadskostnad. <mark>Särskild leasingavgift och kostnad för övermil.</mark> Sedvanlig kreditprövning. Gäller nybeställning t.o.m. ${DEADLINE_FULL}, begränsat antal.</p>`);
+  if(o.leasing) terms.push(`<p><b>Privatleasing</b> via Ayvens: 36 månader, 1 000 mil/år (3 000 mil totalt). Service och försäkring ingår. Priser inkl. moms, ingen kontantinsats. Fler mil och tillval ger annan månadskostnad. <mark>Särskild leasingavgift och kostnad för övermil.</mark> Sedvanlig kreditprövning. Gäller nybeställning t.o.m. ${DEADLINE_FULL}, begränsat antal.</p>`);
   if(o.billan){ const t0=m.trims[0], pb=t0.loanBase, mo=loanMonthly(pb,30,55), effs=m.trims.map(t=>effRate(t.loanBase));
     const lo=Math.min(...effs), hi=Math.max(...effs), f2=v=>v.toFixed(2).replace('.',',');
     const effTxt = f2(lo)===f2(hi) ? f2(lo)+' %' : f2(lo)+'–'+f2(hi)+' % beroende på version';
-    terms.push(`<p><b>Billån</b> via Santander Consumer Bank. Rörlig ränta 0,95 % (effektiv ränta ${effTxt}). Kontantinsats 30 %, 36 månader, restvärde 55 %. Uppläggningsavgift ${FEE_SETUP} kr och administrationsavgift ${FEE_MONTH} kr/mån tillkommer. Räntan är rörlig och kan förändras med Santanders upplåningskostnader, men understiger aldrig 0 %. Sedvanlig kreditprövning. Icke-bindande finansieringsförslag. Kan inte kombineras med kampanjrabatt. Gäller nybeställning t.o.m. ${DEADLINE_FULL}, begränsat antal. Representativt exempel: ${m.name} ${t0.t}, kampanjpris ${fmt(pb)} kr, kontantinsats ${fmt(pb*0.3)} kr, lånebelopp ${fmt(pb*0.7)} kr, ${fmt(mo)} kr/mån, restvärde ${fmt(pb*0.55)} kr, effektiv ränta ${pct(effRate(pb))}, totalt att återbetala ${fmt(mo*N+pb*0.55+FEE_SETUP+FEE_MONTH*N)} kr.</p>`); }
-  if(o.kontant) terms.push(`<p><b>Kampanjrabatt</b> ${fmt(o.kontant)} kr gäller vid kontantköp av ny bil, ett begränsat antal bilar. Kan inte kombineras med privatleasing, billån eller andra kampanjer. Gäller nybeställning t.o.m. ${DEADLINE_FULL}.</p>`);
-  terms.push(`<p><b>Företag:</b> Operationell leasing 36 månader, 1 500 mil/år, service och försäkring ingår, priser ex. moms. Förmånsvärde netto beräknat vid 50 % marginalskatt. Företagsrabatt ${m.rabatt} beroende på företagets vagnpark.</p>`);
+    terms.push(`<p><b>Billån</b> via Santander Consumer Bank. Rörlig ränta 0,95 % (effektiv ränta ${effTxt}). Kontantinsats 30 %, 36 månader, restvärde 55 %. Uppläggningsavgift ${FEE_SETUP} kr och administrationsavgift ${FEE_MONTH} kr/mån tillkommer. Räntan är rörlig och kan förändras med Santanders upplåningskostnader, men understiger aldrig 0 %. Sedvanlig kreditprövning. Icke-bindande finansieringsförslag. Kan inte kombineras med kampanjrabatt. Gäller nybeställning t.o.m. ${DEADLINE_FULL}, begränsat antal. Representativt exempel: ${m.name} ${t0.t}, kampanjpris ${fmt(pb)} kr, kontantinsats ${fmt(pb*0.3)} kr, lånebelopp ${fmt(pb*0.7)} kr, ${fmt(mo)} kr/mån, restvärde ${fmt(pb*0.55)} kr, effektiv ränta ${pct(effRate(pb))}, totalt att återbetala ${fmt(mo*N+pb*0.55+FEE_SETUP+FEE_MONTH*N)} kr.</p>`); }
+  if(o.kontant) terms.push(`<p><b>Kampanjrabatt</b> ${fmt(o.kontant)} kr gäller vid kontantköp av ny bil, ett begränsat antal bilar. Kan inte kombineras med privatleasing, billån eller andra kampanjer. Gäller nybeställning t.o.m. ${DEADLINE_FULL}.</p>`);
+  terms.push(`<p><b>Företag:</b> Operationell leasing 36 månader, 1 500 mil/år, service och försäkring ingår, priser ex. moms. Förmånsvärde netto beräknat vid 50 % marginalskatt. Företagsrabatt ${m.rabatt} beroende på företagets vagnpark.</p>`);
 
   return `<header class="hero light"><div class="wrap">
       <nav class="crumbs" aria-label="Brödsmulor"><a href="#/erbjudanden">Erbjudanden</a><i>/</i><span aria-current="page">${m.name}</span></nav>
@@ -994,8 +1028,8 @@ function bindCalc(m){
   const d=document.getElementById('c-down'), r=document.getElementById('c-res');
   const upd=()=>{
     const tr=m.trims[t.value], price=tr.loanBase, dp=+d.value, rp=+r.value;
-    document.getElementById('o-down').innerHTML=`${dp} %<small>${fmt(price*dp/100)} kr</small>`;
-    document.getElementById('o-res').innerHTML=`${rp} %<small>${fmt(price*rp/100)} kr</small>`;
+    document.getElementById('o-down').innerHTML=`${dp} %<small>${fmt(price*dp/100)} kr</small>`;
+    document.getElementById('o-res').innerHTML=`${rp} %<small>${fmt(price*rp/100)} kr</small>`;
     document.getElementById('o-month').textContent=fmt(loanMonthly(price,dp,rp))+' kr/mån';
     document.getElementById('o-loan').textContent=fmt(price*(1-dp/100))+' kr';
     document.getElementById('o-ball').textContent=fmt(price*rp/100)+' kr';
@@ -1065,7 +1099,7 @@ function bindForm(start){
     qO.innerHTML = offs.length ? offs.map(k=>`<option value="${k}">${offerName[k]}</option>`).join('') : '<option value="offert">Prisförfrågan</option>';
     qO.value = offs.includes(sel)?sel:(offs[0]||'offert');
     qT.innerHTML = m.trims.length ? m.trims.map((t,i)=>`<option value="${i}">${t.t}</option>`).join('') : '<option value="0">Ej vald</option>';
-    $('q-tv').innerHTML = m.tillval ? Object.entries(m.tillval).map(([k,v],i)=>`<label><input type="checkbox" value="${i}"> ${k} +${v} kr/mån</label>`).join('') : '';
+    $('q-tv').innerHTML = m.tillval ? Object.entries(m.tillval).map(([k,v],i)=>`<label><input type="checkbox" value="${i}"> ${k} +${v} kr/mån</label>`).join('') : '';
   }
   const leaseTrimFix=()=>{ const m=byId(qM.value); if(qO.value==='leasing'){ [...qT.options].forEach(op=>op.disabled=!m.trims[op.value].lease); if(qT.selectedOptions[0].disabled) qT.value=m.trims.findIndex(t=>t.lease); } else [...qT.options].forEach(op=>op.disabled=false); };
   function sum(){
@@ -1080,11 +1114,11 @@ function bindForm(start){
       rows+=`<div><dt>Avtal</dt><dd>36 mån, ${fmt(MIL[mi])} mil/år</dd></div><div><dt>Ingår</dt><dd>Service och försäkring</dd></div>${sel.length?`<div><dt>Tillval</dt><dd>${sel.map(i=>tvK[i]).join(', ')}</dd></div>`:''}`;
       price=fmt(tr.lease[mi]+sel.reduce((a,i)=>a+tvV[i],0))+' kr/mån'; extra=` med ${fmt(MIL[mi])} mil/år${sel.length?' och '+sel.map(i=>tvK[i].toLowerCase()).join(', '):''}`; }
     if(tr && k==='foretag' && start.fl){ const pr=tr.list/FINLEASE.vat*(1-start.fl.disc/100), x=finLease(pr,start.fl.f,start.fl.r);
-      rows+=`<div><dt>Finansiell leasing</dt><dd>${fmt(x.pmt)} kr/mån ex. moms</dd></div><div><dt>Första hyra / restvärde</dt><dd>${start.fl.f} % / ${start.fl.r} %</dd></div>${start.fl.disc?`<div><dt>Företagsrabatt</dt><dd>${start.fl.disc} %</dd></div>`:''}`;
+      rows+=`<div><dt>Finansiell leasing</dt><dd>${fmt(x.pmt)} kr/mån ex. moms</dd></div><div><dt>Första hyra / restvärde</dt><dd>${start.fl.f} % / ${start.fl.r} %</dd></div>${start.fl.disc?`<div><dt>Företagsrabatt</dt><dd>${start.fl.disc} %</dd></div>`:''}`;
       extra=` (finansiell leasing, ${start.fl.f} % första hyra, ${start.fl.r} % restvärde${start.fl.disc?', '+start.fl.disc+' % rabatt':''})`; }
-    else if(tr && k==='foretag'){ rows+=`${tr.opl?`<div><dt>Operationell leasing</dt><dd>${fmt(tr.opl[1])} kr/mån ex. moms</dd></div>`:''}<div><dt>Förmånsvärde</dt><dd>${fmt(tr.fv)} kr/mån netto</dd></div><div><dt>Företagsrabatt</dt><dd>${m.rabatt}</dd></div>`; }
-    if(tr && k==='billan'){rows+=`<div><dt>Kontantinsats</dt><dd>${qD.value} %, ${fmt(tr.loanBase*qD.value/100)} kr</dd></div><div><dt>Restvärde</dt><dd>${qR.value} %</dd></div>`; price=fmt(loanMonthly(tr.loanBase,+qD.value,+qR.value))+' kr/mån';}
-    if(tr && k==='kontant'){rows+=`<div><dt>Rabatt</dt><dd>${fmt(m.offers.kontant)} kr</dd></div>`; price= tr.list?fmt(tr.list-m.offers.kontant)+' kr':'<mark>X kr</mark>';}
+    else if(tr && k==='foretag'){ rows+=`${tr.opl?`<div><dt>Operationell leasing</dt><dd>${fmt(tr.opl[1])} kr/mån ex. moms</dd></div>`:''}<div><dt>Förmånsvärde</dt><dd>${fmt(tr.fv)} kr/mån netto</dd></div><div><dt>Företagsrabatt</dt><dd>${m.rabatt}</dd></div>`; }
+    if(tr && k==='billan'){rows+=`<div><dt>Kontantinsats</dt><dd>${qD.value} %, ${fmt(tr.loanBase*qD.value/100)} kr</dd></div><div><dt>Restvärde</dt><dd>${qR.value} %</dd></div>`; price=fmt(loanMonthly(tr.loanBase,+qD.value,+qR.value))+' kr/mån';}
+    if(tr && k==='kontant'){rows+=`<div><dt>Rabatt</dt><dd>${fmt(m.offers.kontant)} kr</dd></div>`; price= tr.list?fmt(tr.list-m.offers.kontant)+' kr':'<mark>X kr</mark>';}
     $('summary').innerHTML=`<div class="s-img"><img src="${m.img}" alt=""></div><h3>${m.name}</h3><p class="desc" style="margin:2px 0 0;color:var(--muted);font-size:14px">${tr?tr.t:''}</p>
       <dl>${rows}${price?`<div><dt>Ditt pris</dt><dd class="bigp">${price}</dd></div>`:''}</dl>
       <p class="fine-s">Kampanjen gäller nybeställning t.o.m. ${DEADLINE_FULL}. Slutligt pris bekräftas av handlaren.</p>`;
@@ -1390,7 +1424,7 @@ function go(i){
   document.getElementById('slide-title').textContent=x.title;
   document.getElementById('slide-sub').textContent=x.sub;
   const l=minLease(m), n=minLoan(m), so=document.getElementById('slide-offer');
-  so.innerHTML = `<b>${l ? `Privatleasing från ${fmt(l)} kr/mån` : loanHead(n)}</b><a href="#/erbjudanden">Se alla kampanjer under Erbjudanden</a>`;
+  so.innerHTML = `<b>${l ? `Privatleasing från ${fmt(l)} kr/mån` : loanHead(n)}</b><a href="#/erbjudanden">Se alla kampanjer under Erbjudanden</a>`;
   document.getElementById('slide-cta').href='#/modell/'+x.id;
   const c2=document.getElementById('slide-cta2'); c2.href='#/modell/'+x.id; c2.textContent=Object.keys(m.offers).length?'Se erbjudanden':'Boka provkörning'; if(!Object.keys(m.offers).length) c2.href='#/provkorning/'+x.id;
 }
@@ -1402,7 +1436,7 @@ document.getElementById('home-models').innerHTML=models.map(m=>`<a class="hm" hr
   ${Object.keys(m.offers).length?'<span class="tag dark">Kampanj</span>':'<span class="tag" style="visibility:hidden">–</span>'}
   <img src="${m.img}" alt="" loading="lazy">
   <b>${m.name}</b><small>${m.desc}</small>
-  <p class="hm-price">${minLease(m)?`Privatleasing från <strong>${fmt(minLease(m))} kr/mån</strong>`:`Billån från <strong>${fmt(minLoan(m))} kr/mån</strong>`}</p>
+  <p class="hm-price">${minLease(m)?`Privatleasing från <strong>${fmt(minLease(m))} kr/mån</strong>`:`Billån från <strong>${fmt(minLoan(m))} kr/mån</strong>`}</p>
   <div class="row"><span class="d">${Object.keys(m.offers).length?'Se erbjudanden':'Läs mer'}</span></div></a>`).join('');
 
 
@@ -1461,7 +1495,7 @@ function ftgPage(pre){
       <h2 class="title">Förmånsvärde och företagsrabatt</h2>
       <p class="sub" style="margin-bottom:22px">Förmånsvärde netto per månad vid 50 % marginalskatt. Rabattnivån beror på företagets vagnpark.</p>
       <div class="ptable"><table><thead><tr><th>Modell</th><th>Version</th><th>Listpris ex. moms</th><th>Förmånsvärde netto</th><th>Företagsrabatt</th></tr></thead><tbody>
-        ${models.map(m=>m.trims.map((t,i)=>`<tr><td>${i?'':`<b>${m.name.replace('BYD ','')}</b>`}</td><td>${t.t}</td><td>${fmt(t.list/FINLEASE.vat)} kr</td><td><b>${fmt(t.fv)} kr/mån</b></td><td>${i?'':m.rabatt}</td></tr>`).join('')).join('')}
+        ${models.map(m=>m.trims.map((t,i)=>`<tr><td>${i?'':`<b>${m.name.replace('BYD ','')}</b>`}</td><td>${t.t}</td><td>${fmt(t.list/FINLEASE.vat)} kr</td><td><b>${fmt(t.fv)} kr/mån</b></td><td>${i?'':m.rabatt}</td></tr>`).join('')).join('')}
       </tbody></table></div>
     </div></section>
 
@@ -1482,8 +1516,8 @@ function oplTable(id){
     <thead><tr><th>Version</th>${MIL.map((v,i)=>`<th class="${i===1?'hl':''}">${fmt(v)} mil/år</th>`).join('')}<th></th></tr></thead>
     <tbody>${m.trims.filter(t=>t.opl).map((t,ti)=>`<tr><td><b>${t.t}</b></td>${t.opl.map((v,i)=>`<td class="${i===1?'hl':''}"><b>${fmt(v)}</b> kr/mån</td>`).join('')}
       <td><a href="#/ansok/${m.id}/foretag/${m.trims.indexOf(t)}">Begär offert</a></td></tr>`).join('')}</tbody></table></div>
-    ${Object.keys(tv).length?`<p class="note">Tillval per månad ex. moms: ${Object.entries(tv).map(([k,v])=>`${k} ${v} kr`).join(' · ')}.</p>`:''}
-    <p class="note">Markerad kolumn (1 500 mil/år) är kommunicerat från-pris.</p>`;
+    ${Object.keys(tv).length?`<p class="note">Tillval per månad ex. moms: ${Object.entries(tv).map(([k,v])=>`${k} ${v} kr`).join(' · ')}.</p>`:''}
+    <p class="note">Markerad kolumn (1 500 mil/år) är kommunicerat från-pris.</p>`;
 }
 function bindFtg(){
   const $=id=>document.getElementById(id);
@@ -1502,7 +1536,7 @@ function bindFtg(){
     if(f>mx){ f=mx; fF.value=mx; }
     $('f-limit').hidden = mx>=FINLEASE.firstMax; $('f-limit').textContent=`Med ${r} % restvärde kan första hyran vara högst ${mx} %.`;
     const price=t.list/FINLEASE.vat*(1-disc/100), x=finLease(price,f,r);
-    $('o-first').innerHTML=`${f} %<small>${fmt(x.first)} kr</small>`; $('o-res2').innerHTML=`${r} %<small>${fmt(x.res)} kr</small>`;
+    $('o-first').innerHTML=`${f} %<small>${fmt(x.first)} kr</small>`; $('o-res2').innerHTML=`${r} %<small>${fmt(x.res)} kr</small>`;
     $('f-month').textContent=fmt(x.pmt)+' kr/mån'; $('f-price').textContent=fmt(price)+' kr'+(disc?` (−${disc} %)`:'');
     $('f-firstkr').textContent=fmt(x.first)+' kr'; $('f-reskr').textContent=fmt(x.res)+' kr'; $('f-fv').textContent=fmt(t.fv)+' kr/mån';
     $('f-apply').href=`#/ansok/${m.id}/foretag/${fT.value}/${f}/${r}/${disc}`;
