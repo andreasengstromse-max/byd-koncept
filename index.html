@@ -1062,7 +1062,7 @@
   <section class="block" style="padding-top:0">
     <div class="wrap"><div class="dealer"><div class="box">
       <div><h2 class="title">Erbjudanden för företag</h2>
-        <p class="sub">Finansiell leasing för alla modeller med egen kalkyl. Business Lease från 4 595 kr/mån ex. moms, service och försäkring ingår. Förmånsvärde från 1 828 kr/mån netto.</p></div>
+        <p class="sub">Finansiell leasing med 0,95 % ränta på alla modeller. Business Lease från 4 595 kr/mån ex. moms, service och försäkring ingår. Förmånsvärde från 1 828 kr/mån netto.</p></div>
       <div class="ctas"><a class="btn btn-dark" href="#/foretag">Se företagserbjudanden</a></div>
     </div></div></div>
   </section>
@@ -1206,8 +1206,8 @@ const OPL_TILLVAL={'dolphin-g-dmi':{'Vinterhjul friktion':336,'Vinterhjul dubb':
   'seal-u-dmi':{'Färgtillägg':201,'Vinterhjul friktion':558,'Vinterhjul dubb':572,'Dragkrok avtagbar':203},
   'seal-6-dmi-touring':{'Färgtillägg':201,'Vinterhjul friktion':474,'Vinterhjul dubb':502,'Dragkrok avtagbar':441},
   'sealion-7':{'Färgtillägg':201,'Vinterhjul friktion (Comfort)':551,'Vinterhjul dubb (Comfort)':551,'Vinterhjul friktion (Excellence)':636,'Vinterhjul dubb (Excellence)':636,'Dragkrok avtagbar':271}};
-/* Finansiell leasing (företag). Räntan finns inte i kampanjprogrammet: exempelvärde, bekräftas med finansbolaget. */
-const FINLEASE={rate:0.0495, months:36, vat:1.25, firstMax:80, resMin:10, resMax:55};
+/* Finansiell leasing (företag). Kampanjränta 0,95 %. */
+const FINLEASE={rate:0.0095, months:36, vat:1.25, firstMax:80, resMin:10, resMax:55};
 function finLease(priceEx, firstPct, resPct){
   const i=FINLEASE.rate/12, n=FINLEASE.months, first=priceEx*firstPct/100, res=priceEx*resPct/100, fin=priceEx-first;
   const pmt=(fin-res/Math.pow(1+i,n))*i/(1-Math.pow(1+i,-n));
@@ -1456,7 +1456,7 @@ function modelPage(m){
   const ftg = `<section class="block" id="foretag" style="padding-bottom:0"><div class="wrap">
     <h2 class="title">För företag</h2><p class="sub" style="margin-bottom:22px">Erbjudanden för dig som kör ${m.name.replace('BYD ','')} i tjänsten. <a href="#/foretag?modell=${m.id}">Räkna på finansiell leasing</a></p>
     <div class="otiles">
-      <div class="otile"><span class="tag">Finansiell leasing</span><h3>Räkna på din månadshyra</h3><p>Företaget väljer själv upplägg.</p>
+      <div class="otile"><span class="tag">Finansiell leasing</span><h3>0,95 % ränta</h3><p>Räkna på din månadshyra och välj upplägg själv.</p>
         <ul><li>36 månader</li><li>Välj förhöjd första hyra och restvärde</li><li>Gäller alla versioner</li></ul>
         <div class="ctas"><a class="btn btn-dark" href="#/foretag?modell=${m.id}">Räkna på finansiell leasing</a></div></div>
       ${minOpl(m)?`<div class="otile"><span class="tag">Business Lease</span><h3>Från ${fmt(minOpl(m))} kr/mån ex. moms</h3><p>Fast månadskostnad för företaget.</p>
@@ -2088,7 +2088,7 @@ function ftgPage(pre){
       <nav class="crumbs" aria-label="Brödsmulor"><a href="#/">BYD</a><i>/</i><span aria-current="page">Företag</span></nav>
       <h1>Tjänstebil från BYD</h1>
       <p class="lead">Elbilar och laddhybrider med mycket utrustning som standard. Här ser du hur en tjänstebil fungerar, vad den kostar och hur företaget kan finansiera den.</p>
-      <p class="ftg-proof">Förmånsvärde från <b>${fmt(fvMin)} kr/mån</b> netto</p>
+      <p class="ftg-proof">Finansiell leasing med <b>0,95 % ränta</b> · Förmånsvärde från <b>${fmt(fvMin)} kr/mån</b> netto</p>
     </div></header>
 
     <section class="block" style="padding-top:8px;padding-bottom:0"><div class="wrap"><div class="ftg-doors">
@@ -2130,8 +2130,8 @@ function ftgPage(pre){
     <section class="block" id="ftg-finans" style="padding-bottom:0"><div class="wrap">
       <h2 class="title">Två sätt att finansiera</h2>
       <div class="ftg-ex">
-        <div class="card"><small>Finansiell leasing</small><h3>Du styr upplägget</h3><p>Företaget hyr bilen i ${FINLEASE.months} månader och väljer själv förhöjd första hyra och restvärde.</p>
-          <ul><li>Gäller alla modeller och versioner</li><li>Du väljer första hyra och restvärde</li><li>Räkna själv i kalkylen</li></ul><div class="ctas"><a class="btn btn-dark" href="#finlease">Räkna på finansiell leasing</a></div></div>
+        <div class="card"><small>Finansiell leasing</small><h3>0,95 % ränta</h3><p>Företaget hyr bilen i ${FINLEASE.months} månader och väljer själv förhöjd första hyra och restvärde.</p>
+          <ul><li>Kampanjränta 0,95 %</li><li>Gäller alla modeller och versioner</li><li>Du väljer första hyra och restvärde</li></ul><div class="ctas"><a class="btn btn-dark" href="#finlease">Räkna på finansiell leasing</a></div></div>
         <div class="card"><small>Business Lease</small><h3>Allt i en månadskostnad</h3><p>Operationell leasing med fast månadskostnad. När avtalet är slut lämnar ni tillbaka bilen.</p>
           <ul><li>36 månader</li><li>Service och försäkring ingår</li><li>Välj körsträcka efter behov</li></ul><div class="ctas"><a class="btn btn-line" href="#oplease">Se priser för Business Lease</a></div></div>
       </div>
@@ -2139,7 +2139,7 @@ function ftgPage(pre){
 
     <section class="block" id="finlease" style="padding-bottom:0"><div class="wrap">
       <h2 class="title">Finansiell leasing</h2>
-      <p class="sub" style="margin-bottom:22px">Välj modell, förhöjd första hyra och restvärde. Gäller alla modeller.</p>
+      <p class="sub" style="margin-bottom:22px">Just nu 0,95 % ränta på alla modeller. Välj modell, förhöjd första hyra och restvärde.</p>
       <div class="calc">
         <div class="card">
           <div class="grid2" style="margin-bottom:20px">
@@ -2162,7 +2162,7 @@ function ftgPage(pre){
             <div><dt>Förmånsvärde netto</dt><dd id="f-fv"></dd></div>
           </dl>
           <div class="ctas"><a class="btn btn-dark" id="f-apply" href="#">Begär företagsoffert</a></div>
-          <p class="fine-s">Exempel. Ränta <mark>${(FINLEASE.rate*100).toFixed(2).replace('.',',')} % – bekräftas med finansbolaget</mark>. Sedvanlig kreditprövning. Förmånsvärde vid 50 % marginalskatt.</p>
+          <p class="fine-s">Exempel. Ränta ${(FINLEASE.rate*100).toFixed(2).replace('.',',')} %. Sedvanlig kreditprövning. Förmånsvärde vid 50 % marginalskatt.</p>
         </div>
       </div>
     </div></section>
@@ -2197,7 +2197,7 @@ function ftgPage(pre){
       <div class="faq">${faq.map(([q,x])=>`<details><summary>${q}</summary><p>${x}</p></details>`).join('')}</div></div></section>
 
     <section class="fine"><div class="wrap"><h2>Villkor</h2>
-      <p><b>Finansiell leasing:</b> räkneexempel med ${FINLEASE.months} månaders löptid, förhöjd första hyra och restvärde i procent av priset exkl. moms. Ränta och slutliga villkor enligt finansbolagets offert. Sedvanlig kreditprövning.</p>
+      <p><b>Finansiell leasing:</b> räkneexempel med ${FINLEASE.months} månaders löptid, förhöjd första hyra och restvärde i procent av priset exkl. moms. Kampanjränta ${(FINLEASE.rate*100).toFixed(2).replace('.',',')} %. Slutliga villkor enligt finansbolagets offert. Sedvanlig kreditprövning.</p>
       <p><b>Business Lease</b> (operationell leasing) via Ayvens: 36 månader, service och försäkring ingår. Priser exkl. moms. Tillval tillkommer per månad. Gäller nybeställning t.o.m. ${DEADLINE_FULL}, begränsat antal.</p>
       <p><b>Förmånsvärde</b> beräknat netto vid 50 % marginalskatt.</p>
     </div></section>`;
