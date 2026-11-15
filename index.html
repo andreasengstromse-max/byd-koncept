@@ -313,6 +313,8 @@
     .promo-cars{opacity:1;width:98%;right:1%;bottom:176px}
     .home-hero.is-promo h1{max-width:none;font-size:clamp(25px,7vw,30px)}
   }
+  .slide-eye{display:inline-block;margin-bottom:14px;padding:6px 14px;border-radius:999px;background:#fff;color:var(--ink);font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+  .slide-offer small{display:block;font-size:13px;font-weight:500;opacity:.85;margin-top:2px;text-shadow:0 1px 8px rgba(0,0,0,.5)}
   .slide-offer{display:block;color:#fff;margin:0 0 24px}
   .slide-offer b{font-size:clamp(20px,2vw,24px);font-weight:700;color:#fff;text-shadow:0 1px 12px rgba(0,0,0,.45);letter-spacing:-.01em;line-height:1.2}
   .slide-offer a{font-size:13.5px;font-weight:600;color:var(--ink);text-decoration:underline;text-underline-offset:3px}
@@ -876,6 +878,7 @@
   <header class="hero home-hero" id="home-hero">
     <div id="slides"></div>
     <div class="wrap">
+      <div class="slide-eye" id="slide-eye" hidden></div>
       <h1 id="slide-title"></h1>
       <p class="lead" id="slide-sub" style="margin-bottom:18px"></p>
       <div class="slide-offer" id="slide-offer"></div>
@@ -1009,6 +1012,7 @@
 /* Mobilbilder: på smala skärmar byts bilder och filmer mot byd.com:s mobilversioner (/mob/ i stället för /pc/). */
 const MOBILE_MQ = matchMedia('(max-width: 760px)');
 const MOB_FILES = new Set([
+  'media/byd-site/eu-v3/model/sealion7/pc/performance/1.mp4',
   'media/__EU/byd-site/eu-v3/model/seal6-dm-i-touring/pc/herobanner/bc-1.mp4',
   'media/byd-site/eu-v3/homepage/pc/herobannner/seal6-dm-i-touring.webp',
   'media/byd-site/eu-v3/homepage/pc/herobannner/atto2-dm-i.mp4',
@@ -1798,6 +1802,9 @@ const slides=[
    video:'media/__EU/byd-site/eu-v3/model/seal6-dm-i-touring/pc/herobanner/bc-1.mp4', poster:'media/byd-site/eu-v3/homepage/pc/herobannner/seal6-dm-i-touring.webp'},
   {title:'BYD ATTO 2 DM-i', sub:'Kompakt hybrid-SUV.', id:'atto-2-dmi',
    video:'media/byd-site/eu-v3/homepage/pc/herobannner/atto2-dm-i.mp4'},
+  {title:'BYD SEALION 7', eye:'Tjänstebil', sub:'Helelektrisk SUV med upp till 530 hk. Mycket bil för lite förmånsvärde.', id:'sealion-7',
+   offer:`Förmånsvärde från ${fmt(2294)}\u00a0kr/mån<small>netto vid 50\u00a0% marginalskatt</small>`, href:'#/modell/sealion-7?till=foretag', cta:'Se tjänstebilserbjudandet', cta2:'Boka provkörning', href2:'#/provkorning/sealion-7',
+   video:'media/byd-site/eu-v3/model/sealion7/pc/performance/1.mp4'},
   {title:'BYD SEAL U DM-i', sub:'Europas mest sålda laddhybrid.', id:'seal-u-dmi',
    video:'media/byd-site/eu-v3/model/sealu-dm-i/pc/performance/bc-1.mp4'}
 ];
@@ -1823,9 +1830,11 @@ function go(i){
   const so=document.getElementById('slide-offer'), c1=document.getElementById('slide-cta'), c2=document.getElementById('slide-cta2');
   if(x.promo){ so.innerHTML=`<b>${x.offer}</b>`; c1.href=x.href; c1.textContent=x.cta; c2.hidden=true; }
   else { const m=byId(x.id), l=minLease(m), n=minLoan(m);
-    so.innerHTML=`<b>${l ? `Privatleasing från ${fmt(l)} kr/mån` : loanHead(n)}</b>`;
-    c1.href='#/modell/'+x.id; c1.textContent='Läs mer'; c2.hidden=false;
-    c2.href='#/modell/'+x.id; c2.textContent=Object.keys(m.offers).length?'Se erbjudanden':'Boka provkörning'; if(!Object.keys(m.offers).length) c2.href='#/provkorning/'+x.id; }
+    so.innerHTML=`<b>${x.offer || (l ? `Privatleasing från ${fmt(l)} kr/mån` : loanHead(n))}</b>`;
+    c1.href=x.href||'#/modell/'+x.id; c1.textContent=x.cta||'Läs mer'; c2.hidden=false;
+    if(x.cta2){ c2.href=x.href2; c2.textContent=x.cta2; }
+    else { c2.href='#/modell/'+x.id; c2.textContent=Object.keys(m.offers).length?'Se erbjudanden':'Boka provkörning'; if(!Object.keys(m.offers).length) c2.href='#/provkorning/'+x.id; } }
+  const ey=document.getElementById('slide-eye'); ey.hidden=!x.eye; ey.textContent=x.eye||'';
 }
 function autoplay(on){ if(matchMedia('(prefers-reduced-motion: reduce)').matches) document.querySelectorAll('video').forEach(v=>{v.removeAttribute('autoplay');v.pause();});clearInterval(timer); if(on && !matchMedia('(prefers-reduced-motion: reduce)').matches) timer=setInterval(()=>go(cur+1),7000);}
 document.getElementById('dots').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
