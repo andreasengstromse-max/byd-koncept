@@ -598,6 +598,9 @@
   /* ---------- privatleasing: landningssida ---------- */
   .pl-hero{position:relative;margin-top:-76px;height:min(46vw,460px);min-height:260px;overflow:hidden;background:#dfe4ea}
   .pl-hero::after{content:"";position:absolute;left:0;right:0;top:0;height:170px;background:linear-gradient(180deg,rgba(0,0,0,.38),rgba(0,0,0,0))}
+  .pl-hero.pl-dark{background:radial-gradient(110% 95% at 50% 70%,#3b434d 0%,#1d2228 48%,#0f1215 100%)}
+  .promo-cars.pl-range{right:auto;left:50%;transform:translateX(-50%);bottom:9%;width:min(74%,700px);opacity:1}
+  @media (max-width:600px){ .pl-hero.pl-dark{height:290px} .promo-cars.pl-range{width:92%;right:auto;bottom:10%} }
   .pl-crumbs{background:#fff;border-bottom:1px solid var(--line)}
   .pl-crumbs .crumbs{margin:0;padding:14px 0}
   /* privatleasing: hela familjen på rad, ett pris per modell */
@@ -1212,16 +1215,13 @@ function plPage(){
     ['Får någon annan än jag köra bilen?','Ja. Det regleras av bilens försäkring.'],
     ['Vad händer när avtalet tar slut?','Du lämnar tillbaka bilen hos handlaren och kan välja en ny BYD. Vill du behålla bilen har återförsäljaren förtur att köpa den och kan då sälja den vidare till dig.']
   ];
-  return `<header class="pl-hero"><img class="hero-img" src="media/byd-site/eu-v3/homepage/pc/herobannner/seal6-dm-i-touring.webp" alt="" aria-hidden="true"></header>
+  return `<header class="pl-hero pl-dark"><div class="promo-cars pl-range" role="img" aria-label="Hela BYD-sortimentet"><div class="r back">${promoCars(['atto-2','atto-3-evo','seal-u-dmi','sealion-7'])}</div><div class="r front">${promoCars(['atto-2-dmi','dolphin-g-dmi','seal-6-dmi-touring'])}</div></div></header>
   <div class="pl-crumbs"><div class="wrap"><nav class="crumbs" aria-label="Brödsmulor"><a href="#/">BYD</a><i>/</i><a href="#/erbjudanden">Erbjudanden</a><i>/</i><span aria-current="page">Privatleasing</span></nav></div></div>
   <section class="pl-intro"><div class="wrap">
     <h1>Privatleasing</h1>
     <p class="pl-q">Funderar du på hur du ska skaffa din nästa BYD?</p>
     <p>Kör en ny <b>elbil</b> eller <b>laddhybrid</b> till fast månadskostnad. Ingen kontantinsats, service ingår. Från 2\u00a0990\u00a0kr/mån.</p>
     <a class="btn btn-dark" href="#pl-modeller">Se erbjudandena</a>
-  </div></section>
-  <section class="pl-fam"><div class="wrap">
-    <div class="fam-row">${['dolphin-g-dmi','atto-2-dmi','atto-2','seal-6-dmi-touring','atto-3-evo','seal-u-dmi','sealion-7'].map(id=>{const m=byId(id);return `<a class="fam" href="#/modell/${m.id}?till=privatleasing"><span class="car"><img src="media/cars/${m.id}.webp" alt="${m.name}" loading="lazy"></span><span class="n">${m.name.replace(/^BYD /,'')}</span><span class="f">från</span><span class="p">${fmt(minLease(m))}</span><span class="u">kr/mån</span></a>`}).join('')}</div>
   </div></section>
   <section class="pl-offers" id="pl-modeller"><div class="wrap">
     <h2 class="title">Aktuella privatleasingerbjudanden</h2>
