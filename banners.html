@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex,nofollow">
 <title>BYD privatleasing, tre bannerförslag</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box}
 body{margin:0;font-family:Montserrat,system-ui,sans-serif;background:#e9ecef;color:#15181c;line-height:1.4}
@@ -16,88 +16,74 @@ body{margin:0;font-family:Montserrat,system-ui,sans-serif;background:#e9ecef;col
 .label{margin:34px 0 10px;font-size:14px;color:#5a626b}
 .label b{color:#15181c;font-size:15px;margin-right:8px}
 
-.bn{position:relative;overflow:hidden;border-radius:14px;isolation:isolate;background-size:cover;display:flex;flex-direction:column;text-decoration:none;color:var(--ink)}
+/* Bannern: helbild, bilarna står direkt på snön i fotot */
+.bn{position:relative;overflow:hidden;border-radius:14px;isolation:isolate;display:flex;flex-direction:column;
+  aspect-ratio:1440/650;text-decoration:none;color:var(--ink);background-size:cover;background-repeat:no-repeat}
 .bn::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--veil)}
-.bn .top{padding:44px 5% 40px;min-height:250px}
-.bn .eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
-.bn h2{margin:8px 0 0;font-weight:700;line-height:1.08;letter-spacing:-.015em;font-size:clamp(28px,3.7vw,54px);max-width:16em}
+.top{padding:4.2% 4.6% 0}
+.eyebrow{font-size:clamp(10px,.85vw,12.5px);font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.bn h2{margin:.35em 0 0;font-weight:700;line-height:1.04;letter-spacing:-.022em;font-size:clamp(28px,4.3vw,64px)}
 .bn h2 span{display:block}
-.bn .sub{margin:14px 0 0;font-size:clamp(13px,1.15vw,16px);font-weight:500;opacity:.92}
-.bn .cta{position:absolute;right:5%;top:48px;padding:13px 26px;border-radius:999px;font-weight:600;font-size:14px;background:var(--btn);color:var(--btnink)}
+.bn h2 .l2{font-weight:500}
+.meta{display:flex;align-items:center;gap:22px;margin-top:1.7vw}
+.cta{padding:.95em 1.9em;border-radius:999px;font-weight:600;font-size:clamp(12px,1vw,14.5px);background:var(--btn);color:var(--btnink)}
+.sub{font-size:clamp(11px,.92vw,13.5px);font-weight:500;opacity:.8}
 
-/* Uppställningen: sju lika breda kolumner, bilarna på samma linje */
-.line{position:relative;display:grid;grid-template-columns:repeat(7,1fr);column-gap:1.4%;padding:0 3.2% 26px;margin-top:auto}
-.line::before{content:"";position:absolute;left:0;right:0;bottom:0;top:var(--band);background:var(--panel);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);z-index:0}
-.col{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;min-width:0}
-.car{height:var(--carh);width:100%;display:flex;align-items:flex-end;justify-content:center;position:relative}
-.car::after{content:"";position:absolute;left:6%;right:2%;bottom:-3%;height:16%;background:radial-gradient(ellipse at center,rgba(0,0,0,.42),rgba(0,0,0,0) 68%);z-index:-1}
+.line{display:grid;grid-template-columns:repeat(7,1fr);column-gap:1%;padding:0 2.6% 2.6%;margin-top:auto;align-items:end}
+.col{display:flex;flex-direction:column;align-items:center;text-align:center;min-width:0}
+.car{width:100%;position:relative}
+.car::after{content:"";position:absolute;left:5%;right:1%;bottom:-5%;height:20%;background:radial-gradient(ellipse at 50% 50%,var(--shade),transparent 70%);filter:blur(3px);z-index:-1}
 .car img{width:100%;display:block}
-.name{margin-top:16px;font-size:clamp(10px,.95vw,13.5px);font-weight:700;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap}
-.fr{font-size:11px;opacity:.75;margin-top:2px}
-.pr{font-size:clamp(20px,2.3vw,34px);font-weight:800;line-height:1;letter-spacing:-.01em}
-.un{font-size:11px;opacity:.75;margin-top:2px}
-.trims{margin:10px 0 0;padding:8px 0 0;border-top:1px solid var(--rule);width:86%;font-size:clamp(9.5px,.82vw,12px);min-height:5.9em}
-.trims div{display:flex;justify-content:space-between;gap:6px;line-height:1.5}
-.trims b{font-weight:700}
+.name{margin-top:1.3vw;font-size:clamp(9px,.78vw,11.5px);font-weight:600;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;opacity:.72}
+.pr{margin-top:.15em;font-size:clamp(10px,.9vw,13px);font-weight:500;white-space:nowrap}
+.pr b{font-size:clamp(15px,1.55vw,23px);font-weight:700;letter-spacing:-.01em;margin:0 .12em}
 
-.b1{--ink:#1d2731;--accent:#c8102e;--btn:#1d2731;--btnink:#fff;--panel:rgba(244,246,248,.86);--rule:rgba(29,39,49,.22);
-  --veil:linear-gradient(rgba(244,247,250,.72),rgba(244,247,250,.25) 46%,rgba(244,247,250,0) 60%);
-  background-color:#dfe7ee;background-image:url("https://images.unsplash.com/photo-1507281736509-c6289f1ea0f8?auto=format&fit=crop&w=2400&q=75");background-position:center 42%}
-.b2{--ink:#fff;--accent:#ffd9a8;--btn:#fff;--btnink:#22262b;--panel:rgba(250,248,245,.9);--rule:rgba(29,39,49,.22);
-  --veil:linear-gradient(rgba(20,24,34,.62),rgba(20,24,34,.25) 44%,rgba(20,24,34,0) 62%);
-  background-color:#8a7460;background-image:url("https://images.unsplash.com/photo-1611180007172-989e4616a32b?auto=format&fit=crop&w=2400&q=75");background-position:center 38%}
-.b2 .line{color:#22262b}
-.b3{--ink:#fff;--accent:#8ff0d2;--btn:#fff;--btnink:#0b1d30;--panel:rgba(8,20,36,.72);--rule:rgba(255,255,255,.28);
-  --veil:linear-gradient(rgba(4,12,24,.5),rgba(4,12,24,.1) 50%,rgba(4,12,24,0) 62%);
-  background-color:#0b1d30;background-image:url("https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=2400&q=75");background-position:center 46%}
-.b3 .car::after{background:radial-gradient(ellipse at center,rgba(0,0,0,.7),rgba(0,0,0,0) 68%)}
-.bn{--carh:8.4vw;--band:calc(var(--carh) * .62)}
-@media (min-width:1500px){.bn{--carh:122px}}
+.b1{--ink:#17222d;--accent:#c8102e;--btn:#17222d;--btnink:#fff;--shade:rgba(40,62,92,.5);
+  --veil:linear-gradient(rgba(240,245,250,.55),rgba(240,245,250,0) 45%),linear-gradient(0deg,rgba(255,255,255,.9),rgba(255,255,255,0) 34%);
+  background-color:#dfe7ee;background-image:url("https://images.unsplash.com/photo-1507281736509-c6289f1ea0f8?auto=format&fit=crop&w=2400&q=78");background-position:center 38%}
+.b2{--ink:#1d2a26;--accent:#2f5d50;--btn:#1d2a26;--btnink:#fff;--shade:rgba(46,66,92,.5);
+  --veil:linear-gradient(rgba(250,250,250,.5),rgba(250,250,250,0) 45%),linear-gradient(0deg,rgba(255,255,255,.88),rgba(255,255,255,0) 34%);
+  background-color:#e3e9ee;background-image:url("https://images.unsplash.com/photo-1739952460691-d8d63d2ad0ae?auto=format&fit=crop&w=2400&q=78");background-position:center 40%}
+.b3{--ink:#fff;--accent:#8ff0d2;--btn:#fff;--btnink:#0b1d30;--shade:rgba(0,0,0,.75);
+  --veil:linear-gradient(rgba(3,10,22,.55),rgba(3,10,22,0) 46%),linear-gradient(0deg,rgba(4,12,26,.92),rgba(4,12,26,.5) 22%,rgba(4,12,26,0) 44%);
+  background-color:#0b1d30;background-image:url("https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=2400&q=78");background-position:center 40%}
 
 @media (max-width:760px){
   .page{padding:18px 12px 40px}
-  .bn{border-radius:10px;--carh:24vw;--band:calc(var(--carh) * .62)}
-  .bn .top{padding:30px 22px 0;min-height:0}
-  .bn .cta{position:static;display:inline-block;margin:18px 0 26px}
-  .bn .sub{font-size:13px}
-  .line{grid-template-columns:repeat(2,1fr);column-gap:6%;row-gap:22px;padding:0 6% 22px}
+  .bn{aspect-ratio:auto;border-radius:10px;background-size:auto 46%;background-position:center top;background-color:var(--ground)}
+  .b1{--ground:#fff}.b2{--ground:#fff}.b3{--ground:#050d1c}
+  .bn::before{background:linear-gradient(rgba(255,255,255,0) 30%,var(--ground) 46%),var(--veil)}
+  .top{padding:30px 22px 0}
+  .bn h2{font-size:30px}
+  .meta{flex-direction:column;align-items:flex-start;gap:12px;margin-top:16px}
+  .cta{font-size:14px}.sub{font-size:12px}
+  .line{grid-template-columns:repeat(2,1fr);column-gap:7%;row-gap:26px;padding:34px 7% 30px;margin-top:0}
   .col:first-child{grid-column:1/-1}
-  .col:first-child .car{width:60%;height:calc(var(--carh) * 1.3)}
-  .name{font-size:12px;margin-top:10px}.pr{font-size:24px}
-  .trims{display:none}
+  .col:first-child .car{width:62%}
+  .name{font-size:10.5px;margin-top:12px}.pr{font-size:12px}.pr b{font-size:19px}
 }
 </style>
 </head>
 <body>
 <div class="page">
   <h1>Privatleasing på startsidan, tre bannerförslag</h1>
-  <p>Samma uppställning i alla tre: sju modeller i lika breda kolumner på samma linje, med pris per version. Det som skiljer är bakgrundsfotot och budskapet.</p>
+  <p>Helbild med bilarna stående direkt på snön. Sju modeller i lika breda kolumner på samma linje, ett pris per modell.</p>
   <div id="out"></div>
 </div>
 <script>
 const NB=' ';
-const CARS=[
- ['dolphin-g-dmi','Dolphin G DM-i',2990,[['Active',2990],['Boost',3290],['Comfort',3490],['Sport',3690]]],
- ['atto-2-dmi','Atto 2 DM-i',3490,[['Boost',3490]]],
- ['atto-2','Atto 2',3890,[['Comfort',3890]]],
- ['seal-6-dmi-touring','Seal 6 DM-i Touring',3490,[['Boost',3490],['Comfort',3690]]],
- ['atto-3-evo','Atto 3 EVO',4290,[['Design',4290],['Excellence',4690]]],
- ['seal-u-dmi','Seal U DM-i',4190,[['Boost',4190],['Comfort',4290],['Design',4490]]],
- ['sealion-7','Sealion 7',5990,[['Comfort',5990],['Excellence',6190]]]];
+const CARS=[['dolphin-g-dmi','Dolphin G DM-i',2990],['atto-2-dmi','Atto 2 DM-i',3490],['atto-2','Atto 2',3890],['seal-6-dmi-touring','Seal 6 DM-i Touring',3490],['atto-3-evo','Atto 3 EVO',4290],['seal-u-dmi','Seal U DM-i',4190],['sealion-7','Sealion 7',5990]];
 const kr=n=>String(n).replace(/(\d)(\d{3})$/,'$1'+NB+'$2');
-const line=()=>`<div class="line">${CARS.map(([id,n,p,t])=>`<div class="col">
-  <div class="car"><img src="media/cars/${id}.webp" alt="BYD ${n}"></div>
-  <div class="name">${n}</div><div class="fr">från</div><div class="pr">${kr(p)}</div><div class="un">kr/mån</div>
-  <div class="trims">${t.map(([a,b])=>`<div><span>${a}</span><b>${kr(b)}</b></div>`).join('')}</div></div>`).join('')}</div>`;
+const line=()=>`<div class="line">${CARS.map(([id,n,p])=>`<div class="col"><div class="car"><img src="media/cars/${id}.webp" alt="BYD ${n}"></div><div class="name">${n}</div><div class="pr">från<b>${kr(p)}</b>kr/mån</div></div>`).join('')}</div>`;
 const B=[
- ['b1','Förslag 1','Fjällvidd i dagsljus. Ljust och luftigt, närmast din förlaga.','Privatleasing',['Hela BYD-familjen.','Från 2'+NB+'990'+NB+'kr/mån.'],'Se alla modeller'],
- ['b2','Förslag 2','Snötunga granar i lågt vinterljus. Varmare ton.','Privatleasing',['En BYD för varje behov.','Nu med privatleasing från 2'+NB+'990'+NB+'kr/mån.'],'Hitta din BYD'],
- ['b3','Förslag 3','Norrsken över snön. Mörk variant som sticker ut mest.','Vinterns privatleasing',['Hela BYD-familjen.','Från 2'+NB+'990'+NB+'kr/mån.'],'Se alla modeller']];
+ ['b1','Förslag 1','Fjällvidd i dagsljus.','Privatleasing',['Hela BYD-familjen.','Från 2'+NB+'990'+NB+'kr/mån.'],'Se alla modeller'],
+ ['b2','Förslag 2','Snötäckt vidd i motljus.','Privatleasing',['En BYD för varje behov.','Från 2'+NB+'990'+NB+'kr/mån.'],'Hitta din BYD'],
+ ['b3','Förslag 3','Norrsken över snön.','Vinterns privatleasing',['Hela BYD-familjen.','Från 2'+NB+'990'+NB+'kr/mån.'],'Se alla modeller']];
 document.getElementById('out').innerHTML=B.map(([c,nr,desc,eb,h,cta])=>`
  <div class="label"><b>${nr}</b>${desc}</div>
  <a class="bn ${c}" href="index.html#/privatleasing">
-  <div class="top"><div class="eyebrow">${eb}</div><h2>${h.map(x=>`<span>${x}</span>`).join('')}</h2>
-   <p class="sub">Service ingår. 36 månader, 1${NB}000 mil per år, ingen insats.</p><span class="cta">${cta}</span></div>
+  <div class="top"><div class="eyebrow">${eb}</div><h2><span>${h[0]}</span><span class="l2">${h[1]}</span></h2>
+   <div class="meta"><span class="cta">${cta}</span><span class="sub">Service ingår. 36 månader, 1${NB}000 mil per år.</span></div></div>
   ${line()}
  </a>`).join('');
 </script>
