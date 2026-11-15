@@ -543,6 +543,60 @@
     body.no-sticky{padding-bottom:0}
   }
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+  /* ---------- mobil: lugnare typografi och mindre trängsel ---------- */
+  @media (max-width:600px){
+    body{font-size:15px}
+    h1{font-size:clamp(24px,7vw,28px);line-height:1.12;margin-bottom:8px}
+    .home-hero h1{font-size:clamp(26px,7.4vw,30px)}
+    h2.title{font-size:clamp(22px,6.2vw,25px)}
+    .sub{font-size:14.5px}
+    .hero .lead{font-size:14.5px;margin-bottom:18px;line-height:1.45}
+    .hero .wrap{padding-top:104px;padding-bottom:132px}
+    .pill-dl{font-size:12px;padding:5px 11px;margin-bottom:12px}
+    .crumbs{font-size:12px;margin-bottom:10px}
+    .btn{padding:11px 18px;font-size:13.5px}
+    .btn-sm{padding:8px 14px;font-size:12.5px}
+    .ctas{gap:10px}
+
+    /* startsidans hero */
+    .home-hero{min-height:0}
+    .home-hero .wrap{padding-top:108px;padding-bottom:186px}
+    .home-hero .lead{display:none}
+    .slide-offer{padding:10px 14px;border-radius:14px;margin-bottom:18px}
+    .slide-offer b{font-size:16px}
+    .slide-offer a{font-size:12.5px;padding:4px 0 0}
+    .dots{bottom:138px;padding:4px;gap:8px}
+    .dots .arr{display:none}
+    .dots .dot{width:7px;height:7px;margin:4px}
+    .dots .dot[aria-current="true"]{width:20px}
+
+    /* genvägskort */
+    .quick,.home-quick{margin-top:-112px}
+    .quick li{flex:0 0 72%}
+    .quick a{min-height:0;padding:14px 14px;gap:12px;border-radius:14px}
+    .quick .ic{width:36px;height:36px;border-radius:10px}
+    .quick .ic svg{width:18px;height:18px}
+    .quick small{font-size:11.5px}
+    .quick h2{font-size:15px;line-height:1.25;margin:1px 0 0}
+    .quick .go{width:32px;height:32px}
+
+    /* kort och block */
+    section.block{padding:40px 0}
+    .head{margin-bottom:20px}
+    .mc h3,.hm b{font-size:17px}
+    .mc .price b{font-size:20px}
+    .hm-price strong{font-size:17px}
+    .otile h3{font-size:19px}
+    .calc-out .monthly{font-size:32px}
+    .steps{padding:44px 0}
+    .steps h3{font-size:16px}
+    .dealer .box{gap:18px}
+    .sticky-cta{padding:10px 16px}
+    .sticky-cta .btn{padding:10px 14px;font-size:13px}
+    body{padding-bottom:64px}
+  }
+  @media (max-width:960px){ .pk-sum:not(:has(img)){display:none} }
 </style>
 </head>
 <body>
