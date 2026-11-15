@@ -2189,7 +2189,7 @@ function pkPage(){
       <div id="pk-main">
         <section class="pk-card" id="pk-s1"><h2><span class="n">1</span>Välj bil</h2><p class="hint">Vilken modell vill du provköra?</p>
           <div class="pk-models">${models.map(m=>`<button type="button" class="pk-m" data-id="${m.id}" aria-pressed="false"><img src="${m.img}" alt="" loading="lazy"><b>${m.name.replace('BYD ','')}</b></button>`).join('')}</div></section>
-        <section class="pk-card" id="pk-s2"><h2><span class="n">2</span>Välj återförsäljare</h2><p class="hint">Skriv ditt postnummer så sorterar vi handlarna efter avstånd.</p>
+        <section class="pk-card" id="pk-s2"><h2><span class="n">2</span>Välj återförsäljare</h2><p class="hint">Skriv ditt postnummer så sorterar vi återförsäljarna efter avstånd.</p>
           <form class="pk-zip" id="pk-zipform" novalidate><label for="pk-zip" class="sr">Postnummer</label><input id="pk-zip" inputmode="numeric" maxlength="6" placeholder="Postnummer, t.ex. 114 35" autocomplete="postal-code"><button class="btn btn-dark" type="submit">Visa återförsäljare</button></form>
           <p id="pk-ziperr" style="color:var(--red);font-size:13px;margin:8px 0 0" hidden>Skriv ett postnummer med fem siffror.</p>
           <p style="margin:10px 0 0"><button type="button" class="pk-link" id="pk-geo">${pin} Använd min position</button></p>
