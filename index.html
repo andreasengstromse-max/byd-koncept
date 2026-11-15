@@ -1305,7 +1305,7 @@ function plLadder(m){
 }
 function plTerms(m){
   const ts=m.trims.filter(t=>t.lease), t0=ts[0];
-  return `<p><b>Privatleasing</b> via Santander Consumer Bank. 36 månader, 1\u00a0000 mil/år och ingen kontantinsats. Service ingår, försäkring ingår inte. Priser inkl. moms. Uppläggningsavgift ${PL.setup}\u00a0kr och aviavgift ${PL.avi}\u00a0kr/mån tillkommer. Övermil ${PL.overmil}\u00a0kr/mil. Fler mil och tillval ger en annan månadskostnad. Månadskostnaden följer en rörlig ränta och kan ändras under avtalstiden. Sedvanlig kreditprövning. Begränsat antal bilar. Exempel: ${m.name} ${t0.t}, ${fmt(t0.lease[0])}\u00a0kr/mån, totalt ${fmt(plTotal(t0.lease[0]))}\u00a0kr under avtalstiden inklusive avgifter.</p>`;
+  return `<p><b>Privatleasing</b> via Santander Consumer Bank. 36 månader, 1\u00a0000 mil/år och ingen kontantinsats. Service ingår, försäkring ingår inte. Priser inkl. moms. Uppläggningsavgift ${PL.setup}\u00a0kr och aviavgift ${PL.avi}\u00a0kr/mån tillkommer. Övermil ${PL.overmil}\u00a0kr/mil. Fler mil och tillval ger en annan månadskostnad. Månadskostnaden följer en rörlig ränta och kan ändras under avtalstiden. Sedvanlig kreditprövning. Begränsat antal bilar. Gäller nybeställning t.o.m. ${DEADLINE_FULL}. Exempel: ${m.name} ${t0.t}, ${fmt(t0.lease[0])}\u00a0kr/mån, totalt ${fmt(plTotal(t0.lease[0]))}\u00a0kr under avtalstiden inklusive avgifter.</p>`;
 }
 function plPage(){
   const evs=models.filter(m=>m.cat==='el').length, hy=models.filter(m=>m.cat==='hybrid').length;
@@ -1393,7 +1393,7 @@ function plPage(){
     <div><h2 class="title">Hitta din nästa BYD</h2><p class="sub">Provkör hos din närmaste återförsäljare eller begär ett erbjudande direkt.</p></div>
     <div class="ctas"><a class="btn btn-white" href="#/provkorning">Boka provkörning</a><a class="btn btn-ghost" href="#/ansok/dolphin-g-dmi/leasing/0/0/0">Begär offert</a></div></div></section>
   <section class="fine"><div class="wrap"><h2>Villkor</h2>
-    <p><sup>1</sup> Privatleasing via Santander Consumer Bank. 36 månader, 1\u00a0000 mil/år och ingen kontantinsats. Service ingår, försäkring ingår inte. Priser inkl. moms. Uppläggningsavgift ${PL.setup}\u00a0kr och aviavgift ${PL.avi}\u00a0kr/mån tillkommer. Övermil ${PL.overmil}\u00a0kr/mil. Månadskostnaden följer en rörlig ränta och kan ändras under avtalstiden. Sedvanlig kreditprövning. Begränsat antal bilar. Bilderna kan visa extrautrustning.</p>
+    <p><sup>1</sup> Privatleasing via Santander Consumer Bank. 36 månader, 1\u00a0000 mil/år och ingen kontantinsats. Service ingår, försäkring ingår inte. Priser inkl. moms. Uppläggningsavgift ${PL.setup}\u00a0kr och aviavgift ${PL.avi}\u00a0kr/mån tillkommer. Övermil ${PL.overmil}\u00a0kr/mil. Månadskostnaden följer en rörlig ränta och kan ändras under avtalstiden. Sedvanlig kreditprövning. Begränsat antal bilar. Bilderna kan visa extrautrustning. Gäller nybeställning t.o.m. ${DEADLINE_FULL}.</p>
     <p>Totalt att betala under avtalstiden inklusive avgifter, lägsta version per modell: ${ex}</p>
   </div></section>`;
 }
@@ -1499,7 +1499,7 @@ function modelPage(m){
     const effTxt = f2(lo)===f2(hi) ? f2(lo)+' %' : f2(lo)+'–'+f2(hi)+' % beroende på version';
     terms.push(`<p><b>Billån</b> via Santander Consumer Bank. Rörlig ränta 0,95 % (effektiv ränta ${effTxt}). Kontantinsats 30 %, 36 månader, restvärde 55 %. Uppläggningsavgift ${FEE_SETUP} kr och administrationsavgift ${FEE_MONTH} kr/mån tillkommer. Räntan är rörlig och kan förändras med Santanders upplåningskostnader, men understiger aldrig 0 %. Sedvanlig kreditprövning. Icke-bindande finansieringsförslag. Kan inte kombineras med kampanjrabatt. Gäller nybeställning t.o.m. ${DEADLINE_FULL}, begränsat antal. Representativt exempel: ${m.name} ${t0.t}, kampanjpris ${fmt(pb)} kr, kontantinsats ${fmt(pb*0.3)} kr, lånebelopp ${fmt(pb*0.7)} kr, ${fmt(mo)} kr/mån, restvärde ${fmt(pb*0.55)} kr, effektiv ränta ${pct(effRate(pb))}, totalt att återbetala ${fmt(mo*N+pb*0.55+FEE_SETUP+FEE_MONTH*N)} kr.</p>`); }
   if(o.kontant) terms.push(`<p><b>Kampanjrabatt</b> ${fmt(o.kontant)} kr gäller vid kontantköp av ny bil, ett begränsat antal bilar. Kan inte kombineras med privatleasing, billån eller andra kampanjer. Gäller nybeställning t.o.m. ${DEADLINE_FULL}.</p>`);
-  terms.push(`<p><b>Företag:</b> Business Lease (operationell leasing) 36 månader, 1 500 mil/år, service och försäkring ingår, priser ex. moms. Förmånsvärde netto beräknat vid 50 % marginalskatt.</p>`);
+  terms.push(`<p><b>Företag:</b> Finansiell leasing via Santander Consumer Bank, rörlig ränta 0,95 %. Business Lease (operationell leasing) 36 månader, 1 500 mil/år, service och försäkring ingår, priser ex. moms. Förmånsvärde netto beräknat vid 50 % marginalskatt.</p>`);
 
   return `<header class="hero light"><div class="wrap">
       <nav class="crumbs" aria-label="Brödsmulor"><a href="#/erbjudanden">Erbjudanden</a><i>/</i><span aria-current="page">${m.name}</span></nav>
@@ -1628,7 +1628,7 @@ function bindForm(start){
     if(tr && k==='kontant'){rows+=`<div><dt>Rabatt</dt><dd>${fmt(m.offers.kontant)} kr</dd></div>`; price= tr.list?fmt(tr.list-m.offers.kontant)+' kr':'<mark>X kr</mark>';}
     $('summary').innerHTML=`<div class="s-img"><img src="${m.img}" alt=""></div><h3>${m.name}</h3><p class="desc" style="margin:2px 0 0;color:var(--muted);font-size:14px">${tr?tr.t:''}</p>
       <dl>${rows}${price?`<div><dt>Ditt pris</dt><dd class="bigp">${price}</dd></div>`:''}</dl>
-      <p class="fine-s">${k==='leasing'?'Privatleasing via Santander. Begränsat antal bilar.':'Kampanjen gäller nybeställning t.o.m. '+DEADLINE_FULL+'.'} Slutligt pris bekräftas av återförsäljaren.</p>`;
+      <p class="fine-s">${k==='leasing'?'Privatleasing via Santander. Begränsat antal bilar. ':''}Kampanjen gäller nybeställning t.o.m. ${DEADLINE_FULL}. Slutligt pris bekräftas av återförsäljaren.</p>`;
     $('dealer-sees').innerHTML=`<b>Återförsäljaren får se:</b> ${m.name}${tr?' '+tr.t:''}, ${k==='offert'?'prisförfrågan':offerName[k].toLowerCase()}${k==='billan'?` med ${qD.value} % insats och ${qR.value} % restvärde`:extra}${k==='foretag'&&$('q-org').value?` för ${esc($('q-org').value)}`:''}, samt att förfrågan kom från erbjudandesidan.`;
   }
   qM.addEventListener('change',()=>{start.fl=null;fillOffer(qO.value);sum()});
@@ -2162,7 +2162,7 @@ function ftgPage(pre){
             <div><dt>Förmånsvärde netto</dt><dd id="f-fv"></dd></div>
           </dl>
           <div class="ctas"><a class="btn btn-dark" id="f-apply" href="#">Begär företagsoffert</a></div>
-          <p class="fine-s">Exempel. Ränta ${(FINLEASE.rate*100).toFixed(2).replace('.',',')} %. Sedvanlig kreditprövning. Förmånsvärde vid 50 % marginalskatt.</p>
+          <p class="fine-s">Exempel. Rörlig ränta ${(FINLEASE.rate*100).toFixed(2).replace('.',',')} % via Santander. Sedvanlig kreditprövning. Förmånsvärde vid 50 % marginalskatt.</p>
         </div>
       </div>
     </div></section>
@@ -2197,7 +2197,7 @@ function ftgPage(pre){
       <div class="faq">${faq.map(([q,x])=>`<details><summary>${q}</summary><p>${x}</p></details>`).join('')}</div></div></section>
 
     <section class="fine"><div class="wrap"><h2>Villkor</h2>
-      <p><b>Finansiell leasing:</b> räkneexempel med ${FINLEASE.months} månaders löptid, förhöjd första hyra och restvärde i procent av priset exkl. moms. Kampanjränta ${(FINLEASE.rate*100).toFixed(2).replace('.',',')} %. Slutliga villkor enligt finansbolagets offert. Sedvanlig kreditprövning.</p>
+      <p><b>Finansiell leasing</b> via Santander Consumer Bank. Rörlig ränta ${(FINLEASE.rate*100).toFixed(2).replace('.',',')} %, gäller alla modeller. Räkneexempel med ${FINLEASE.months} månaders löptid, förhöjd första hyra och restvärde i procent av priset exkl. moms. Sedvanlig kreditprövning. Gäller nybeställning t.o.m. ${DEADLINE_FULL}.</p>
       <p><b>Business Lease</b> (operationell leasing) via Ayvens: 36 månader, service och försäkring ingår. Priser exkl. moms. Tillval tillkommer per månad. Gäller nybeställning t.o.m. ${DEADLINE_FULL}, begränsat antal.</p>
       <p><b>Förmånsvärde</b> beräknat netto vid 50 % marginalskatt.</p>
     </div></section>`;
