@@ -801,6 +801,77 @@
     .steps .ctas{justify-content:center;width:100%}
     .steps .ctas .btn-ghost{display:none}
   }
+
+  /* ---------- konfigurator (samma upplägg som byd.com/se/konfiguration) ---------- */
+  .cfg{display:grid;grid-template-columns:minmax(0,1fr) 480px;margin-top:-76px;background:#fff}
+  .cfg-stage{position:sticky;top:0;height:100vh;background:#e9edf1;overflow:hidden}
+  .gal{position:relative;height:100%}
+  .gal-track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+  .gal-track::-webkit-scrollbar{display:none}
+  .gal-track img{flex:0 0 100%;width:100%;height:100%;object-fit:cover;scroll-snap-align:center}
+  .gal-arr{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:0;background:rgba(255,255,255,.9);display:grid;place-items:center;cursor:pointer;z-index:2}
+  .gal-arr.prev{left:28px}.gal-arr.next{right:28px}
+  .gal-dots{position:absolute;left:0;right:0;bottom:120px;display:flex;justify-content:center;gap:8px;z-index:2}
+  .gal-dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.6)}
+  .gal-dots i.on{background:#fff;width:18px;border-radius:999px}
+  .cfg-panel{padding:108px 24px 150px 22px}
+  .cfg-panel h1{font-size:32px;text-transform:none;margin:0 0 6px;color:var(--ink)}
+  .cfg-tag{color:var(--muted);font-weight:500;margin:0 0 34px}
+  .cfg-panel h2{font-size:20px;margin:0 0 16px;color:var(--ink)}
+  .cfg-ver{display:block;width:100%;text-align:left;background:#fff;border:2px solid var(--line);border-radius:10px;padding:18px 16px;margin-bottom:12px;cursor:pointer;font:inherit;color:var(--text)}
+  .cfg-ver[aria-pressed="true"]{border-color:var(--ink)}
+  .cfg-ver .top{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+  .cfg-ver b{font-size:17px;color:var(--ink)}
+  .cfg-ver .top span{font-weight:600;color:var(--ink);white-space:nowrap}
+  .cfg-ver ul{list-style:none;margin:12px 0 0;padding:0;font-size:14px;line-height:1.55;display:none}
+  .cfg-ver[aria-pressed="true"] ul{display:block}
+  .cfg-ver li{padding-left:14px;position:relative}
+  .cfg-ver li::before{content:"";position:absolute;left:0;top:.6em;width:5px;height:5px;border-radius:50%;background:var(--ink)}
+  .cfg-build{margin-top:44px}
+  .cfg-sec{margin-bottom:30px}
+  .cfg-sec h3{font-size:16px;font-weight:600;background:#f4f5f6;border-radius:12px;padding:10px 14px;margin:0 0 14px;color:var(--ink)}
+  .cfg-sec .gal{display:none}
+  .cfg-sw{display:flex;flex-wrap:wrap;gap:12px;padding:0 6px}
+  .cfg-sw button{width:46px;height:46px;border-radius:50%;border:2px solid transparent;padding:3px;background:none;cursor:pointer}
+  .cfg-sw button[aria-pressed="true"]{border-color:var(--ink)}
+  .cfg-sw img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
+  .cfg-pick{display:flex;justify-content:space-between;gap:12px;padding:12px 8px 0;font-size:14.5px}
+  .cfg-pick b{color:var(--ink)}
+  .cfg-more{display:inline-block;margin:6px 8px 0;font-weight:600;color:#2b4fb8;text-decoration:none;font-size:14.5px}
+  .cfg-bar{position:fixed;left:24px;right:24px;bottom:18px;z-index:40;display:flex;align-items:center;gap:22px;padding:16px 22px 16px 40px;border-radius:999px;background:rgba(255,255,255,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 6px 30px rgba(0,0,0,.14)}
+  .cfg-bar .who{margin-right:auto}
+  .cfg-bar .who b{display:block;font-size:22px;color:var(--ink);line-height:1.15}
+  .cfg-bar .who span{color:var(--muted);font-size:14px;font-weight:500}
+  .cfg-bar .sum b{display:block;font-size:20px;color:var(--ink);white-space:nowrap}
+  .cfg-bar .sum span{font-size:12.5px;color:var(--muted);white-space:nowrap}
+  .cfg-bar .note{font-size:11px;line-height:1.5;max-width:300px;margin:0}
+  .cfg-bar .btn{white-space:nowrap}
+  .cfg-sumlist{border-top:1px solid var(--line);margin:0 0 20px}
+  .cfg-sumlist div{display:flex;justify-content:space-between;gap:16px;padding:13px 2px;border-bottom:1px solid var(--line);font-size:15px}
+  .cfg-sumlist dt{color:var(--muted)}.cfg-sumlist dd{margin:0;text-align:right;color:var(--ink);font-weight:600}
+  .cfg-sumlist small{display:block;font-weight:400;color:var(--muted)}
+  .cfg-total{display:flex;justify-content:space-between;align-items:baseline;margin:0 0 6px}
+  .cfg-total b{font-size:28px;color:var(--ink)}
+  .cfg-acts{display:grid;gap:10px;margin-top:22px}
+  .cfg-acts .btn{text-align:center;justify-content:center}
+  @media (max-width:960px){
+    .cfg{display:block;margin-top:0}
+    .cfg-stage{position:relative;height:auto;aspect-ratio:4/3;margin:0 12px;border-radius:14px}
+    .cfg-stage .gal-arr{display:none}.cfg-stage .gal-dots{bottom:12px}
+    .cfg-panel{padding:22px 12px 190px}
+    .cfg-head{padding:18px 12px 14px}
+    .cfg-panel h1,.cfg-head h1{font-size:24px;margin:0 0 4px;text-transform:none}
+    .cfg-tag{margin-bottom:0}
+    .cfg-deskhead{display:none}
+    .cfg-sec .gal{display:block;aspect-ratio:4/3;height:auto;border-radius:14px;overflow:hidden;margin-bottom:14px;background:#e9edf1}
+    .cfg-sec .gal-arr{display:none}.cfg-sec .gal-dots{bottom:10px}
+    .cfg-bar{left:0;right:0;bottom:0;border-radius:0;display:grid;grid-template-columns:1fr auto;gap:8px 12px;padding:12px 16px 14px;background:rgba(250,250,250,.96)}
+    .cfg-bar .who{display:none}
+    .cfg-bar .note{grid-column:1/-1;max-width:none;border-bottom:1px solid var(--line);padding-bottom:10px}
+    .cfg-bar .btn{grid-column:1/-1;text-align:center;justify-content:center;padding:14px}
+    .cfg-bar .sum{grid-column:1/-1;display:flex;justify-content:space-between;align-items:baseline}
+  }
+  @media (min-width:961px){ .cfg-head{display:none} }
   @media (max-width:960px){ .pk-sum:not(:has(img)){display:none} }
 </style>
 </head>
@@ -1791,11 +1862,78 @@ function byggPage(m){
   return `<header class="hero light"><div class="wrap">
       <nav class="crumbs" aria-label="Brödsmulor"><a href="#/erbjudanden">Erbjudanden</a><i>/</i><a href="#/modell/${m.id}">${m.name}</a><i>/</i><span aria-current="page">Bygg din bil</span></nav>
       <div class="hero-split"><div><h1>Bygg din ${m.name.replace('BYD ','')}</h1>
-        <p class="lead">Här öppnas konfiguratorn för modellen, med färg, fälgar och tillval. <mark>Länka till befintlig konfigurator.</mark></p>
+        <p class="lead">Den här modellen har ingen konfigurator på byd.com/se ännu. Begär en offert så hjälper din handlare dig med färg och utrustning.</p>
         <div class="ctas"><a class="btn btn-dark" href="#/ansok/${m.id}/${Object.keys(m.offers)[0]||'offert'}/0">Begär offert</a><a class="btn btn-line" href="#/modell/${m.id}">Tillbaka till erbjudanden</a></div></div>
         <img src="${m.img}" alt="${m.name}"></div></div></header><div style="height:72px"></div>`;
 }
 
+/* ---------- Konfigurator: data från byd.com (cfg-data.js), samma val och bilder som originalet ---------- */
+const CFG_IMG='media/cfg/';
+const cfgState={};
+function loadCfg(cb){ if(window.CFG) return cb(); const sc=document.createElement('script'); sc.src='cfg-data.js'; sc.onload=cb; sc.onerror=cb; document.head.appendChild(sc); }
+const cfgKr=n=>fmt(n)+' kr';
+const cfgSku=(v,st)=>{ const ks=Object.keys(v.s), hit=(c,i,w)=>ks.find(k=>{const [a,b,d]=k.split('$'); return a===c && (i==null||b===i) && (w==null||(d||'').split('+')[0]===w);});
+  return hit(st.c,st.i,st.w)||hit(st.c,st.i,null)||hit(st.c,null,null)||ks[0]; };
+function cfgSync(v,st){ const k=cfgSku(v,st), [c,i,w]=k.split('$'); st.c=c; st.i=i; st.w=(v.w.find(x=>x.k===(w||'').split('+')[0])||v.w[0]).k; return v.s[k]; }
+const cfgGal=(list,key)=>`<div class="gal" data-gal="${key}"><div class="gal-track">${list.map((x,n)=>`<img src="${CFG_IMG}${MOBILE_MQ.matches&&x[1]?x[1]:x[0]}" alt="" ${n?'loading="lazy"':''}>`).join('')}</div>
+  ${list.length>1?`<button class="gal-arr prev" type="button" aria-label="Föregående bild"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2"><path d="M15 5l-7 7 7 7"/></svg></button><button class="gal-arr next" type="button" aria-label="Nästa bild"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg></button><div class="gal-dots">${list.map((_,n)=>`<i class="${n?'':'on'}"></i>`).join('')}</div>`:''}</div>`;
+function cfgPage(m){
+  const vs=window.CFG[m.id], st=cfgState[m.id]||(cfgState[m.id]={v:0,focus:'v',step:1}), v=vs[st.v];
+  if(!st.c){ st.c=(v.c.find(x=>!x.p)||v.c[0]).k; st.i=null; st.w=null; }
+  if(!v.c.some(x=>x.k===st.c)) st.c=(v.c.find(x=>!x.p)||v.c[0]).k;
+  const sku=cfgSync(v,st), col=v.c.find(x=>x.k===st.c), inn=v.in.find(x=>x.k===st.i)||v.in[0], whl=v.w.find(x=>x.k===st.w)||v.w[0];
+  const tr=m.trims.find(t=>v.n.toLowerCase().startsWith(t.t.toLowerCase())), ti=tr?m.trims.indexOf(tr):0, lease=tr&&tr.lease?tr.lease[0]:0;
+  const stageList={v:v.im.length?v.im:sku.c, c:sku.c, i:sku.i.length?sku.i:sku.c, w:sku.w.length?sku.w:sku.c}[st.step===2?'c':st.focus];
+  const opt=(o)=>o.p?'+'+cfgKr(o.p):'Ingår';
+  const sw=(list,cur,kind)=>`<div class="cfg-sw">${list.map(o=>`<button type="button" data-cfg="${kind}" data-k="${o.k}" aria-pressed="${o.k===cur}" aria-label="${o.n}" title="${o.n}"><img src="${CFG_IMG}${o.i}" alt=""></button>`).join('')}</div>`;
+  const okFor=(kind,k)=>Object.keys(v.s).some(key=>{const [a,b,d]=key.split('$'); return kind==='i'?(a===st.c&&b===k):true;});
+  const head=`<h1>${m.name}</h1><p class="cfg-tag">${m.desc}</p>`;
+  const build=`<h2>Välj en version</h2>
+    ${vs.map((x,n)=>`<button type="button" class="cfg-ver" data-cfg="v" data-k="${n}" aria-pressed="${n===st.v}"><span class="top"><b>${x.n}</b><span>${cfgKr(x.p)}</span></span><ul>${x.t.map(t=>`<li>${t}</li>`).join('')}</ul></button>`).join('')}
+    <div class="cfg-build"><h2>Bygg din BYD</h2>
+      <div class="cfg-sec"><h3>Färg</h3>${cfgGal(sku.c,'c')}${sw(v.c,st.c,'c')}<div class="cfg-pick"><b>${col.n}</b><span>${opt(col)}</span></div></div>
+      <div class="cfg-sec"><h3>Interiör</h3>${cfgGal(sku.i.length?sku.i:sku.c,'i')}${sw(v.in.filter(o=>okFor('i',o.k)),inn.k,'i')}<div class="cfg-pick"><b>${inn.n}</b><span>${opt(inn)}</span></div></div>
+      <div class="cfg-sec"><h3>Fälgar</h3>${cfgGal(sku.w.length?sku.w:sku.c,'w')}${sw(v.w,whl.k,'w')}<div class="cfg-pick"><b>${whl.n}</b><span>${opt(whl)}</span></div></div>
+      <a class="cfg-more" href="#/modell/${m.id}">Upptäck bildetaljer ›</a></div>`;
+  const summary=`<h2>Sammanfattning</h2>
+    <dl class="cfg-sumlist">
+      <div><dt>Version</dt><dd>${v.n}<small>${cfgKr(v.p)}</small></dd></div>
+      <div><dt>Färg</dt><dd>${col.n}<small>${opt(col)}</small></dd></div>
+      <div><dt>Interiör</dt><dd>${inn.n}<small>${opt(inn)}</small></dd></div>
+      <div><dt>Fälgar</dt><dd>${whl.n}<small>${opt(whl)}</small></dd></div>
+    </dl>
+    <div class="cfg-total"><span>Totalpris inkl. moms</span><b>${cfgKr(sku.p)}</b></div>
+    ${lease?`<p class="cfg-tag" style="margin:0">Privatleasing ${v.n} från ${fmt(lease)} kr/mån, 36 mån och 1 000 mil/år. Färgtillägg tillkommer.</p>`:''}
+    <div class="cfg-acts">
+      ${lease?`<a class="btn btn-dark" href="#/ansok/${m.id}/leasing/${ti}/0/0">Begär leasingoffert</a>`:''}
+      <a class="btn btn-${lease?'line':'dark'}" href="#/ansok/${m.id}/kontant/${ti}">Begär offert på köp</a>
+      <a class="btn btn-line" href="#/provkorning/${m.id}">Boka provkörning</a>
+      <button type="button" class="btn btn-ghost" data-cfg="back" style="color:var(--ink);border-color:var(--line)">Ändra dina val</button>
+    </div>`;
+  return `<div class="cfg" data-id="${m.id}">
+    <div class="cfg-head">${head}</div>
+    <div class="cfg-stage">${cfgGal(stageList,'stage')}</div>
+    <div class="cfg-panel"><div class="cfg-deskhead">${head}</div>${st.step===2?summary:build}</div>
+    <div class="cfg-bar"><div class="who"><b>${m.name}</b><span>${m.desc}</span></div>
+      <div class="sum"><b>${cfgKr(sku.p)}</b><span>${lease?`eller privatleasing från ${fmt(lease)} kr/mån`:v.n}</span></div>
+      <p class="note">Leveranstider varierar beroende på tillgänglighet. Kontakta en BYD-återförsäljare för mer information.</p>
+      ${st.step===2?`<a class="btn btn-dark" href="#/ansok/${m.id}/${lease?'leasing':'kontant'}/${ti}${lease?'/0/0':''}">Begär offert</a>`:`<button type="button" class="btn btn-dark" data-cfg="next">Nästa – Sammanfattning</button>`}</div>
+  </div>`;
+}
+function bindCfg(m){
+  const root=document.getElementById('info-view'), st=cfgState[m.id];
+  const render=keep=>{ const y=window.scrollY; root.innerHTML=cfgPage(m); bindGals(); if(keep) window.scrollTo({top:y,behavior:'instant'}); else window.scrollTo({top:0,behavior:'instant'}); };
+  const bindGals=()=>root.querySelectorAll('.gal').forEach(g=>{ const t=g.querySelector('.gal-track'), dots=[...g.querySelectorAll('.gal-dots i')];
+    const idx=()=>Math.round(t.scrollLeft/Math.max(1,t.clientWidth));
+    t.addEventListener('scroll',()=>dots.forEach((d,n)=>d.classList.toggle('on',n===idx())),{passive:true});
+    g.querySelectorAll('.gal-arr').forEach(b=>b.addEventListener('click',()=>{ const n=t.children.length, to=(idx()+(b.classList.contains('next')?1:-1)+n)%n; t.scrollTo({left:to*t.clientWidth,behavior:'smooth'}); })); });
+  if(!root._cfg){ root._cfg=true; root.addEventListener('click',e=>{ const b=e.target.closest('[data-cfg]'); if(!b||!root.querySelector('.cfg')) return;
+    const mm=byId(root.querySelector('.cfg').dataset.id), s=cfgState[mm.id], k=b.dataset.cfg;
+    if(k==='v'){ s.v=+b.dataset.k; s.focus='v'; } else if(k==='c'){ s.c=b.dataset.k; s.focus='c'; } else if(k==='i'){ s.i=b.dataset.k; s.focus='i'; } else if(k==='w'){ s.w=b.dataset.k; s.focus='w'; }
+    else if(k==='next'){ s.step=2; } else if(k==='back'){ s.step=1; s.focus='c'; }
+    const y=window.scrollY; root.innerHTML=cfgPage(mm); bindCfg(mm); window.scrollTo({top:(k==='next'||k==='back')?0:y,behavior:'instant'}); }); }
+  bindGals();
+}
 
 /* ---------- Startsida ---------- */
 const slides=[
@@ -2195,8 +2333,9 @@ function route(){
     document.getElementById('info-view').innerHTML=infoPage(a); show('info',infoPages[a].sec);
     document.title=infoPages[a].title+' | BYD'; window.scrollTo({top:0,behavior:'instant'});
   } else if(view==='bygg' && byId(a)){
-    document.getElementById('info-view').innerHTML=byggPage(byId(a)); show('info','Modeller');
-    document.title='Bygg din bil | BYD'; window.scrollTo({top:0,behavior:'instant'});
+    const bm=byId(a); document.getElementById('info-view').innerHTML=byggPage(bm); show('info','Modeller');
+    document.title='Bygg din '+bm.name.replace('BYD ','')+' | BYD'; window.scrollTo({top:0,behavior:'instant'});
+    loadCfg(()=>{ if(window.CFG && window.CFG[bm.id] && location.hash.startsWith('#/bygg/'+bm.id)){ if(cfgState[bm.id]) cfgState[bm.id].step=1; document.getElementById('info-view').innerHTML=cfgPage(bm); bindCfg(bm); window.scrollTo({top:0,behavior:'instant'}); } });
   } else if(view==='foretag'){
     document.getElementById('ftg-view').innerHTML=ftgPage(qs.get('modell')); bindFtg(); show('foretag','Erbjudanden');
     document.title='Företag | BYD'; window.scrollTo({top:0,behavior:'instant'});
