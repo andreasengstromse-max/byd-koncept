@@ -544,6 +544,98 @@
   }
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
+  /* ---------- privatleasing: versionstrappa ---------- */
+  .ladder{list-style:none;margin:26px 0 0;padding:0;display:flex;align-items:stretch}
+  .lad-card{flex:1 1 0;min-width:0;background:#fff;border-radius:var(--r-md);padding:20px 16px 18px;display:flex;flex-direction:column;gap:2px}
+  .ladder.one .lad-card{flex:0 1 320px}
+  .lad-name{font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .lad-card b{font-size:clamp(18px,1.6vw,23px);line-height:1.25;color:var(--ink);letter-spacing:-.01em;white-space:nowrap}
+  .lad-card small{font-size:13px;color:var(--muted)}
+  .lad-card a{margin-top:auto;padding-top:12px;font-size:13.5px;font-weight:600;color:var(--ink)}
+  .lad-step{flex:0 0 128px;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:0 10px;text-align:center}
+  .lad-step::before{content:"";position:absolute;left:0;right:0;top:50%;border-top:2px dashed #c5cad1}
+  .lad-plus{position:relative;background:var(--ink);color:#fff;border-radius:999px;padding:6px 12px;font-weight:700;font-size:13.5px;white-space:nowrap}
+  .lad-gain{position:relative;background:var(--page);font-size:12.5px;line-height:1.35;color:var(--text);padding:2px 4px;max-width:120px}
+  .sub-h{font-size:18px;color:var(--ink);margin:40px 0 14px}
+  #privatleasing .ptable td small{font-size:12px}
+  @media (max-width:960px){
+    .ladder{flex-direction:column}
+    .lad-card,.ladder.one .lad-card{flex:none;flex-direction:row;flex-wrap:wrap;align-items:baseline;column-gap:12px;padding:14px 16px}
+    .lad-name{flex:1 0 100%}
+    .lad-card small{flex:1 0 100%;order:3}
+    .lad-card a{margin-left:auto;padding-top:0}
+    .lad-step{flex:none;flex-direction:row;justify-content:flex-start;align-items:center;gap:12px;padding:12px 0 12px 14px;text-align:left}
+    .lad-step::before{left:28px;right:auto;top:0;bottom:0;border-top:0;border-left:2px dashed #c5cad1}
+    .lad-gain{max-width:none}
+  }
+
+  /* ---------- privatleasing: landningssida ---------- */
+  .pl-hero{position:relative;margin-top:-76px;height:min(46vw,460px);min-height:260px;overflow:hidden;background:#dfe4ea}
+  .pl-crumbs{background:#fff;border-bottom:1px solid var(--line)}
+  .pl-crumbs .crumbs{margin:0;padding:14px 0}
+  .pl-intro{background:#fff;padding:56px 0 64px;text-align:center}
+  .pl-intro .wrap{max-width:760px}
+  .pl-intro h1{margin-bottom:14px}
+  .pl-intro p{color:var(--muted);font-size:16.5px;margin:0 0 16px}
+  .pl-intro .pl-q{color:var(--ink);font-weight:700}
+  .pl-intro p b{color:var(--ink)}
+  .pl-intro .btn{margin-top:12px}
+  .pl-offers{background:#fff;padding-top:56px}
+  .pl-offers h2.title{text-align:center;margin-bottom:26px}
+  .pl-chips{display:flex;gap:8px;flex-wrap:wrap;padding-bottom:22px}
+  .pl-chips button{border:0;background:var(--page);border-radius:999px;padding:9px 16px;font:inherit;font-size:14px;font-weight:600;color:var(--text);cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+  .pl-chips button span{background:#fff;border-radius:999px;font-size:12px;padding:1px 7px}
+  .pl-chips button[aria-pressed="true"]{background:var(--ink);color:#fff}
+  .pl-chips button[aria-pressed="true"] span{background:#3a3d42;color:#fff}
+  .pl-band{background:var(--page);padding:44px 0 64px}
+  .pl-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+  .plc{background:#fff;border-radius:var(--r-lg);padding:22px 22px 20px;display:flex;flex-direction:column;align-items:center;text-align:center}
+  .plc[hidden]{display:none}
+  .plc-img{display:block;width:100%;border-radius:16px;overflow:hidden;aspect-ratio:16/9;background:#dfe4ea;margin-bottom:16px}
+  .plc-img img{width:100%;height:100%;object-fit:cover;display:block}
+  .plc-price{margin:0 0 6px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:4px 8px}
+  .plc-price b{font-size:26px;color:var(--ink);letter-spacing:-.01em;white-space:nowrap}
+  .plc-price sup{font-size:.5em}
+  .plc-price span{font-size:12.5px;color:var(--muted)}
+  .plc h3{margin:2px 0 2px;font-size:21px;color:var(--ink);line-height:1.2}
+  .plc-desc{margin:0 0 16px;font-size:14px;color:var(--muted)}
+  .plc-btns{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:14px}
+  .plc-trims{margin:auto 0 0;font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;width:100%}
+  .pl-split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .pl-split .sub{font-size:16px;margin-top:14px}
+  .pl-split .sub b{color:var(--ink)}
+  .pl-split .ticks{margin-top:18px}
+  .pl-split .ticks b{color:var(--ink)}
+  .pl-img{border-radius:var(--r-lg);overflow:hidden;aspect-ratio:3/2;background:#dfe4ea;box-shadow:0 12px 32px rgba(20,30,45,.12)}
+  .pl-img img{width:100%;height:100%;object-fit:cover;display:block}
+  .pl-how{background:#fff;border-radius:var(--r-lg);padding:44px 40px;text-align:center}
+  .pl-how ol{list-style:none;margin:30px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;text-align:left}
+  .pl-how li{background:var(--page);border-radius:var(--r-md);padding:24px}
+  .pl-how .n{width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:700;margin-bottom:14px}
+  .pl-how h3{margin:0 0 8px;font-size:17px;color:var(--ink)}
+  .pl-how p{margin:0 0 8px;font-size:14.5px;color:var(--muted)}
+  @media (max-width:960px){
+    .pl-grid{grid-template-columns:1fr 1fr}
+    .pl-split{grid-template-columns:1fr;gap:24px}
+    .pl-split.rev .pl-img{order:-1}
+    .pl-how ol{grid-template-columns:1fr}
+  }
+  @media (max-width:600px){
+    .pl-hero{height:240px;min-height:0}
+    .pl-intro{padding:36px 0 40px}
+    .pl-intro p{font-size:15px}
+    .pl-offers{padding-top:40px}
+    .pl-chips{flex-wrap:nowrap;overflow-x:auto;margin:0 -16px;padding:0 16px 18px;scrollbar-width:none}
+    .pl-chips button{flex:none}
+    .pl-band{padding:24px 0 40px}
+    .pl-grid{grid-template-columns:1fr;gap:14px}
+    .plc{padding:16px 16px 16px}
+    .plc-price b{font-size:22px}
+    .plc h3{font-size:18px}
+    .pl-how{padding:28px 18px}
+    .pl-split .sub{font-size:15px}
+  }
+
   /* ---------- mobil: lugnare typografi och mindre trängsel ---------- */
   @media (max-width:600px){
     body{font-size:15px}
@@ -635,6 +727,7 @@
     <div class="panel" id="p-erbj">
       <div class="panel-head"><h2>Erbjudanden</h2></div>
       <div class="lgrid">
+        <a class="lcard" href="#/privatleasing"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 12h4"/></svg></span><span><b>Privatleasing</b><small>Hela BYD-familjen från 2 990 kr/mån, service ingår.</small></span></a>
         <a class="lcard" href="#/erbjudanden"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12 12 20 4 12V4h8z"/><circle cx="8.5" cy="8.5" r="1.3"/></svg></span><span><b>Alla erbjudanden</b><small>Privatleasing, billån och kontantrabatt för varje modell.</small></span></a>
         <a class="lcard" href="#/foretag"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 13h18"/></svg></span><span><b>Företag</b><small>Operationell och finansiell leasing, förmånsvärde.</small></span></a>
         <a class="lcard" href="#/provkorning"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/><path d="M12 3v6.5M4.5 15.5l5.3-2.3M19.5 15.5l-5.3-2.3"/></svg></span><span><b>Boka provkörning</b><small>Välj handlare och tid som passar dig.</small></span></a>
@@ -683,7 +776,7 @@
     <div class="dots" id="dots"></div>
   </header>
   <div class="quick home-quick"><div class="wrap"><ul>
-    <li><a href="#/erbjudanden"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12 12 20 4 12V4h8z"/><circle cx="8.5" cy="8.5" r="1.3"/></svg></span><span><small>Erbjudanden</small><h2>Privatleasing från <span style="white-space:nowrap">4 695 kr/mån</span></h2><p>Se alla kampanjer per modell och begär offert.</p></span><span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+    <li><a href="#/privatleasing"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12 12 20 4 12V4h8z"/><circle cx="8.5" cy="8.5" r="1.3"/></svg></span><span><small>Privatleasing</small><h2>Privatleasing från <span style="white-space:nowrap">2 990 kr/mån</span></h2><p>Hela BYD-familjen med service. Se vad varje version kostar.</p></span><span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
     <li><a href="#/info/super-dm"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="16" height="10" rx="2"/><path d="M8 7V5M16 7V5M9 12h6"/></svg></span><span><small>Teknik</small><h2>Super DM-teknologi</h2><p>Nästa generation av effektiva laddhybrider.</p></span><span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
     <li><a href="#/provkorning"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span><small>Återförsäljare</small><h2>Hitta en BYD-handlare</h2><p>Hitta din närmaste handlare och boka provkörning.</p></span><span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
   </ul></div></div>
@@ -708,8 +801,8 @@
   </section>
 
   <section class="steps"><div class="wrap" style="display:flex;justify-content:space-between;gap:24px;align-items:center;flex-wrap:wrap">
-    <div><h2 class="title">Privatleasa från 4 695 kr/mån</h2><p class="sub">Seal U DM-i och Seal 6 DM-i Touring. 36 månader, 1 000 mil/år, service och försäkring ingår. Gäller t.o.m. 30 november.</p></div>
-    <div class="ctas"><a class="btn btn-white" href="#/erbjudanden">Se erbjudanden</a><a class="btn btn-ghost" href="#/provkorning">Boka provkörning</a></div></div></section>
+    <div><h2 class="title">Privatleasa hela BYD-familjen från 2 990 kr/mån</h2><p class="sub">36 månader, 1 000 mil/år och ingen kontantinsats. Service ingår.</p></div>
+    <div class="ctas"><a class="btn btn-white" href="#/privatleasing">Se privatleasing</a><a class="btn btn-ghost" href="#/provkorning">Boka provkörning</a></div></div></section>
 </main>
 
 <!-- =================== ERBJUDANDEN =================== -->
@@ -720,12 +813,12 @@
       <nav class="crumbs" aria-label="Brödsmulor"><a href="#/">BYD</a><i>/</i><span aria-current="page">Erbjudanden</span></nav>
       <span class="pill-dl">Gäller nybeställning t.o.m. 30 november</span>
       <h1>Erbjudanden på hela <span style="white-space:nowrap">BYD-familjen</span></h1>
-      <p class="lead">Välj din modell och se alla dess kampanjer på ett ställe. Privatleasa från 4 695 kr/mån, 36 månader, 1 000 mil/år, service och försäkring ingår.</p>
+      <p class="lead">Välj din modell och se alla dess kampanjer på ett ställe. Privatleasa från 2 990 kr/mån i 36 månader med 1 000 mil/år och service.</p>
       <div class="ctas"><a class="btn btn-white" href="#modeller">Välj modell</a><a class="btn btn-ghost" href="#/provkorning">Boka provkörning</a></div>
     </div>
   </header>
   <div class="quick"><div class="wrap"><ul>
-    <li><a href="#/erbjudanden/leasing"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 12h4"/></svg></span><span><small>Privatleasing</small><h2>Från 4 695 kr/mån</h2><p>Ingen kontantinsats. Service och försäkring ingår.</p></span><span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+    <li><a href="#/privatleasing"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 12h4"/></svg></span><span><small>Privatleasing</small><h2>Från 2 990 kr/mån</h2><p>Ingen kontantinsats. Service ingår.</p></span><span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
     <li><a href="#/erbjudanden/billan"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5 5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg></span><span><small>Billån</small><h2>0,95 % ränta</h2><p>Rörlig ränta via Santander, 36 månader.</p></span><span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
     <li><a href="#/erbjudanden/kontant"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/></svg></span><span><small>Kontantrabatt</small><h2>20 000 kr</h2><p>På lagerbilar, så långt lagret räcker.</p></span><span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
   </ul></div></div>
@@ -793,6 +886,7 @@
 
 <!-- =================== FÖRETAG =================== -->
 <main data-view="foretag" id="ftg-view"></main>
+<main data-view="privatleasing" id="pl-view"></main>
 
 <!-- =================== INFOSIDOR =================== -->
 <main data-view="info" id="info-view"></main>
@@ -845,36 +939,43 @@ const RATE=0.0095, N=36, FEE_SETUP=592, FEE_MONTH=59;
    list = listpris, loanBase = kampanjpris för räntekampanjen, lease = privatleasing per mil/år (1 000–3 000),
    opl = operationell leasing ex. moms per mil/år, fv = förmånsvärde netto vid 50 % marginalskatt. */
 const DEADLINE='30 november', DEADLINE_FULL='30/11 2026';
-const MIL=[1000,1500,2000,2500,3000];
+/* Privatleasing via Santander, programmet 13 november 2026: 36 mån, ingen insats, service ingår. Pris per 1 000/1 500/2 000 mil/år. */
+const MIL=[1000,1500,2000], MIL_OPL=[1000,1500,2000,2500,3000];
+const PL={setup:995, avi:58, overmil:15, months:36};
 const models=[
   {id:'seal-u-dmi', name:'BYD SEAL U DM-i', cat:'hybrid', desc:'Europas mest sålda laddhybrid', keys:['Laddhybrid','SUV'],
    img:HD+'sealu-dm-i.webp', rabatt:'6–10 %',
-   tillval:{'Färgtillägg':251,'Vinterhjul friktion':697,'Vinterhjul dubb':715,'Dragkrok avtagbar':254},
-   trims:[{t:'Boost',list:469900,loanBase:459900,lease:[4795,5095,5695,6045,6595],opl:[6095,6295,6795,6995,7495],fv:2839},
-          {t:'Comfort',list:499900,loanBase:489900,lease:[4895,5195,5795,6145,6695],opl:[6395,6595,7095,7295,7795],fv:3031},
-          {t:'Design',list:529900,loanBase:519900,lease:[5595,5895,6495,6995,7595],opl:[6795,6995,7495,7695,8195],fv:3223}]},
+   tillval:{'Färgtillägg':316,'Vinterhjul friktion':616,'Vinterhjul dubb':631,'Dragkrok avtagbar':254},
+   trims:[{t:'Boost',list:469900,loanBase:459900,lease:[4190,4312,4760],el:'80 km på el',opl:[6095,6295,6795,6995,7495],fv:2839},
+          {t:'Comfort',list:499900,loanBase:489900,lease:[4290,4470,4975],gain:'125 km på el i stället för 80 km',opl:[6395,6595,7095,7295,7795],fv:3031},
+          {t:'Design',list:529900,loanBase:519900,lease:[4490,4691,5263],gain:'Fyrhjulsdrift (AWD)',opl:[6795,6995,7495,7695,8195],fv:3223}]},
   {id:'seal-6-dmi-touring', name:'BYD SEAL 6 DM-i TOURING', cat:'hybrid', desc:'En av få laddhybridkombis på marknaden', keys:['Laddhybrid','Kombi'],
    img:HD+'seal6-dm-i-touring.webp', rabatt:'6–10 %',
-   tillval:{'Färgtillägg':251,'Vinterhjul friktion':593,'Vinterhjul dubb':628,'Dragkrok avtagbar':551},
-   trims:[{t:'Boost',list:439900,loanBase:439900,lease:[4695,4995,5595,5945,6495],opl:[5795,5945,6445,6645,7145],fv:2646},
-          {t:'Comfort',list:469900,loanBase:459900,lease:[5195,5495,6095,6445,6995],opl:[6095,6295,6795,6995,7495],fv:2839}]},
+   tillval:{'Färgtillägg':316,'Vinterhjul friktion':524,'Vinterhjul dubb':554,'Dragkrok avtagbar':551},
+   trims:[{t:'Boost',list:439900,loanBase:439900,lease:[3490,3605,4061],opl:[5795,5945,6445,6645,7145],fv:2646},
+          {t:'Comfort',list:469900,loanBase:459900,lease:[3690,3819,4293],gain:'100 km på el i stället för 50 km',opl:[6095,6295,6795,6995,7495],fv:2839}]},
   {id:'sealion-7', name:'BYD SEALION 7', cat:'el', desc:'Helelektrisk SUV med sportig prestanda', keys:['Elbil','SUV'],
    img:HD+'sealion7.webp', rabatt:'4–8 %',
-   trims:[{t:'Comfort',list:569900,loanBase:569900,opl:[7295,7545,7895,8145,8645],fv:2294},
-          {t:'Excellence',list:639900,loanBase:639900,opl:[8195,8495,8895,9195,9695],fv:2742}]},
+   tillval:{'Färgtillägg':316,'Vinterhjul friktion':608,'Vinterhjul dubb':608,'Dragkrok avtagbar':485},
+   trims:[{t:'Comfort',list:569900,loanBase:569900,lease:[5990,6155,6497],opl:[7295,7545,7895,8145,8645],fv:2294},
+          {t:'Excellence',list:639900,loanBase:639900,lease:[6190,6462,6931],gain:'Fyrhjulsdrift och 530 hk, 0–100 km/h på 4,5 s',tv:{'Vinterhjul friktion':702,'Vinterhjul dubb':702},opl:[8195,8495,8895,9195,9695],fv:2742}]},
   {id:'atto-3-evo', name:'BYD ATTO 3 EVO', cat:'el', desc:'Elektrisk SUV med 510 km räckvidd', keys:['Elbil','SUV','510 km räckvidd'],
    img:HD+'atto3-evo.webp', rabatt:'4–8 %',
-   trims:[{t:'Design',list:494900,loanBase:494900,fv:2358},{t:'Excellence',list:524900,loanBase:524900,fv:2456}]},
+   tillval:{'Färgtillägg':218,'Vinterhjul friktion':524,'Vinterhjul dubb':539},
+   trims:[{t:'Design',list:494900,loanBase:494900,lease:[4290,4453,4752],fv:2358},{t:'Excellence',list:524900,loanBase:524900,lease:[4690,4921,5337],gain:'Fyrhjulsdrift (AWD)',fv:2456}]},
   {id:'atto-2', name:'BYD ATTO 2', cat:'el', desc:'Elektrisk kompakt SUV', keys:['Elbil','Kompakt SUV'],
    img:HD+'atto2.webp', rabatt:'4–8 %',
-   trims:[{t:'Comfort',list:428900,loanBase:428900,fv:2141}]},
+   tillval:{'Färgtillägg':218,'Vinterhjul friktion':432,'Vinterhjul dubb':439},
+   trims:[{t:'Comfort',list:428900,loanBase:428900,lease:[3890,4014,4313],fv:2141}]},
   {id:'atto-2-dmi', name:'BYD ATTO 2 DM-i', cat:'hybrid', desc:'Kompakt hybrid-SUV', keys:['Laddhybrid','Kompakt SUV'],
    img:HD+'atto2-dm-i.webp', rabatt:'6–10 %',
-   trims:[{t:'Boost',list:369900,loanBase:369900,fv:2242}]},
+   tillval:{'Färgtillägg':218,'Vinterhjul friktion':432,'Vinterhjul dubb':447},
+   trims:[{t:'Boost',list:369900,loanBase:369900,lease:[3490,3632,4167],fv:2242}]},
   {id:'dolphin-g-dmi', name:'BYD DOLPHIN G DM-i', cat:'hybrid', desc:'Hybridhalvkombi med lång räckvidd', keys:['Laddhybrid','Halvkombi'],
    img:HD+'dolphin-g-dm-i.webp', rabatt:'6–10 %',
-   trims:[{t:'Active',list:306900,loanBase:306900,fv:1828},{t:'Boost',list:339900,loanBase:339900,fv:2045},
-          {t:'Comfort',list:359900,loanBase:359900,fv:2177},{t:'Sport',list:369900,loanBase:369900,fv:2242}]}
+   tillval:{'Färgtillägg':218,'Vinterhjul friktion':370,'Vinterhjul dubb':386},
+   trims:[{t:'Active',list:306900,loanBase:306900,lease:[2990,3133,3655],fv:1828},{t:'Boost',list:339900,loanBase:339900,lease:[3290,3457,4003],fv:2045},
+          {t:'Comfort',list:359900,loanBase:359900,lease:[3490,3667,4223],fv:2177},{t:'Sport',list:369900,loanBase:369900,lease:[3690,3872,4433],fv:2242}]}
 ];
 const OPL_TILLVAL={'seal-u-dmi':{'Färgtillägg':201,'Vinterhjul friktion':558,'Vinterhjul dubb':572,'Dragkrok avtagbar':203},
   'seal-6-dmi-touring':{'Färgtillägg':201,'Vinterhjul friktion':474,'Vinterhjul dubb':502,'Dragkrok avtagbar':441},
@@ -953,13 +1054,138 @@ document.getElementById('menu-el').innerHTML=models.filter(m=>m.cat==='el').map(
 document.getElementById('menu-hybrid').innerHTML=models.filter(m=>m.cat==='hybrid').map(menuCard).join('');
 document.getElementById('menu-offers').innerHTML=models.map(m=>`<a href="#/modell/${m.id}">${m.name.replace('BYD ','')}</a>`).join('');
 
+/* ---------- Privatleasing: versionstrappa, miltrappa, villkor ---------- */
+const tvFor = (m,t) => ({...(m.tillval||{}), ...((t&&t.tv)||{})});
+const plTotal = v => v*PL.months + PL.avi*PL.months + PL.setup;
+function plLadder(m){
+  const ts=m.trims.filter(t=>t.lease); if(!ts.length) return '';
+  const one=ts.length===1;
+  const items=ts.map((t,i)=>{
+    const prev=ts[i-1];
+    const step=prev?`<li class="lad-step"><span class="lad-plus">+${fmt(t.lease[0]-prev.lease[0])}\u00a0kr/mån</span><span class="lad-gain">${t.gain||'<mark>Fyll i vad som tillkommer</mark>'}</span></li>`:'';
+    return step+`<li class="lad-card"><span class="lad-name">${t.t}</span><b>${fmt(t.lease[0])}\u00a0kr/mån</b>${t.el?`<small>${t.el}</small>`:''}<a href="#/ansok/${m.id}/leasing/${m.trims.indexOf(t)}/0/0">Begär offert</a></li>`;
+  }).join('');
+  const tv=tvFor(m,ts[0]);
+  const tvTxt=Object.entries(tv).map(([k,v])=>`${k.toLowerCase()} ${fmt(v)}\u00a0kr`).join(', ');
+  return `<section class="block" id="privatleasing" style="padding-bottom:0"><div class="wrap">
+    <h2 class="title">${one?'Privatleasing':'Vad kostar nästa version?'}</h2>
+    <p class="sub">Privatleasing i 36 månader med 1 000 mil/år och ingen kontantinsats. Service ingår.${one?` ${m.name.replace('BYD ','')} finns i en version i Sverige.`:' Så här mycket mer kostar varje steg uppåt.'}</p>
+    <ol class="ladder${one?' one':''}">${items}</ol>
+    <h3 class="sub-h">Kör du mer än 1 000 mil om året?</h3>
+    <div class="ptable"><table><thead><tr><th>Version</th>${MIL.map(v=>`<th>${fmt(v)}\u00a0mil/år</th>`).join('')}</tr></thead><tbody>
+      ${ts.map(t=>`<tr><td><b>${t.t}</b></td>${t.lease.map((v,i)=>`<td><b>${fmt(v)}\u00a0kr/mån</b>${i?`<small>+${fmt(v-t.lease[0])}\u00a0kr mot 1\u00a0000 mil</small>`:''}</td>`).join('')}</tr>`).join('')}
+    </tbody></table></div>
+    <p class="note">Kör du längre än avtalet kostar övermil ${PL.overmil}\u00a0kr/mil. Tillval per månad: ${tvTxt}${tv['Dragkrok avtagbar']?'':'. Dragkrok kommer senare'}.</p>
+  </div></section>`;
+}
+function plTerms(m){
+  const ts=m.trims.filter(t=>t.lease), t0=ts[0];
+  return `<p><b>Privatleasing</b> via Santander Consumer Bank. 36 månader, 1\u00a0000 mil/år och ingen kontantinsats. Service ingår, försäkring ingår inte. Priser inkl. moms. Uppläggningsavgift ${PL.setup}\u00a0kr och aviavgift ${PL.avi}\u00a0kr/mån tillkommer. Övermil ${PL.overmil}\u00a0kr/mil. Fler mil och tillval ger en annan månadskostnad. Månadskostnaden följer en rörlig ränta och kan ändras under avtalstiden. Sedvanlig kreditprövning. Begränsat antal bilar. Exempel: ${m.name} ${t0.t}, ${fmt(t0.lease[0])}\u00a0kr/mån, totalt ${fmt(plTotal(t0.lease[0]))}\u00a0kr under avtalstiden inklusive avgifter.</p>`;
+}
+function plPage(){
+  const evs=models.filter(m=>m.cat==='el').length, hy=models.filter(m=>m.cat==='hybrid').length;
+  const order=[...models].sort((a,b)=>minLease(a)-minLease(b));
+  const card=m=>{ const ts=m.trims.filter(t=>t.lease);
+    return `<article class="plc" data-cat="${m.cat}">
+      <a class="plc-img" href="#/modell/${m.id}?till=privatleasing" tabindex="-1" aria-hidden="true"><img src="${m.img}" alt="" loading="lazy"></a>
+      <p class="plc-price"><b>${fmt(minLease(m))}\u00a0kr/mån<sup>1</sup></b><span>36 mån · 1\u00a0000 mil/år · privatleasing</span></p>
+      <h3>${m.name}</h3><p class="plc-desc">${m.desc}</p>
+      <div class="plc-btns"><a class="btn btn-dark btn-sm" href="#/modell/${m.id}?till=privatleasing">Se versioner och priser</a><a class="btn btn-line btn-sm" href="#/ansok/${m.id}/leasing/0/0/0">Begär offert</a></div>
+      <p class="plc-trims">${ts.map(t=>`${t.t} ${fmt(t.lease[0])}`).join(' · ')}\u00a0kr/mån</p>
+    </article>`; };
+  const ex=order.map(m=>{ const t=m.trims.filter(x=>x.lease)[0]; return `${m.name} ${t.t}: ${fmt(t.lease[0])}\u00a0kr/mån, totalt ${fmt(plTotal(t.lease[0]))}\u00a0kr.`; }).join(' ');
+  const faq=[
+    ['Vad ingår i månadskostnaden?','Bilen och service under hela avtalet. Försäkring ingår inte, den tecknar du själv. Halvförsäkring räcker, eftersom bilen har vagnskadegaranti i tre år.'],
+    ['Hur lång är avtalstiden?','36 månader.'],
+    ['Hur långt får jag köra?','Du väljer 1\u00a0000, 1\u00a0500 eller 2\u00a0000 mil per år. Kör du längre än avtalet kostar övermil 15\u00a0kr per mil.'],
+    ['Behöver jag betala en kontantinsats?','Nej. Det går inte heller att betala en förhöjd första hyra för att sänka månadskostnaden.'],
+    ['Vilka avgifter tillkommer?','En uppläggningsavgift på 995\u00a0kr när avtalet startar och en aviavgift på 58\u00a0kr per månad.'],
+    ['Är månadskostnaden fast?','Nej. Santander tillämpar rörlig ränta, så månadskostnaden kan ändras under avtalstiden.'],
+    ['Kan jag lägga till vinterhjul och andra tillval?','Ja. Färgtillägg och vinterhjul finns för alla modeller och läggs på månadskostnaden. Dragkrok finns på Seal 6 DM-i Touring, Seal U DM-i och Sealion 7.'],
+    ['Får någon annan än jag köra bilen?','Ja. Det regleras av bilens försäkring.'],
+    ['Vad händer när avtalet tar slut?','Du lämnar tillbaka bilen hos handlaren och kan välja en ny BYD. Vill du behålla bilen har återförsäljaren förtur att köpa den och kan då sälja den vidare till dig.']
+  ];
+  return `<header class="pl-hero"><img class="hero-img" src="media/byd-site/eu-v3/homepage/pc/herobannner/seal6-dm-i-touring.webp" alt="" aria-hidden="true"></header>
+  <div class="pl-crumbs"><div class="wrap"><nav class="crumbs" aria-label="Brödsmulor"><a href="#/">BYD</a><i>/</i><a href="#/erbjudanden">Erbjudanden</a><i>/</i><span aria-current="page">Privatleasing</span></nav></div></div>
+  <section class="pl-intro"><div class="wrap">
+    <h1>Privatleasing</h1>
+    <p class="pl-q">Funderar du på hur du ska skaffa din nästa BYD?</p>
+    <p>Med privatleasing kör du en ny <b>elbil</b> eller <b>laddhybrid</b> för en månadskostnad, utan kontantinsats och med service inräknad. Hela BYD-familjen finns från 2\u00a0990\u00a0kr/mån.</p>
+    <p>Nedan ser du vad varje modell kostar, vad nästa version kostar och hur privatleasing fungerar, så att det blir lätt att välja.</p>
+    <a class="btn btn-dark" href="#pl-modeller">Se erbjudandena</a>
+  </div></section>
+  <section class="pl-offers" id="pl-modeller"><div class="wrap">
+    <h2 class="title">Aktuella privatleasingerbjudanden</h2>
+    <div class="pl-chips" role="group" aria-label="Filtrera modeller">
+      <button type="button" aria-pressed="true" data-f="alla">Alla modeller <span>${models.length}</span></button>
+      <button type="button" aria-pressed="false" data-f="el">Elbilar <span>${evs}</span></button>
+      <button type="button" aria-pressed="false" data-f="hybrid">Laddhybrider <span>${hy}</span></button>
+    </div>
+  </div>
+  <div class="pl-band"><div class="wrap"><div class="pl-grid">${order.map(card).join('')}</div></div></div></section>
+  <section class="block"><div class="wrap"><div class="pl-split">
+    <div class="pl-img"><img src="media/byd-site/super-dm/benefit.jpg" alt="" loading="lazy"></div>
+    <div><h2 class="title">Vad är privatleasing?</h2>
+      <p class="sub"><b>Privatleasing är ett enkelt sätt att köra en ny bil utan att köpa den.</b> Du betalar en månadskostnad under 36 månader och lämnar sedan tillbaka bilen. Det finns ingen kontantinsats och service ingår.</p>
+      <p class="sub">Månadskostnaden beror på modell, version och hur långt du kör. Du väljer 1\u00a0000, 1\u00a0500 eller 2\u00a0000 mil per år. Kör du längre än avtalet tillkommer en kostnad för övermil.</p></div>
+  </div></div></section>
+  <section class="block" style="padding-top:0"><div class="wrap"><div class="pl-how">
+    <h2 class="title">Så fungerar privatleasing hos BYD</h2>
+    <p class="sub">Det är enkelt att privatleasa en BYD, och du gör det i tre steg.</p>
+    <ol>
+      <li><span class="n">1</span><h3>Välj din BYD</h3><p>Välj modell, version och tillval som vinterhjul.</p><p>Välj hur långt du kör per år så ser du din månadskostnad direkt.</p></li>
+      <li><span class="n">2</span><h3>Få ditt erbjudande</h3><p>Handlaren skickar ett erbjudande och Santander gör en kreditprövning.</p><p>När allt är klart hämtar du ut din nya BYD.</p></li>
+      <li><span class="n">3</span><h3>När avtalet tar slut</h3><p>Efter 36 månader lämnar du tillbaka bilen och kan börja om med en ny BYD.</p></li>
+    </ol>
+  </div></div></section>
+  <section class="block" style="padding-top:0"><div class="wrap"><div class="pl-split rev">
+    <div><h2 class="title">Fördelar med privatleasing</h2>
+      <ul class="ticks">
+        <li><b>Ingen kontantinsats.</b> Du behöver inte binda pengar i bilen.</li>
+        <li><b>Service ingår.</b> Den ordinarie servicen under avtalet finns redan i månadskostnaden.</li>
+        <li><b>Inget andrahandsvärde att oroa sig för.</b> Du lämnar tillbaka bilen och behöver inte sälja den själv.</li>
+        <li><b>Ny teknik oftare.</b> Efter tre år kan du byta till en nyare BYD.</li>
+      </ul></div>
+    <div class="pl-img"><img src="media/byd-site/eu/about-byd-new/Promotion-banner-with-seal-u-dm-i-pc.jpg" alt="" loading="lazy"></div>
+  </div></div></section>
+  <section class="block" style="padding-top:0"><div class="wrap">
+    <h2 class="title">Privatleasing, billån eller köp?</h2>
+    <p class="sub" style="margin-bottom:22px">Alla tre fungerar. Det som passar dig beror på om du vill äga bilen och hur mycket du vill betala i början.</p>
+    <div class="ptable"><table><thead><tr><th></th><th>Privatleasing</th><th>Billån 0,95 %</th><th>Kontant</th></tr></thead><tbody>
+      <tr><td><b>Betala i början</b></td><td>Ingen kontantinsats</td><td>Från 20 % av priset</td><td>Hela priset</td></tr>
+      <tr><td><b>Äger du bilen?</b></td><td>Nej, du lämnar tillbaka den</td><td>Ja</td><td>Ja</td></tr>
+      <tr><td><b>Service</b></td><td>Ingår</td><td>Betalar du själv</td><td>Betalar du själv</td></tr>
+      <tr><td><b>Andrahandsvärdet</b></td><td>Inte din risk</td><td>Din risk</td><td>Din risk</td></tr>
+      <tr><td><b>Passar dig som</b></td><td>vill byta bil vart tredje år</td><td>vill äga men dela upp betalningen</td><td>vill äga direkt</td></tr>
+    </tbody></table></div>
+  </div></section>
+  <section class="block" style="padding-top:0"><div class="wrap">
+    <h2 class="title" style="margin-bottom:8px">Vanliga frågor om privatleasing</h2>
+    <p class="sub" style="margin-bottom:22px">Här hittar du svar på det vi oftast får frågor om.</p>
+    <div class="faq">${faq.map(([q,a])=>`<details><summary>${q}</summary><p>${a}</p></details>`).join('')}</div>
+  </div></section>
+  <section class="steps"><div class="wrap" style="display:flex;justify-content:space-between;gap:24px;align-items:center;flex-wrap:wrap">
+    <div><h2 class="title">Hitta din nästa BYD</h2><p class="sub">Provkör hos din närmaste handlare eller begär ett erbjudande direkt.</p></div>
+    <div class="ctas"><a class="btn btn-white" href="#/provkorning">Boka provkörning</a><a class="btn btn-ghost" href="#/ansok/dolphin-g-dmi/leasing/0/0/0">Begär offert</a></div></div></section>
+  <section class="fine"><div class="wrap"><h2>Villkor</h2>
+    <p><sup>1</sup> Privatleasing via Santander Consumer Bank. 36 månader, 1\u00a0000 mil/år och ingen kontantinsats. Service ingår, försäkring ingår inte. Priser inkl. moms. Uppläggningsavgift ${PL.setup}\u00a0kr och aviavgift ${PL.avi}\u00a0kr/mån tillkommer. Övermil ${PL.overmil}\u00a0kr/mil. Månadskostnaden följer en rörlig ränta och kan ändras under avtalstiden. Sedvanlig kreditprövning. Begränsat antal bilar. Bilderna kan visa extrautrustning.</p>
+    <p>Totalt att betala under avtalstiden inklusive avgifter, lägsta version per modell: ${ex}</p>
+  </div></section>`;
+}
+function bindPl(){
+  document.querySelectorAll('.pl-chips button').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelectorAll('.pl-chips button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+    document.querySelectorAll('.plc').forEach(c=>{ c.hidden = b.dataset.f!=='alla' && c.dataset.cat!==b.dataset.f; });
+  }));
+}
+
 /* ---------- Modellsida ---------- */
 function modelPage(m){
   const o=m.offers, tiles=[];
   if(o.leasing) tiles.push(`<div class="otile"><span class="tag dark">Privatleasing</span>
-    <h3>Privatleasing från ${fmt(minLease(m))} kr/mån</h3><p>Ett fast månadspris utan kontantinsats.</p>
-    <ul><li>36 månader, 1 000 mil/år</li><li>Service och försäkring ingår</li><li>Ingen kontantinsats</li><li>Fler mil och tillval går att välja</li></ul>
-    <div class="ctas"><a class="btn btn-dark" href="#/ansok/${m.id}/leasing/0/0/0">${ctaName.leasing}</a><a class="btn btn-line" href="#leasingkalkyl">Räkna på leasing</a></div></div>`);
+    <h3>Privatleasing från ${fmt(minLease(m))} kr/mån</h3><p>Ett månadspris utan kontantinsats, via Santander.</p>
+    <ul><li>36 månader, 1 000 mil/år</li><li>Service ingår</li><li>Ingen kontantinsats</li><li>${m.trims.filter(t=>t.lease).length>1?'Se vad nästa version kostar':'Fler mil och tillval går att välja'}</li></ul>
+    <div class="ctas"><a class="btn btn-dark" href="#/ansok/${m.id}/leasing/0/0/0">${ctaName.leasing}</a><a class="btn btn-line" href="#privatleasing">Jämför versioner</a></div></div>`);
   if(o.billan) tiles.push(`<div class="otile"><span class="tag">Billån 0,95 %</span>
     <h3>${loanHead(minLoan(m))}</h3><p>Äg bilen, med rörlig ränta via Santander Consumer Bank.</p>
     <ul><li>Rörlig ränta 0,95 %, effektiv ränta enligt villkor</li><li>Kontantinsats från 20 %</li><li>Löptid 36 månader</li><li>Restvärde upp till 55 %</li></ul>
@@ -978,28 +1204,28 @@ function modelPage(m){
     <h2 class="title">Priser per utrustningsnivå</h2><p class="sub" style="margin-bottom:22px">Alla priser inklusive moms.</p>
     <div class="ptable"><table><thead><tr><th>Utrustningsnivå</th><th>Listpris</th>${cols.map(c=>`<th>${offerName[c]}</th>`).join('')}</tr></thead><tbody>
     ${m.trims.map((t,i)=>`<tr><td><b>${t.t}</b></td><td>${t.list?fmt(t.list)+' kr':'<mark>X kr</mark>'}</td>${cols.map(c=>
-      c==='leasing'?(t.lease?`<td><b>${fmt(t.lease[0])} kr/mån</b><small>1 000 mil/år, inkl. service och försäkring</small></td>`:'<td>–</td>'):
+      c==='leasing'?(t.lease?`<td><b>${fmt(t.lease[0])} kr/mån</b><small>1 000 mil/år, service ingår</small></td>`:'<td>–</td>'):
       c==='billan'?`<td><b>${fmt(loanMonthly(t.loanBase,30,55))} kr/mån</b><small>30 % insats, 55 % restvärde</small></td>`:
       `<td><b>${t.list?fmt(t.list-o.kontant)+' kr':'<mark>X kr</mark>'}</b><small>efter rabatt</small></td>`).join('')}</tr>`).join('')}
     </tbody></table></div></div></section>` : '';
 
   const leaseTrims=m.trims.map((t,i)=>[t,i]).filter(([t])=>t.lease);
   const lcalc = o.leasing ? `<section class="block" id="leasingkalkyl" style="padding-bottom:0"><div class="wrap">
-    <h2 class="title">Räkna på privatleasing</h2><p class="sub" style="margin-bottom:22px">Välj version, körsträcka och tillval. Service och försäkring ingår alltid.</p>
+    <h2 class="title">Räkna på privatleasing</h2><p class="sub" style="margin-bottom:22px">Välj version, körsträcka och tillval. Service ingår alltid.</p>
     <div class="calc">
       <div class="card">
         <div class="field" style="margin-bottom:20px"><label for="l-trim">Utrustningsnivå</label><select id="l-trim">${leaseTrims.map(([t,i])=>`<option value="${i}">${t.t}</option>`).join('')}</select></div>
         <div class="field" style="margin-bottom:20px"><label>Körsträcka per år</label>
           <div class="choice" id="l-mil">${MIL.map((v,i)=>`<label><input type="radio" name="lmil" value="${i}" ${i?'':'checked'}> ${fmt(v)} mil</label>`).join('')}</div></div>
         <div class="field"><label>Tillval</label>
-          <div class="choice" id="l-tv">${Object.entries(m.tillval).map(([k,v],i)=>`<label><input type="checkbox" value="${i}"> ${k} <span style="color:var(--muted)">+${v} kr/mån</span></label>`).join('')}</div></div>
+          <div class="choice" id="l-tv">${Object.entries(m.tillval).map(([k,v],i)=>`<label><input type="checkbox" value="${i}"> ${k} <span style="color:var(--muted)" data-tv="${k}">+${v} kr/mån</span></label>`).join('')}</div></div>
       </div>
       <div class="card calc-out" aria-live="polite">
         <div class="lbl">Din månadskostnad</div><div class="monthly" id="l-month"></div>
         <dl><div><dt>Avtalstid</dt><dd>36 månader</dd></div><div><dt>Körsträcka</dt><dd id="l-milout"></dd></div>
-          <div><dt>Ingår</dt><dd>Service och försäkring</dd></div><div><dt>Tillval</dt><dd id="l-tvout"></dd></div></dl>
+          <div><dt>Ingår</dt><dd>Service</dd></div><div><dt>Tillval</dt><dd id="l-tvout"></dd></div></dl>
         <div class="ctas"><a class="btn btn-dark" id="lease-apply" href="#">${ctaName.leasing}</a><a class="btn btn-line" href="#/bygg/${m.id}">Bygg din bil</a></div>
-        <p class="fine-s">Pris inkl. moms. Ingen kontantinsats. Gäller nybeställning t.o.m. ${DEADLINE_FULL}.</p>
+        <p class="fine-s">Pris inkl. moms. Ingen kontantinsats. Uppläggningsavgift ${PL.setup} kr och aviavgift ${PL.avi} kr/mån tillkommer. Försäkring ingår inte. Begränsat antal bilar.</p>
       </div>
     </div></div></section>` : '';
   const ftg = `<section class="block" id="foretag" style="padding-bottom:0"><div class="wrap">
@@ -1042,7 +1268,7 @@ function modelPage(m){
     </div></div></section>` : '';
 
   const terms=[];
-  if(o.leasing) terms.push(`<p><b>Privatleasing</b> via Ayvens: 36 månader, 1 000 mil/år (3 000 mil totalt). Service och försäkring ingår. Priser inkl. moms, ingen kontantinsats. Fler mil och tillval ger annan månadskostnad. <mark>Särskild leasingavgift och kostnad för övermil.</mark> Sedvanlig kreditprövning. Gäller nybeställning t.o.m. ${DEADLINE_FULL}, begränsat antal.</p>`);
+  if(o.leasing) terms.push(plTerms(m));
   if(o.billan){ const t0=m.trims[0], pb=t0.loanBase, mo=loanMonthly(pb,30,55), effs=m.trims.map(t=>effRate(t.loanBase));
     const lo=Math.min(...effs), hi=Math.max(...effs), f2=v=>v.toFixed(2).replace('.',',');
     const effTxt = f2(lo)===f2(hi) ? f2(lo)+' %' : f2(lo)+'–'+f2(hi)+' % beroende på version';
@@ -1059,14 +1285,16 @@ function modelPage(m){
         <img src="${m.img}" alt="${m.name}">
       </div></div></header>
     <section class="block" style="padding-top:28px;padding-bottom:0"><div class="wrap"><div class="otiles">${tiles.join('')}</div></div></section>
-    ${table}${lcalc}${calc}${ftg}
+    ${table}${plLadder(m)}${lcalc}${calc}${ftg}
     ${terms.length?`<section class="fine" style="padding-top:56px"><div class="wrap"><h2>Villkor</h2>${terms.join('')}</div></section>`:'<div style="height:72px"></div>'}`;
 }
 function bindLease(m){
   const t=document.getElementById('l-trim'); if(!t) return;
-  const tvK=Object.keys(m.tillval), tvV=Object.values(m.tillval);
+  const tvK=Object.keys(m.tillval); let tvV=Object.values(m.tillval);
   const upd=()=>{
     const tr=m.trims[t.value], mi=+document.querySelector('input[name=lmil]:checked').value;
+    const tv=tvFor(m,tr); tvV=tvK.map(k=>tv[k]);
+    document.querySelectorAll('#l-tv [data-tv]').forEach(x=>{x.textContent='+'+fmt(tv[x.dataset.tv])+'\u00a0kr/mån';});
     const sel=[...document.querySelectorAll('#l-tv input:checked')].map(x=>+x.value), mask=sel.reduce((a,i)=>a|(1<<i),0);
     const tot=tr.lease[mi]+sel.reduce((a,i)=>a+tvV[i],0);
     document.getElementById('l-month').textContent=fmt(tot)+' kr/mån';
@@ -1164,8 +1392,8 @@ function bindForm(start){
     let rows=`<div><dt>Erbjudande</dt><dd>${k==='offert'?'Prisförfrågan':offerName[k]}</dd></div>`, price='';
     let extra='';
     if(tr && k==='leasing' && tr.lease){ const mi=+(document.querySelector('input[name=qmil]:checked')||{value:0}).value;
-      const sel=[...document.querySelectorAll('#q-tv input:checked')].map(x=>+x.value), tvK=Object.keys(m.tillval||{}), tvV=Object.values(m.tillval||{});
-      rows+=`<div><dt>Avtal</dt><dd>36 mån, ${fmt(MIL[mi])} mil/år</dd></div><div><dt>Ingår</dt><dd>Service och försäkring</dd></div>${sel.length?`<div><dt>Tillval</dt><dd>${sel.map(i=>tvK[i]).join(', ')}</dd></div>`:''}`;
+      const sel=[...document.querySelectorAll('#q-tv input:checked')].map(x=>+x.value), tvK=Object.keys(m.tillval||{}), tvV=tvK.map(k=>tvFor(m,tr)[k]);
+      rows+=`<div><dt>Avtal</dt><dd>36 mån, ${fmt(MIL[mi])} mil/år</dd></div><div><dt>Ingår</dt><dd>Service</dd></div>${sel.length?`<div><dt>Tillval</dt><dd>${sel.map(i=>tvK[i]).join(', ')}</dd></div>`:''}`;
       price=fmt(tr.lease[mi]+sel.reduce((a,i)=>a+tvV[i],0))+' kr/mån'; extra=` med ${fmt(MIL[mi])} mil/år${sel.length?' och '+sel.map(i=>tvK[i].toLowerCase()).join(', '):''}`; }
     if(tr && k==='foretag' && start.fl){ const pr=tr.list/FINLEASE.vat*(1-start.fl.disc/100), x=finLease(pr,start.fl.f,start.fl.r);
       rows+=`<div><dt>Finansiell leasing</dt><dd>${fmt(x.pmt)} kr/mån ex. moms</dd></div><div><dt>Första hyra / restvärde</dt><dd>${start.fl.f} % / ${start.fl.r} %</dd></div>${start.fl.disc?`<div><dt>Företagsrabatt</dt><dd>${start.fl.disc} %</dd></div>`:''}`;
@@ -1175,7 +1403,7 @@ function bindForm(start){
     if(tr && k==='kontant'){rows+=`<div><dt>Rabatt</dt><dd>${fmt(m.offers.kontant)} kr</dd></div>`; price= tr.list?fmt(tr.list-m.offers.kontant)+' kr':'<mark>X kr</mark>';}
     $('summary').innerHTML=`<div class="s-img"><img src="${m.img}" alt=""></div><h3>${m.name}</h3><p class="desc" style="margin:2px 0 0;color:var(--muted);font-size:14px">${tr?tr.t:''}</p>
       <dl>${rows}${price?`<div><dt>Ditt pris</dt><dd class="bigp">${price}</dd></div>`:''}</dl>
-      <p class="fine-s">Kampanjen gäller nybeställning t.o.m. ${DEADLINE_FULL}. Slutligt pris bekräftas av handlaren.</p>`;
+      <p class="fine-s">${k==='leasing'?'Privatleasing via Santander. Begränsat antal bilar.':'Kampanjen gäller nybeställning t.o.m. '+DEADLINE_FULL+'.'} Slutligt pris bekräftas av handlaren.</p>`;
     $('dealer-sees').innerHTML=`<b>Handlaren får se:</b> ${m.name}${tr?' '+tr.t:''}, ${k==='offert'?'prisförfrågan':offerName[k].toLowerCase()}${k==='billan'?` med ${qD.value} % insats och ${qR.value} % restvärde`:extra}${k==='foretag'&&$('q-org').value?` för ${esc($('q-org').value)}`:''}, samt att förfrågan kom från erbjudandesidan.`;
   }
   qM.addEventListener('change',()=>{start.fl=null;fillOffer(qO.value);sum()});
@@ -1567,7 +1795,7 @@ function ftgPage(pre){
 function oplTable(id){
   const m=byId(id), tv=OPL_TILLVAL[id]||{};
   return `<div class="ptable"><table>
-    <thead><tr><th>Version</th>${MIL.map((v,i)=>`<th class="${i===1?'hl':''}">${fmt(v)} mil/år</th>`).join('')}<th></th></tr></thead>
+    <thead><tr><th>Version</th>${MIL_OPL.map((v,i)=>`<th class="${i===1?'hl':''}">${fmt(v)} mil/år</th>`).join('')}<th></th></tr></thead>
     <tbody>${m.trims.filter(t=>t.opl).map((t,ti)=>`<tr><td><b>${t.t}</b></td>${t.opl.map((v,i)=>`<td class="${i===1?'hl':''}"><b>${fmt(v)}</b> kr/mån</td>`).join('')}
       <td><a href="#/ansok/${m.id}/foretag/${m.trims.indexOf(t)}">Begär offert</a></td></tr>`).join('')}</tbody></table></div>
     ${Object.keys(tv).length?`<p class="note">Tillval per månad ex. moms: ${Object.entries(tv).map(([k,v])=>`${k} ${v} kr`).join(' · ')}.</p>`:''}
@@ -1712,7 +1940,7 @@ function pkRender(){
   document.getElementById('pk-sum').innerHTML=`<div class="s-img">${m?`<img src="${m.img}" alt="">`:''}</div>
     <h2 style="font-size:18px;margin:0 0 12px">Din provkörning</h2>
     <dl>${row('Bil',m&&m.name)}${row('Handlare',pk.dealer&&dealerById(pk.dealer).name)}${pk.dealer?row('Adress',dealerById(pk.dealer).addr+', '+dealerById(pk.dealer).city):''}${row('Tid','Handlaren kontaktar dig')}</dl>
-    ${m&&Object.keys(m.offers).length?`<p class="fine-s">Kampanj på ${m.name.replace('BYD ','')} t.o.m. ${DEADLINE}: ${minLease(m)?'privatleasing från '+fmt(minLease(m))+' kr/mån':'billån från '+fmt(minLoan(m))+' kr/mån · 0,95 % ränta'}. <a href="#/modell/${m.id}">Se erbjudanden</a></p>`:''}`;
+    ${m&&Object.keys(m.offers).length?`<p class="fine-s">${minLease(m)?'Privatleasing ':'Kampanj t.o.m. '+DEADLINE+': '}${m.name.replace('BYD ','')}${minLease(m)?' från '+fmt(minLease(m))+'\u00a0kr/mån':'billån från '+fmt(minLoan(m))+' kr/mån · 0,95 % ränta'}. <a href="#/modell/${m.id}">Se erbjudanden</a></p>`:''}`;
 }
 function bindPk(){
   const v=document.getElementById('pk-view');
@@ -1797,7 +2025,8 @@ function route(){
   const [path,query]=h.slice(2).split('?'); const [view,a,b,c,d,e,f]=path.split('/'); const qs=new URLSearchParams(query||'');
   if(view==='modell' && byId(a)){
     const m=byId(a); document.getElementById('modell-view').innerHTML=modelPage(m); bindCalc(m); show('modell');
-    document.title=m.name+' erbjudanden | BYD'; window.scrollTo({top:0,behavior:'instant'});
+    document.title=m.name+' erbjudanden | BYD'; const tgt=qs.get('till')&&document.getElementById(qs.get('till'));
+    if(tgt) tgt.scrollIntoView({behavior:'instant'}); else window.scrollTo({top:0,behavior:'instant'});
   } else if(view==='ansok' && byId(a)){
     const m=byId(a); document.getElementById('ansok-view').innerHTML=ansokPage(m,b,+c||0,+d||30,e===undefined?55:+e);
     bindForm({offer:b, ti:+c||0, dp:b==='leasing'?(+d||0):(+d||30), rp:b==='leasing'?(+e||0):(e===undefined?55:+e), fl:b==='foretag'&&d!==undefined?{f:+d,r:+e,disc:+f||0}:null}); show('ansok');
@@ -1813,6 +2042,9 @@ function route(){
     document.title='Företag | BYD'; window.scrollTo({top:0,behavior:'instant'});
   } else if(view==='erbjudanden' && a && offerName[a]){
     fOffer=a; applyFilters(); show('erbjudanden'); document.getElementById('modeller').scrollIntoView({behavior:'instant'});
+  } else if(view==='privatleasing'){
+    document.getElementById('pl-view').innerHTML=plPage(); bindPl(); show('privatleasing','Erbjudanden');
+    document.title='Privatleasing | BYD Sverige'; window.scrollTo({top:0,behavior:'instant'});
   } else if(view==='provkorning'){
     openPk(a,b); show('provkorning','Erbjudanden'); document.title='Boka provkörning | BYD'; window.scrollTo({top:0,behavior:'instant'});
   } else if(view==='erbjudanden'){ fOffer=null; applyFilters(); show('erbjudanden'); document.title='Erbjudanden | BYD'; window.scrollTo({top:0,behavior:'instant'}); }
