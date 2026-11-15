@@ -329,6 +329,14 @@
   .home-quick{margin-top:-140px}
   .home-models{display:grid;grid-auto-flow:column;grid-auto-columns:calc(25% - 15px);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;scrollbar-width:none}
   .home-models::-webkit-scrollbar{display:none}
+  /* bläddringsreglage under modellkorten, som på byd.com/es-es */
+  .hm-nav{display:flex;align-items:center;gap:14px;width:max-content;margin:18px auto 0;padding:5px;border-radius:999px;background:#d9dcdf}
+  .hm-nav button{width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:var(--ink);display:grid;place-items:center;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.15)}
+  .hm-nav button:disabled{background:#c3c7cb;color:#555;box-shadow:none;cursor:default}
+  .hm-nav .pips{display:flex;gap:9px;align-items:center}
+  .hm-nav .pips i{width:7px;height:7px;border-radius:50%;background:#3a3f45}
+  .hm-nav .pips i.on{width:16px;border-radius:999px;background:#fff}
+
   .hm{scroll-snap-align:start;background:#fff;border-radius:var(--r-lg);padding:22px;text-decoration:none;color:var(--text);display:flex;flex-direction:column}
   .hm small{color:var(--muted);font-size:12.5px}
   .hm b{font-size:18px;color:var(--ink);line-height:1.2}
@@ -971,6 +979,7 @@
       <div class="head"><div><h2 class="title">Hitta din BYD</h2><p class="sub">Elbilar och laddhybrider för alla behov.</p></div>
         <a class="btn btn-line" href="#/erbjudanden">Alla erbjudanden</a></div>
       <div class="home-models" id="home-models"></div>
+      <div class="hm-nav" id="hm-nav"><button type="button" class="prev" aria-label="Föregående modell"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button><span class="pips"></span><button type="button" class="next" aria-label="Nästa modell"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
     </div>
   </section>
 
@@ -2014,6 +2023,16 @@ go(0);
   hero.addEventListener('pointerup',end); hero.addEventListener('pointercancel',end);
   hero.addEventListener('dragstart',e=>e.preventDefault());
 })();
+function bindHmNav(){
+  const t=document.getElementById('home-models'), nav=document.getElementById('hm-nav'), pips=nav.querySelector('.pips'), prev=nav.querySelector('.prev'), next=nav.querySelector('.next');
+  const step=()=>{const c=t.children; return c.length>1 ? c[1].offsetLeft-c[0].offsetLeft : t.clientWidth;};
+  const pages=()=>Math.max(1,Math.round((t.scrollWidth-t.clientWidth)/step())+1);
+  const cur=()=>Math.min(pages()-1,Math.round(t.scrollLeft/step()));
+  const draw=()=>{ const n=pages(), c=cur(); if(pips.children.length!==n) pips.innerHTML=Array.from({length:n},()=>'<i></i>').join('');
+    [...pips.children].forEach((d,i)=>d.classList.toggle('on',i===c)); prev.disabled=c===0; next.disabled=c===n-1; nav.hidden=n<2; };
+  prev.onclick=()=>t.scrollBy({left:-step(),behavior:'smooth'}); next.onclick=()=>t.scrollBy({left:step(),behavior:'smooth'});
+  t.addEventListener('scroll',draw,{passive:true}); addEventListener('resize',draw); draw(); setTimeout(draw,400);
+}
 const sizeOrder=['dolphin-g-dmi','atto-2','atto-2-dmi','atto-3-evo','seal-6-dmi-touring','seal-u-dmi','sealion-7'];
 document.getElementById('home-models').innerHTML=[...models].sort((a,b)=>sizeOrder.indexOf(a.id)-sizeOrder.indexOf(b.id)).map(m=>`<a class="hm" href="#/modell/${m.id}">
   ${Object.keys(m.offers).length?'<span class="tag dark">Kampanj</span>':'<span class="tag" style="visibility:hidden">–</span>'}
@@ -2021,6 +2040,7 @@ document.getElementById('home-models').innerHTML=[...models].sort((a,b)=>sizeOrd
   <b>${m.name}</b><small>${m.desc}</small>
   <p class="hm-price">${minLease(m)?`Privatleasing från <strong>${fmt(minLease(m))} kr/mån</strong>`:`Billån från <strong>${fmt(minLoan(m))} kr/mån</strong>`}</p>
   <div class="row"><span class="d">${Object.keys(m.offers).length?'Se erbjudanden':'Läs mer'}</span></div></a>`).join('');
+bindHmNav();
 
 
 
