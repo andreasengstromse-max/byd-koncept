@@ -604,7 +604,7 @@
   .pl-crumbs{background:#fff;border-bottom:1px solid var(--line)}
   .pl-crumbs .crumbs{margin:0;padding:14px 0}
   /* privatleasing: hela familjen på rad, ett pris per modell */
-  .pl-fam{background:linear-gradient(#f6f7f9,#eef0f3);padding:36px 0 0}
+  .pl-fam{background:linear-gradient(#f6f7f9,#eef0f3);padding:60px 0 0}
   .pl-fam .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#c8102e}
   .pl-fam h2{margin:8px 0 0;font-size:clamp(28px,3.6vw,48px);line-height:1.08;letter-spacing:-.02em;color:#454b52}
   .pl-fam h2 span{display:block}
@@ -620,12 +620,12 @@
   .fam .p{font-size:clamp(22px,2.3vw,32px);font-weight:800;line-height:1.05;letter-spacing:-.01em}
   @media (min-width:1440px){.fam-row::before{top:72px}}
   @media (max-width:760px){
-    .pl-fam{padding-top:28px}
-    .fam-row{grid-template-columns:repeat(2,1fr);column-gap:6%;row-gap:26px;margin-top:0;padding-bottom:36px}
+    .pl-fam{padding-top:22px}
+    .fam-row{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 -16px;padding:0 16px 30px;scrollbar-width:none}
+    .fam-row::-webkit-scrollbar{display:none}
     .fam-row::before{display:none}
-    .fam:first-child{grid-column:1/-1}
+    .fam{flex:0 0 40%;scroll-snap-align:start}
     .fam .car{height:auto;max-height:none;aspect-ratio:900/490}
-    .fam:first-child .car{width:62%}
     .fam .n{font-size:12px;margin-top:10px}.fam .p{font-size:24px}
   }
   .pl-intro{background:#fff;padding:56px 0 64px;text-align:center}
@@ -1215,7 +1215,9 @@ function plPage(){
     ['Får någon annan än jag köra bilen?','Ja. Det regleras av bilens försäkring.'],
     ['Vad händer när avtalet tar slut?','Du lämnar tillbaka bilen hos handlaren och kan välja en ny BYD. Vill du behålla bilen har återförsäljaren förtur att köpa den och kan då sälja den vidare till dig.']
   ];
-  return `<header class="pl-hero pl-dark"><div class="promo-cars pl-range" role="img" aria-label="Hela BYD-sortimentet"><div class="r back">${promoCars(['atto-2','atto-3-evo','seal-u-dmi','sealion-7'])}</div><div class="r front">${promoCars(['atto-2-dmi','dolphin-g-dmi','seal-6-dmi-touring'])}</div></div></header>
+  return `<section class="pl-fam"><div class="wrap">
+    <div class="fam-row">${['dolphin-g-dmi','atto-2-dmi','atto-2','seal-6-dmi-touring','atto-3-evo','seal-u-dmi','sealion-7'].map(id=>{const m=byId(id);return `<a class="fam" href="#/modell/${m.id}?till=privatleasing"><span class="car"><img src="media/cars/${m.id}.webp" alt="${m.name}"></span><span class="n">${m.name.replace(/^BYD /,'')}</span><span class="f">från</span><span class="p">${fmt(minLease(m))}</span><span class="u">kr/mån</span></a>`}).join('')}</div>
+  </div></section>
   <div class="pl-crumbs"><div class="wrap"><nav class="crumbs" aria-label="Brödsmulor"><a href="#/">BYD</a><i>/</i><a href="#/erbjudanden">Erbjudanden</a><i>/</i><span aria-current="page">Privatleasing</span></nav></div></div>
   <section class="pl-intro"><div class="wrap">
     <h1>Privatleasing</h1>
