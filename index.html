@@ -583,6 +583,31 @@
   .pl-hero::after{content:"";position:absolute;left:0;right:0;top:0;height:170px;background:linear-gradient(180deg,rgba(0,0,0,.38),rgba(0,0,0,0))}
   .pl-crumbs{background:#fff;border-bottom:1px solid var(--line)}
   .pl-crumbs .crumbs{margin:0;padding:14px 0}
+  /* privatleasing: hela familjen på rad, ett pris per modell */
+  .pl-fam{background:linear-gradient(#f6f7f9,#eef0f3);padding:56px 0 0}
+  .pl-fam .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#c8102e}
+  .pl-fam h2{margin:8px 0 0;font-size:clamp(28px,3.6vw,48px);line-height:1.08;letter-spacing:-.02em;color:#454b52}
+  .pl-fam h2 span{display:block}
+  .pl-fam .sub{margin:14px 0 0;font-size:15px;color:var(--text)}
+  .fam-row{position:relative;display:grid;grid-template-columns:repeat(7,1fr);column-gap:1.2%;margin-top:44px;padding-bottom:44px}
+  .fam-row::before{content:"";position:absolute;left:50%;width:100vw;margin-left:-50vw;top:calc(4.6vw + 6px);bottom:0;background:#e2e5e9}
+  .fam{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;color:#454b52;min-width:0}
+  .fam .car{width:100%;height:6.6vw;max-height:96px;display:flex;align-items:flex-end;justify-content:center}
+  .fam .car img{width:96%;display:block;filter:drop-shadow(0 8px 6px rgba(0,0,0,.22));transition:transform .2s}
+  .fam:hover .car img{transform:translateY(-3px)}
+  .fam .n{margin-top:16px;font-size:clamp(10.5px,.95vw,13.5px);font-weight:700;text-transform:uppercase;white-space:nowrap}
+  .fam .f,.fam .u{font-size:12px;color:var(--muted)}
+  .fam .p{font-size:clamp(22px,2.3vw,32px);font-weight:800;line-height:1.05;letter-spacing:-.01em}
+  @media (min-width:1440px){.fam-row::before{top:72px}}
+  @media (max-width:760px){
+    .pl-fam{padding-top:40px}
+    .fam-row{grid-template-columns:repeat(2,1fr);column-gap:6%;row-gap:26px;margin-top:28px;padding-bottom:36px}
+    .fam-row::before{display:none}
+    .fam:first-child{grid-column:1/-1}
+    .fam .car{height:auto;max-height:none;aspect-ratio:900/490}
+    .fam:first-child .car{width:62%}
+    .fam .n{font-size:12px;margin-top:10px}.fam .p{font-size:24px}
+  }
   .pl-intro{background:#fff;padding:56px 0 64px;text-align:center}
   .pl-intro .wrap{max-width:760px}
   .pl-intro h1{margin-bottom:14px}
@@ -1177,6 +1202,12 @@ function plPage(){
     <p class="pl-q">Funderar du på hur du ska skaffa din nästa BYD?</p>
     <p>Kör en ny <b>elbil</b> eller <b>laddhybrid</b> till fast månadskostnad. Ingen kontantinsats, service ingår. Från 2\u00a0990\u00a0kr/mån.</p>
     <a class="btn btn-dark" href="#pl-modeller">Se erbjudandena</a>
+  </div></section>
+  <section class="pl-fam"><div class="wrap">
+    <div class="eyebrow">Privatleasing</div>
+    <h2><span>Hela BYD-familjen.</span><span>Från 2\u00a0990\u00a0kr/mån.</span></h2>
+    <p class="sub">Service ingår. 36 månader, 1\u00a0000 mil per år, ingen kontantinsats.</p>
+    <div class="fam-row">${['dolphin-g-dmi','atto-2-dmi','atto-2','seal-6-dmi-touring','atto-3-evo','seal-u-dmi','sealion-7'].map(id=>{const m=byId(id);return `<a class="fam" href="#/modell/${m.id}?till=privatleasing"><span class="car"><img src="media/cars/${m.id}.webp" alt="${m.name}" loading="lazy"></span><span class="n">${m.name.replace(/^BYD /,'')}</span><span class="f">från</span><span class="p">${fmt(minLease(m))}</span><span class="u">kr/mån</span></a>`}).join('')}</div>
   </div></section>
   <section class="pl-offers" id="pl-modeller"><div class="wrap">
     <h2 class="title">Aktuella privatleasingerbjudanden</h2>
