@@ -779,7 +779,7 @@
     .hm{align-items:center;text-align:center;padding:26px 20px 24px;border-radius:28px}
     .hm .tag{align-self:center}
     .hm img{display:none}
-    .hm img.st{display:block;width:100%;aspect-ratio:16/10;object-fit:contain;background:none;border-radius:0;margin:6px 0 10px}
+    .hm img.st{display:block;width:88%;aspect-ratio:900/500;object-fit:contain;object-position:center bottom;background:none;border-radius:0;margin:18px auto 22px;filter:drop-shadow(0 12px 10px rgba(0,0,0,.2))}
     .hm small{order:1;min-height:0;font-size:13.5px;color:var(--text)}
     .hm b{order:2;min-height:0;font-size:26px;letter-spacing:-.01em;margin-top:4px}
     .hm-price{order:3;border-top:0;padding-top:0;margin:10px 0 18px;font-size:14px}
@@ -1834,7 +1834,7 @@ document.getElementById('dots').addEventListener('click',e=>{const b=e.target.cl
 go(0);
 document.getElementById('home-models').innerHTML=models.map(m=>`<a class="hm" href="#/modell/${m.id}">
   ${Object.keys(m.offers).length?'<span class="tag dark">Kampanj</span>':'<span class="tag" style="visibility:hidden">–</span>'}
-  <img src="${m.img}" alt="" loading="lazy"><img class="st" src="media/studio/${m.id}.webp" alt="" loading="lazy">
+  <img src="${m.img}" alt="" loading="lazy"><img class="st" src="media/cars/${m.id}.webp" alt="" loading="lazy">
   <b>${m.name}</b><small>${m.desc}</small>
   <p class="hm-price">${minLease(m)?`Privatleasing från <strong>${fmt(minLease(m))} kr/mån</strong>`:`Billån från <strong>${fmt(minLoan(m))} kr/mån</strong>`}</p>
   <div class="row"><span class="d">${Object.keys(m.offers).length?'Se erbjudanden':'Läs mer'}</span></div></a>`).join('');
