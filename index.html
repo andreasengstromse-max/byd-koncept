@@ -820,7 +820,6 @@
     <video class="hero-img" src="media/__EU/byd-site/eu-v3/model/seal6-dm-i-touring/pc/herobanner/bc-1.mp4" poster="media/byd-site/eu-v3/homepage/pc/herobannner/seal6-dm-i-touring.webp" autoplay muted loop playsinline aria-hidden="true"></video>
     <div class="wrap">
       <nav class="crumbs" aria-label="Brödsmulor"><a href="#/">BYD</a><i>/</i><span aria-current="page">Erbjudanden</span></nav>
-      <span class="pill-dl">Gäller nybeställning t.o.m. 30 november</span>
       <h1>Erbjudanden på hela <span style="white-space:nowrap">BYD-familjen</span></h1>
       <p class="lead">Välj din modell och se alla dess kampanjer på ett ställe. Privatleasa från 2 990 kr/mån i 36 månader med 1 000 mil/år och service.</p>
       <div class="ctas"><a class="btn btn-white" href="#modeller">Välj modell</a><a class="btn btn-ghost" href="#/provkorning">Boka provkörning</a></div>
@@ -882,6 +881,9 @@
       </div>
     </div>
   </section>
+<section class="fine"><div class="wrap"><h2>Villkor</h2>
+  <p><b>Billån 0,95 %</b> och <b>kontantrabatt</b> gäller nybeställning t.o.m. 30/11 2026, begränsat antal bilar. <b>Privatleasing</b> via Santander Consumer Bank, begränsat antal bilar. Fullständiga villkor och räkneexempel finns på varje modells kampanjsida.</p>
+</div></section>
 </main>
 
 <!-- =================== PROVKÖRNING =================== -->
@@ -1288,7 +1290,7 @@ function modelPage(m){
   return `<header class="hero light"><div class="wrap">
       <nav class="crumbs" aria-label="Brödsmulor"><a href="#/erbjudanden">Erbjudanden</a><i>/</i><span aria-current="page">${m.name}</span></nav>
       <div class="hero-split">
-        <div>${none?'':'<span class="pill-dl">Gäller nybeställning t.o.m. 30 november</span>'}
+        <div>
           <h1>${m.name}</h1><p class="lead">${m.desc}. ${none?'':'Här ser du alla aktuella erbjudanden för modellen.'}</p>
           <div class="ctas"><a class="btn btn-dark" href="#/provkorning/${m.id}">Boka provkörning</a><a class="btn btn-line" href="#/bygg/${m.id}">Bygg din bil</a></div></div>
         <img src="${m.img}" alt="${m.name}">
@@ -1738,7 +1740,6 @@ function ftgPage(pre){
   const mPre=byId(pre)||models[0];
   return `<header class="hero light compact"><div class="wrap" style="padding-bottom:36px">
       <nav class="crumbs" aria-label="Brödsmulor"><a href="#/erbjudanden">Erbjudanden</a><i>/</i><span aria-current="page">Företag</span></nav>
-      <span class="pill-dl">Gäller nybeställning t.o.m. ${DEADLINE}</span>
       <h1>Erbjudanden för företag</h1>
       <p class="lead">Operationell leasing med service och försäkring, eller finansiell leasing där du själv väljer första hyra och restvärde. Alla priser exklusive moms.</p>
       <div class="ctas"><a class="btn btn-dark" href="#oplease">Operationell leasing</a><a class="btn btn-line" href="#finlease">Finansiell leasing</a></div>
