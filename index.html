@@ -600,8 +600,8 @@
   .pl-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
   .plc{background:#fff;border-radius:var(--r-lg);padding:22px 22px 20px;display:flex;flex-direction:column;align-items:center;text-align:center}
   .plc[hidden]{display:none}
-  .plc-img{display:block;width:100%;border-radius:16px;overflow:hidden;aspect-ratio:16/9;background:#dfe4ea;margin-bottom:16px}
-  .plc-img img{width:100%;height:100%;object-fit:cover;display:block}
+  .plc-img{display:block;width:100%;aspect-ratio:16/10;background:#fff;margin-bottom:8px}
+  .plc-img img{width:100%;height:100%;object-fit:contain;display:block}
   .plc-price{margin:0 0 6px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:4px 8px}
   .plc-price b{font-size:26px;color:var(--ink);letter-spacing:-.01em;white-space:nowrap}
   .plc-price sup{font-size:.5em}
@@ -1098,7 +1098,7 @@ function plPage(){
   const order=[...models].sort((a,b)=>minLease(a)-minLease(b));
   const card=m=>{ const ts=m.trims.filter(t=>t.lease);
     return `<article class="plc" data-cat="${m.cat}">
-      <a class="plc-img" href="#/modell/${m.id}?till=privatleasing" tabindex="-1" aria-hidden="true"><img src="${m.img}" alt="" loading="lazy"></a>
+      <a class="plc-img" href="#/modell/${m.id}?till=privatleasing" tabindex="-1" aria-hidden="true"><img src="media/studio/${m.id}.webp" alt="" loading="lazy"></a>
       <p class="plc-price"><b>${fmt(minLease(m))}\u00a0kr/mån<sup>1</sup></b><span>36 mån · 1\u00a0000 mil/år · privatleasing</span></p>
       <h3>${m.name}</h3><p class="plc-desc">${m.desc}</p>
       <div class="plc-btns"><a class="btn btn-dark btn-sm" href="#/modell/${m.id}?till=privatleasing">Se versioner och priser</a><a class="btn btn-line btn-sm" href="#/ansok/${m.id}/leasing/0/0/0">Begär offert</a></div>
