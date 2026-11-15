@@ -1831,7 +1831,8 @@ function autoplay(on){ if(matchMedia('(prefers-reduced-motion: reduce)').matches
 document.getElementById('dots').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
   go(b.dataset.i!==undefined?+b.dataset.i:cur+ +b.dataset.step); autoplay(true);});
 go(0);
-document.getElementById('home-models').innerHTML=models.map(m=>`<a class="hm" href="#/modell/${m.id}">
+const sizeOrder=['dolphin-g-dmi','atto-2','atto-2-dmi','atto-3-evo','seal-6-dmi-touring','seal-u-dmi','sealion-7'];
+document.getElementById('home-models').innerHTML=[...models].sort((a,b)=>sizeOrder.indexOf(a.id)-sizeOrder.indexOf(b.id)).map(m=>`<a class="hm" href="#/modell/${m.id}">
   ${Object.keys(m.offers).length?'<span class="tag dark">Kampanj</span>':'<span class="tag" style="visibility:hidden">–</span>'}
   <img src="${m.img}" alt="" loading="lazy"><img class="st" src="media/cars/${m.id}.webp" alt="" loading="lazy">
   <b>${m.name}</b><small>${m.desc}</small>
