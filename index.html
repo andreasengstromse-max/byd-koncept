@@ -296,6 +296,23 @@
   .slide.on{opacity:1}
   .slide img,.slide video{width:100%;height:100%;object-fit:cover}
   .home-hero h1{font-size:clamp(32px,3.4vw,48px);text-transform:none}
+  /* kampanjbild först i startsidans bildspel */
+  .slide.promo{background:radial-gradient(120% 90% at 72% 62%,#3b434d 0%,#1d2228 46%,#0f1215 100%)}
+  .promo-cars{position:absolute;right:3%;bottom:262px;width:min(54%,820px)}
+  .promo-cars::after{content:"";position:absolute;left:2%;right:2%;bottom:-5%;height:22%;background:radial-gradient(ellipse at center,rgba(0,0,0,.75),transparent 70%);z-index:-1}
+  .promo-cars .r{display:flex;justify-content:center;align-items:flex-end}
+  .promo-cars img{width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 10px 8px rgba(0,0,0,.45))}
+  .promo-cars .back img{width:25%;margin:0 -.8%}
+  .promo-cars .front{margin-top:-7%;position:relative}
+  .promo-cars .front img{width:32%;margin:0 -1.2%}
+  .home-hero.is-promo h1{max-width:13em}
+  .home-hero.is-promo .slide-offer b{font-size:clamp(22px,2.3vw,30px)}
+  @media (max-width:960px){ .promo-cars{width:92%;right:4%;opacity:.5} }
+  @media (max-width:600px){
+    .slide.promo{background:radial-gradient(130% 60% at 50% 74%,#3b434d 0%,#1d2228 50%,#0f1215 100%)}
+    .promo-cars{opacity:1;width:98%;right:1%;bottom:176px}
+    .home-hero.is-promo h1{max-width:none;font-size:clamp(25px,7vw,30px)}
+  }
   .slide-offer{display:block;color:#fff;margin:0 0 24px}
   .slide-offer b{font-size:clamp(20px,2vw,24px);font-weight:700;color:#fff;text-shadow:0 1px 12px rgba(0,0,0,.45);letter-spacing:-.01em;line-height:1.2}
   .slide-offer a{font-size:13.5px;font-weight:600;color:var(--ink);text-decoration:underline;text-underline-offset:3px}
@@ -1775,6 +1792,7 @@ function byggPage(m){
 
 /* ---------- Startsida ---------- */
 const slides=[
+  {promo:true, title:'Premiär för privatleasing på hela BYD-sortimentet!', offer:'Från 2\u00a0990\u00a0kr/mån. Service ingår.', href:'#/privatleasing', cta:'Se alla modeller'},
   {title:'BYD SEAL 6 DM-i TOURING', sub:'Laddhybridkombi med plats för hela familjen.', id:'seal-6-dmi-touring',
    video:'media/__EU/byd-site/eu-v3/model/seal6-dm-i-touring/pc/herobanner/bc-1.mp4', poster:'media/byd-site/eu-v3/homepage/pc/herobannner/seal6-dm-i-touring.webp'},
   {title:'BYD ATTO 2 DM-i', sub:'Kompakt hybrid-SUV.', id:'atto-2-dmi',
@@ -1783,7 +1801,10 @@ const slides=[
    video:'media/byd-site/eu-v3/model/sealu-dm-i/pc/performance/bc-1.mp4'}
 ];
 let cur=0, timer=null;
-document.getElementById('slides').innerHTML=slides.map((x,i)=>`<div class="slide${i?'':' on'}">${x.video
+const promoCars=ids=>ids.map(id=>`<img src="media/cars/${id}.webp" alt="">`).join('');
+document.getElementById('slides').innerHTML=slides.map((x,i)=>`<div class="slide${i?'':' on'}${x.promo?' promo':''}">${x.promo
+  ?`<div class="promo-cars" aria-hidden="true"><div class="r back">${promoCars(['atto-2','atto-3-evo','seal-u-dmi','sealion-7'])}</div><div class="r front">${promoCars(['atto-2-dmi','dolphin-g-dmi','seal-6-dmi-touring'])}</div></div>`
+  :x.video
   ?`<video src="${x.video}" ${x.poster?`poster="${x.poster}"`:''} muted loop playsinline ${i?'':'autoplay'} aria-hidden="true"></video>`
   :`<img src="${x.img}" alt="" aria-hidden="true">`}</div>`).join('');
 const arrowSvg=d=>`<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.6"><path d="${d}"/></svg>`;
@@ -1794,13 +1815,16 @@ function go(i){
   cur=(i+slides.length)%slides.length;
   document.querySelectorAll('.slide').forEach((el,j)=>{el.classList.toggle('on',j===cur);const v=el.querySelector('video');if(v){j===cur?v.play().catch(()=>{}):v.pause();}});
   document.querySelectorAll('.dots .dot').forEach((d,j)=>d.setAttribute('aria-current',j===cur));
-  const x=slides[cur], m=byId(x.id);
+  const x=slides[cur], hero=document.getElementById('home-hero');
+  hero.classList.toggle('is-promo',!!x.promo);
   document.getElementById('slide-title').textContent=x.title;
-  document.getElementById('slide-sub').textContent=x.sub;
-  const l=minLease(m), n=minLoan(m), so=document.getElementById('slide-offer');
-  so.innerHTML = `<b>${l ? `Privatleasing från ${fmt(l)} kr/mån` : loanHead(n)}</b>`;
-  document.getElementById('slide-cta').href='#/modell/'+x.id;
-  const c2=document.getElementById('slide-cta2'); c2.href='#/modell/'+x.id; c2.textContent=Object.keys(m.offers).length?'Se erbjudanden':'Boka provkörning'; if(!Object.keys(m.offers).length) c2.href='#/provkorning/'+x.id;
+  document.getElementById('slide-sub').textContent=x.sub||'';
+  const so=document.getElementById('slide-offer'), c1=document.getElementById('slide-cta'), c2=document.getElementById('slide-cta2');
+  if(x.promo){ so.innerHTML=`<b>${x.offer}</b>`; c1.href=x.href; c1.textContent=x.cta; c2.hidden=true; }
+  else { const m=byId(x.id), l=minLease(m), n=minLoan(m);
+    so.innerHTML=`<b>${l ? `Privatleasing från ${fmt(l)} kr/mån` : loanHead(n)}</b>`;
+    c1.href='#/modell/'+x.id; c1.textContent='Läs mer'; c2.hidden=false;
+    c2.href='#/modell/'+x.id; c2.textContent=Object.keys(m.offers).length?'Se erbjudanden':'Boka provkörning'; if(!Object.keys(m.offers).length) c2.href='#/provkorning/'+x.id; }
 }
 function autoplay(on){ if(matchMedia('(prefers-reduced-motion: reduce)').matches) document.querySelectorAll('video').forEach(v=>{v.removeAttribute('autoplay');v.pause();});clearInterval(timer); if(on && !matchMedia('(prefers-reduced-motion: reduce)').matches) timer=setInterval(()=>go(cur+1),7000);}
 document.getElementById('dots').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
