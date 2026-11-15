@@ -957,7 +957,7 @@
   <section class="block" style="padding-top:0">
     <div class="wrap"><div class="dealer"><div class="box">
       <div><h2 class="title">Erbjudanden för företag</h2>
-        <p class="sub">Operationell leasing från 5 945 kr/mån ex. moms, service och försäkring ingår. Förmånsvärde från 1 828 kr/mån netto och företagsrabatt upp till 10 %. Finansiell leasing för alla modeller med egen kalkyl.</p></div>
+        <p class="sub">Finansiell leasing för alla modeller med egen kalkyl. Operationell leasing från 5 945 kr/mån ex. moms, service och försäkring ingår. Förmånsvärde från 1 828 kr/mån netto.</p></div>
       <div class="ctas"><a class="btn btn-dark" href="#/foretag">Se företagserbjudanden</a></div>
     </div></div></div>
   </section>
@@ -1061,35 +1061,35 @@ const MIL=[1000,1500,2000], MIL_OPL=[1000,1500,2000,2500,3000];
 const PL={setup:995, avi:58, overmil:15, months:36};
 const models=[
   {id:'seal-u-dmi', name:'BYD SEAL U DM-i', cat:'hybrid', desc:'Europas mest sålda laddhybrid', keys:['Laddhybrid','SUV'],
-   img:HD+'sealu-dm-i.webp', rabatt:'6–10 %',
+   img:HD+'sealu-dm-i.webp',
    tillval:{'Färgtillägg':316,'Vinterhjul friktion':616,'Vinterhjul dubb':631,'Dragkrok avtagbar':254},
    trims:[{t:'Boost',list:469900,loanBase:459900,lease:[4190,4312,4760],el:'80 km på el',opl:[6095,6295,6795,6995,7495],fv:2839},
           {t:'Comfort',list:499900,loanBase:489900,lease:[4290,4470,4975],gain:'125 km på el i stället för 80 km',opl:[6395,6595,7095,7295,7795],fv:3031},
           {t:'Design',list:529900,loanBase:519900,lease:[4490,4691,5263],gain:'Fyrhjulsdrift (AWD)',opl:[6795,6995,7495,7695,8195],fv:3223}]},
   {id:'seal-6-dmi-touring', name:'BYD SEAL 6 DM-i TOURING', cat:'hybrid', desc:'En av få laddhybridkombis på marknaden', keys:['Laddhybrid','Kombi'],
-   img:HD+'seal6-dm-i-touring.webp', rabatt:'6–10 %',
+   img:HD+'seal6-dm-i-touring.webp',
    tillval:{'Färgtillägg':316,'Vinterhjul friktion':524,'Vinterhjul dubb':554,'Dragkrok avtagbar':551},
    trims:[{t:'Boost',list:439900,loanBase:439900,lease:[3490,3605,4061],opl:[5795,5945,6445,6645,7145],fv:2646},
           {t:'Comfort',list:469900,loanBase:459900,lease:[3690,3819,4293],gain:'100 km på el i stället för 50 km',opl:[6095,6295,6795,6995,7495],fv:2839}]},
   {id:'sealion-7', name:'BYD SEALION 7', cat:'el', desc:'Helelektrisk SUV med sportig prestanda', keys:['Elbil','SUV'],
-   img:HD+'sealion7.webp', rabatt:'4–8 %',
+   img:HD+'sealion7.webp',
    tillval:{'Färgtillägg':316,'Vinterhjul friktion':608,'Vinterhjul dubb':608,'Dragkrok avtagbar':485},
    trims:[{t:'Comfort',list:569900,loanBase:569900,lease:[5990,6155,6497],opl:[7295,7545,7895,8145,8645],fv:2294},
           {t:'Excellence',list:639900,loanBase:639900,lease:[6190,6462,6931],gain:'Fyrhjulsdrift och 530 hk, 0–100 km/h på 4,5 s',tv:{'Vinterhjul friktion':702,'Vinterhjul dubb':702},opl:[8195,8495,8895,9195,9695],fv:2742}]},
   {id:'atto-3-evo', name:'BYD ATTO 3 EVO', cat:'el', desc:'Elektrisk SUV med 510 km räckvidd', keys:['Elbil','SUV','510 km räckvidd'],
-   img:HD+'atto3-evo.webp', rabatt:'4–8 %',
+   img:HD+'atto3-evo.webp',
    tillval:{'Färgtillägg':218,'Vinterhjul friktion':524,'Vinterhjul dubb':539},
    trims:[{t:'Design',list:494900,loanBase:494900,lease:[4290,4453,4752],fv:2358},{t:'Excellence',list:524900,loanBase:524900,lease:[4690,4921,5337],gain:'Fyrhjulsdrift (AWD)',fv:2456}]},
   {id:'atto-2', name:'BYD ATTO 2', cat:'el', desc:'Elektrisk kompakt SUV', keys:['Elbil','Kompakt SUV'],
-   img:HD+'atto2.webp', rabatt:'4–8 %',
+   img:HD+'atto2.webp',
    tillval:{'Färgtillägg':218,'Vinterhjul friktion':432,'Vinterhjul dubb':439},
    trims:[{t:'Comfort',list:428900,loanBase:428900,lease:[3890,4014,4313],fv:2141}]},
   {id:'atto-2-dmi', name:'BYD ATTO 2 DM-i', cat:'hybrid', desc:'Kompakt hybrid-SUV', keys:['Laddhybrid','Kompakt SUV'],
-   img:HD+'atto2-dm-i.webp', rabatt:'6–10 %',
+   img:HD+'atto2-dm-i.webp',
    tillval:{'Färgtillägg':218,'Vinterhjul friktion':432,'Vinterhjul dubb':447},
    trims:[{t:'Boost',list:369900,loanBase:369900,lease:[3490,3632,4167],fv:2242}]},
   {id:'dolphin-g-dmi', name:'BYD DOLPHIN G DM-i', cat:'hybrid', desc:'Hybridhalvkombi med lång räckvidd', keys:['Laddhybrid','Halvkombi'],
-   img:HD+'dolphin-g-dm-i.webp', rabatt:'6–10 %',
+   img:HD+'dolphin-g-dm-i.webp',
    tillval:{'Färgtillägg':218,'Vinterhjul friktion':370,'Vinterhjul dubb':386},
    trims:[{t:'Active',list:306900,loanBase:306900,lease:[2990,3133,3655],fv:1828},{t:'Boost',list:339900,loanBase:339900,lease:[3290,3457,4003],fv:2045},
           {t:'Comfort',list:359900,loanBase:359900,lease:[3490,3667,4223],fv:2177},{t:'Sport',list:369900,loanBase:369900,lease:[3690,3872,4433],fv:2242}]}
@@ -1105,7 +1105,6 @@ function finLease(priceEx, firstPct, resPct){
   return {first, res, fin, pmt};
 }
 const maxFirst = resPct => Math.min(FINLEASE.firstMax, Math.floor((95-resPct)/5)*5);
-const discLevels = m => { const [a,b]=m.rabatt.match(/\d+/g).map(Number); return [0,a,(a+b)/2,b]; };
 models.forEach(m=>{ m.offers={}; if(m.trims.some(t=>t.lease)) m.offers.leasing=true; m.offers.billan=true; m.offers.kontant=20000; m.offers.foretag=true; });
 const byId = id => models.find(m=>m.id===id);
 const offerName={leasing:'Privatleasing', billan:'Billån 0,95 %', kontant:'Kontantrabatt', foretag:'Företagserbjudande'};
@@ -1348,15 +1347,15 @@ function modelPage(m){
   const ftg = `<section class="block" id="foretag" style="padding-bottom:0"><div class="wrap">
     <h2 class="title">För företag</h2><p class="sub" style="margin-bottom:22px">Erbjudanden för dig som kör ${m.name.replace('BYD ','')} i tjänsten. <a href="#/foretag?modell=${m.id}">Räkna på finansiell leasing</a></p>
     <div class="otiles">
+      <div class="otile"><span class="tag">Finansiell leasing</span><h3>Räkna på din månadshyra</h3><p>Företaget väljer själv upplägg.</p>
+        <ul><li>36 månader</li><li>Välj förhöjd första hyra och restvärde</li><li>Gäller alla versioner</li></ul>
+        <div class="ctas"><a class="btn btn-dark" href="#/foretag?modell=${m.id}">Räkna på finansiell leasing</a></div></div>
       ${minOpl(m)?`<div class="otile"><span class="tag">Operationell leasing</span><h3>Från ${fmt(minOpl(m))} kr/mån ex. moms</h3><p>Fast månadskostnad för företaget.</p>
         <ul><li>36 månader, 1 500 mil/år</li><li>Service och försäkring ingår</li><li>Fler mil går att välja</li></ul>
-        <div class="ctas"><a class="btn btn-dark" href="#/ansok/${m.id}/foretag/0">${ctaName.foretag}</a></div></div>`:''}
+        <div class="ctas"><a class="btn btn-line" href="#/ansok/${m.id}/foretag/0">${ctaName.foretag}</a></div></div>`:''}
       <div class="otile"><span class="tag">Förmånsvärde</span><h3>Från ${fmt(minFv(m))} kr/mån netto</h3><p>Kostnad för föraren vid 50 % marginalskatt.</p>
         <ul>${m.trims.map(t=>`<li>${t.t}: ${fmt(t.fv)} kr/mån</li>`).join('')}</ul>
-        <div class="ctas"><a class="btn btn-${minOpl(m)?'line':'dark'}" href="#/ansok/${m.id}/foretag/0">${ctaName.foretag}</a></div></div>
-      <div class="otile"><span class="tag">Företagsrabatt</span><h3>${m.rabatt} rabatt</h3><p>Rabatt på listpriset för företag.</p>
-        <ul><li>Nivån beror på företagets vagnpark</li><li>Gäller köp och finansiering</li></ul>
-        <div class="ctas"><a class="btn btn-line" href="#/ansok/${m.id}/foretag/0">Begär företagsoffert</a></div></div>
+        <div class="ctas"><a class="btn btn-line" href="#/ansok/${m.id}/foretag/0">${ctaName.foretag}</a></div></div>
     </div></div></section>`;
   const calc = o.billan ? `<section class="block" id="kalkyl" style="padding-bottom:0"><div class="wrap">
     <h2 class="title">Räkna på ditt billån</h2><p class="sub" style="margin-bottom:22px">Ändra kontantinsats och restvärde och se din månadskostnad.</p>
@@ -1391,7 +1390,7 @@ function modelPage(m){
     const effTxt = f2(lo)===f2(hi) ? f2(lo)+' %' : f2(lo)+'–'+f2(hi)+' % beroende på version';
     terms.push(`<p><b>Billån</b> via Santander Consumer Bank. Rörlig ränta 0,95 % (effektiv ränta ${effTxt}). Kontantinsats 30 %, 36 månader, restvärde 55 %. Uppläggningsavgift ${FEE_SETUP} kr och administrationsavgift ${FEE_MONTH} kr/mån tillkommer. Räntan är rörlig och kan förändras med Santanders upplåningskostnader, men understiger aldrig 0 %. Sedvanlig kreditprövning. Icke-bindande finansieringsförslag. Kan inte kombineras med kampanjrabatt. Gäller nybeställning t.o.m. ${DEADLINE_FULL}, begränsat antal. Representativt exempel: ${m.name} ${t0.t}, kampanjpris ${fmt(pb)} kr, kontantinsats ${fmt(pb*0.3)} kr, lånebelopp ${fmt(pb*0.7)} kr, ${fmt(mo)} kr/mån, restvärde ${fmt(pb*0.55)} kr, effektiv ränta ${pct(effRate(pb))}, totalt att återbetala ${fmt(mo*N+pb*0.55+FEE_SETUP+FEE_MONTH*N)} kr.</p>`); }
   if(o.kontant) terms.push(`<p><b>Kampanjrabatt</b> ${fmt(o.kontant)} kr gäller vid kontantköp av ny bil, ett begränsat antal bilar. Kan inte kombineras med privatleasing, billån eller andra kampanjer. Gäller nybeställning t.o.m. ${DEADLINE_FULL}.</p>`);
-  terms.push(`<p><b>Företag:</b> Operationell leasing 36 månader, 1 500 mil/år, service och försäkring ingår, priser ex. moms. Förmånsvärde netto beräknat vid 50 % marginalskatt. Företagsrabatt ${m.rabatt} beroende på företagets vagnpark.</p>`);
+  terms.push(`<p><b>Företag:</b> Operationell leasing 36 månader, 1 500 mil/år, service och försäkring ingår, priser ex. moms. Förmånsvärde netto beräknat vid 50 % marginalskatt.</p>`);
 
   return `<header class="hero light"><div class="wrap">
       <nav class="crumbs" aria-label="Brödsmulor"><a href="#/erbjudanden">Erbjudanden</a><i>/</i><span aria-current="page">${m.name}</span></nav>
@@ -1513,9 +1512,9 @@ function bindForm(start){
       rows+=`<div><dt>Avtal</dt><dd>36 mån, ${fmt(MIL[mi])} mil/år</dd></div><div><dt>Ingår</dt><dd>Service</dd></div>${sel.length?`<div><dt>Tillval</dt><dd>${sel.map(i=>tvK[i]).join(', ')}</dd></div>`:''}`;
       price=fmt(tr.lease[mi]+sel.reduce((a,i)=>a+tvV[i],0))+' kr/mån'; extra=` med ${fmt(MIL[mi])} mil/år${sel.length?' och '+sel.map(i=>tvK[i].toLowerCase()).join(', '):''}`; }
     if(tr && k==='foretag' && start.fl){ const pr=tr.list/FINLEASE.vat*(1-start.fl.disc/100), x=finLease(pr,start.fl.f,start.fl.r);
-      rows+=`<div><dt>Finansiell leasing</dt><dd>${fmt(x.pmt)} kr/mån ex. moms</dd></div><div><dt>Första hyra / restvärde</dt><dd>${start.fl.f} % / ${start.fl.r} %</dd></div>${start.fl.disc?`<div><dt>Företagsrabatt</dt><dd>${start.fl.disc} %</dd></div>`:''}`;
-      extra=` (finansiell leasing, ${start.fl.f} % första hyra, ${start.fl.r} % restvärde${start.fl.disc?', '+start.fl.disc+' % rabatt':''})`; }
-    else if(tr && k==='foretag'){ rows+=`${tr.opl?`<div><dt>Operationell leasing</dt><dd>${fmt(tr.opl[1])} kr/mån ex. moms</dd></div>`:''}<div><dt>Förmånsvärde</dt><dd>${fmt(tr.fv)} kr/mån netto</dd></div><div><dt>Företagsrabatt</dt><dd>${m.rabatt}</dd></div>`; }
+      rows+=`<div><dt>Finansiell leasing</dt><dd>${fmt(x.pmt)} kr/mån ex. moms</dd></div><div><dt>Första hyra / restvärde</dt><dd>${start.fl.f} % / ${start.fl.r} %</dd></div>`;
+      extra=` (finansiell leasing, ${start.fl.f} % första hyra, ${start.fl.r} % restvärde)`; }
+    else if(tr && k==='foretag'){ rows+=`${tr.opl?`<div><dt>Operationell leasing</dt><dd>${fmt(tr.opl[1])} kr/mån ex. moms</dd></div>`:''}<div><dt>Förmånsvärde</dt><dd>${fmt(tr.fv)} kr/mån netto</dd></div>`; }
     if(tr && k==='billan'){rows+=`<div><dt>Kontantinsats</dt><dd>${qD.value} %, ${fmt(tr.loanBase*qD.value/100)} kr</dd></div><div><dt>Restvärde</dt><dd>${qR.value} %</dd></div>`; price=fmt(loanMonthly(tr.loanBase,+qD.value,+qR.value))+' kr/mån';}
     if(tr && k==='kontant'){rows+=`<div><dt>Rabatt</dt><dd>${fmt(m.offers.kontant)} kr</dd></div>`; price= tr.list?fmt(tr.list-m.offers.kontant)+' kr':'<mark>X kr</mark>';}
     $('summary').innerHTML=`<div class="s-img"><img src="${m.img}" alt=""></div><h3>${m.name}</h3><p class="desc" style="margin:2px 0 0;color:var(--muted);font-size:14px">${tr?tr.t:''}</p>
@@ -1894,18 +1893,11 @@ function ftgPage(pre){
   return `<header class="hero light compact"><div class="wrap" style="padding-bottom:36px">
       <nav class="crumbs" aria-label="Brödsmulor"><a href="#/erbjudanden">Erbjudanden</a><i>/</i><span aria-current="page">Företag</span></nav>
       <h1>Erbjudanden för företag</h1>
-      <p class="lead">Operationell leasing med service och försäkring, eller finansiell leasing där du själv väljer första hyra och restvärde. Alla priser exklusive moms.</p>
-      <div class="ctas"><a class="btn btn-dark" href="#oplease">Operationell leasing</a><a class="btn btn-line" href="#finlease">Finansiell leasing</a></div>
+      <p class="lead">Finansiell leasing där du själv väljer första hyra och restvärde, eller operationell leasing med service och försäkring. Alla priser exklusive moms.</p>
+      <div class="ctas"><a class="btn btn-dark" href="#finlease">Finansiell leasing</a><a class="btn btn-line" href="#oplease">Operationell leasing</a></div>
     </div></header>
 
-    <section class="block" id="oplease" style="padding-top:40px;padding-bottom:0"><div class="wrap">
-      <h2 class="title">Operationell leasing</h2>
-      <p class="sub" style="margin-bottom:18px">36 månader. Service och försäkring ingår. Månadskostnad ex. moms per körsträcka.</p>
-      <div class="ftg-tabs" role="group" aria-label="Välj modell">${opl.map((m,i)=>`<button type="button" data-opl="${m.id}" aria-pressed="${i===0}">${m.name.replace('BYD ','')}</button>`).join('')}</div>
-      <div id="opl-table"></div>
-    </div></section>
-
-    <section class="block" id="finlease" style="padding-bottom:0"><div class="wrap">
+    <section class="block" id="finlease" style="padding-top:40px;padding-bottom:0"><div class="wrap">
       <h2 class="title">Finansiell leasing</h2>
       <p class="sub" style="margin-bottom:22px">Välj modell, förhöjd första hyra och restvärde. Gäller alla modeller.</p>
       <div class="calc">
@@ -1914,7 +1906,6 @@ function ftgPage(pre){
             <div class="field"><label for="f-model">Modell</label><select id="f-model">${models.map(m=>`<option value="${m.id}" ${m.id===mPre.id?'selected':''}>${m.name}</option>`).join('')}</select></div>
             <div class="field"><label for="f-trim">Utrustningsnivå</label><select id="f-trim"></select></div>
           </div>
-          <div class="field" style="margin-bottom:20px"><label>Företagsrabatt</label><div class="seg-sm" id="f-disc"></div><p class="help" id="f-disc-help"></p></div>
           <div class="range"><div class="row"><label for="f-first">Förhöjd första hyra</label><output id="o-first"></output></div>
             <input type="range" id="f-first" min="0" max="${FINLEASE.firstMax}" step="5" value="0"><div class="ends"><span>0 %</span><span>${FINLEASE.firstMax} %</span></div></div>
           <div class="range"><div class="row"><label for="f-res">Restvärde</label><output id="o-res2"></output></div>
@@ -1936,11 +1927,18 @@ function ftgPage(pre){
       </div>
     </div></section>
 
+    <section class="block" id="oplease" style="padding-bottom:0"><div class="wrap">
+      <h2 class="title">Operationell leasing</h2>
+      <p class="sub" style="margin-bottom:18px">36 månader. Service och försäkring ingår. Månadskostnad ex. moms per körsträcka.</p>
+      <div class="ftg-tabs" role="group" aria-label="Välj modell">${opl.map((m,i)=>`<button type="button" data-opl="${m.id}" aria-pressed="${i===0}">${m.name.replace('BYD ','')}</button>`).join('')}</div>
+      <div id="opl-table"></div>
+    </div></section>
+
     <section class="block" style="padding-bottom:0"><div class="wrap">
-      <h2 class="title">Förmånsvärde och företagsrabatt</h2>
-      <p class="sub" style="margin-bottom:22px">Förmånsvärde netto per månad vid 50 % marginalskatt. Rabattnivån beror på företagets vagnpark.</p>
-      <div class="ptable"><table><thead><tr><th>Modell</th><th>Version</th><th>Listpris ex. moms</th><th>Förmånsvärde netto</th><th>Företagsrabatt</th></tr></thead><tbody>
-        ${models.map(m=>m.trims.map((t,i)=>`<tr><td>${i?'':`<b>${m.name.replace('BYD ','')}</b>`}</td><td>${t.t}</td><td>${fmt(t.list/FINLEASE.vat)} kr</td><td><b>${fmt(t.fv)} kr/mån</b></td><td>${i?'':m.rabatt}</td></tr>`).join('')).join('')}
+      <h2 class="title">Förmånsvärde</h2>
+      <p class="sub" style="margin-bottom:22px">Förmånsvärde netto per månad vid 50 % marginalskatt.</p>
+      <div class="ptable"><table><thead><tr><th>Modell</th><th>Version</th><th>Listpris ex. moms</th><th>Förmånsvärde netto</th></tr></thead><tbody>
+        ${models.map(m=>m.trims.map((t,i)=>`<tr><td>${i?'':`<b>${m.name.replace('BYD ','')}</b>`}</td><td>${t.t}</td><td>${fmt(t.list/FINLEASE.vat)} kr</td><td><b>${fmt(t.fv)} kr/mån</b></td></tr>`).join('')).join('')}
       </tbody></table></div>
     </div></section>
 
@@ -1950,9 +1948,9 @@ function ftgPage(pre){
     </div></div></div></section>
 
     <section class="fine"><div class="wrap"><h2>Villkor</h2>
-      <p><b>Operationell leasing</b> via Ayvens: 36 månader, service och försäkring ingår. Priser exkl. moms. Tillval tillkommer per månad. Gäller nybeställning t.o.m. ${DEADLINE_FULL}, begränsat antal.</p>
       <p><b>Finansiell leasing:</b> räkneexempel med ${FINLEASE.months} månaders löptid, förhöjd första hyra och restvärde i procent av priset exkl. moms. Ränta och slutliga villkor enligt finansbolagets offert. Sedvanlig kreditprövning.</p>
-      <p><b>Företagsrabatt</b> beror på företagets vagnpark. Förmånsvärde beräknat netto vid 50 % marginalskatt.</p>
+      <p><b>Operationell leasing</b> via Ayvens: 36 månader, service och försäkring ingår. Priser exkl. moms. Tillval tillkommer per månad. Gäller nybeställning t.o.m. ${DEADLINE_FULL}, begränsat antal.</p>
+      <p><b>Förmånsvärde</b> beräknat netto vid 50 % marginalskatt.</p>
     </div></section>`;
 }
 function oplTable(id){
@@ -1973,10 +1971,9 @@ function bindFtg(){
   let disc=0;
   const fillModel=()=>{ const m=byId(fM.value);
     fT.innerHTML=m.trims.map((t,i)=>`<option value="${i}">${t.t}</option>`).join('');
-    $('f-disc').innerHTML=discLevels(m).map((d,i)=>`<label><input type="radio" name="fdisc" value="${d}" ${i?'':'checked'}> ${d?d+' %':'Ingen'}</label>`).join('');
-    $('f-disc-help').textContent=`Rabatt för ${m.name.replace('BYD ','')}: ${m.rabatt} beroende på vagnpark.`; disc=0; };
+    disc=0; };
   const upd=()=>{
-    const m=byId(fM.value), t=m.trims[+fT.value]; disc=+(document.querySelector('input[name=fdisc]:checked')||{value:0}).value;
+    const m=byId(fM.value), t=m.trims[+fT.value]; disc=0;
     let f=+fF.value, r=+fR.value; const mx=maxFirst(r);
     if(f>mx){ f=mx; fF.value=mx; }
     $('f-limit').hidden = mx>=FINLEASE.firstMax; $('f-limit').textContent=`Med ${r} % restvärde kan första hyran vara högst ${mx} %.`;
@@ -1987,7 +1984,7 @@ function bindFtg(){
     $('f-apply').href=`#/ansok/${m.id}/foretag/${fT.value}/${f}/${r}/${disc}`;
   };
   fM.addEventListener('change',()=>{fillModel();upd();});
-  [fT,fF,fR].forEach(x=>x.addEventListener('input',upd)); $('f-disc').addEventListener('change',upd);
+  [fT,fF,fR].forEach(x=>x.addEventListener('input',upd));
   fillModel(); upd();
 }
 
