@@ -1201,7 +1201,6 @@ function plPage(){
       <p class="plc-price"><b>${fmt(minLease(m))}\u00a0kr/mån<sup>1</sup></b><span>36 mån · 1\u00a0000 mil/år · privatleasing</span></p>
       <h3>${m.name}</h3><p class="plc-desc">${m.desc}</p>
       <div class="plc-btns"><a class="btn btn-dark btn-sm" href="#/modell/${m.id}?till=privatleasing">Se versioner och priser</a><a class="btn btn-line btn-sm" href="#/ansok/${m.id}/leasing/0/0/0">Begär offert</a></div>
-      <p class="plc-trims">${ts.map(t=>`${t.t} ${fmt(t.lease[0])}`).join(' · ')}\u00a0kr/mån</p>
     </article>`; };
   const ex=order.map(m=>{ const t=m.trims.filter(x=>x.lease)[0]; return `${m.name} ${t.t}: ${fmt(t.lease[0])}\u00a0kr/mån, totalt ${fmt(plTotal(t.lease[0]))}\u00a0kr.`; }).join(' ');
   const faq=[
