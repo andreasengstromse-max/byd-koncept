@@ -1062,7 +1062,7 @@
   <section class="block" style="padding-top:0">
     <div class="wrap"><div class="dealer"><div class="box">
       <div><h2 class="title">Erbjudanden för företag</h2>
-        <p class="sub">Finansiell leasing för alla modeller med egen kalkyl. Business Lease från 5 945 kr/mån ex. moms, service och försäkring ingår. Förmånsvärde från 1 828 kr/mån netto.</p></div>
+        <p class="sub">Finansiell leasing för alla modeller med egen kalkyl. Business Lease från 4 595 kr/mån ex. moms, service och försäkring ingår. Förmånsvärde från 1 828 kr/mån netto.</p></div>
       <div class="ctas"><a class="btn btn-dark" href="#/foretag">Se företagserbjudanden</a></div>
     </div></div></div>
   </section>
@@ -1168,40 +1168,44 @@ const models=[
   {id:'seal-u-dmi', name:'BYD SEAL U DM-i', cat:'hybrid', desc:'Europas mest sålda laddhybrid', keys:['Laddhybrid','SUV'],
    img:HD+'sealu-dm-i.webp',
    tillval:{'Färgtillägg':316,'Vinterhjul friktion':616,'Vinterhjul dubb':631,'Dragkrok avtagbar':254},
-   trims:[{t:'Boost',list:469900,loanBase:459900,lease:[4190,4312,4760],el:'80 km på el',opl:[6095,6295,6795,6995,7495],fv:2900},
-          {t:'Comfort',list:499900,loanBase:489900,lease:[4290,4470,4975],gain:'125 km på el i stället för 80 km',opl:[6395,6595,7095,7295,7795],fv:3097},
-          {t:'Design',list:529900,loanBase:519900,lease:[4490,4691,5263],gain:'Fyrhjulsdrift (AWD)',opl:[6795,6995,7495,7695,8195],fv:3295}]},
+   trims:[{t:'Boost',list:469900,loanBase:459900,lease:[4190,4312,4760],el:'80 km på el',opl:[6495,6695,7195,7495,7895],fv:2900},
+          {t:'Comfort',list:499900,loanBase:489900,lease:[4290,4470,4975],gain:'125 km på el i stället för 80 km',opl:[6895,7095,7595,7895,8295],fv:3097},
+          {t:'Design',list:529900,loanBase:519900,lease:[4490,4691,5263],gain:'Fyrhjulsdrift (AWD)',opl:[7295,7595,8095,8395,8895],fv:3295}]},
   {id:'seal-6-dmi-touring', name:'BYD SEAL 6 DM-i TOURING', cat:'hybrid', desc:'En av få laddhybridkombis på marknaden', keys:['Laddhybrid','Kombi'],
    img:HD+'seal6-dm-i-touring.webp',
    tillval:{'Färgtillägg':316,'Vinterhjul friktion':524,'Vinterhjul dubb':554,'Dragkrok avtagbar':551},
-   trims:[{t:'Boost',list:439900,loanBase:439900,lease:[3490,3605,4061],opl:[5795,5945,6445,6645,7145],fv:2703},
-          {t:'Comfort',list:469900,loanBase:459900,lease:[3690,3819,4293],gain:'100 km på el i stället för 50 km',opl:[6095,6295,6795,6995,7495],fv:2900}]},
+   trims:[{t:'Boost',list:439900,loanBase:439900,lease:[3490,3605,4061],opl:[6195,6395,6795,7095,null],fv:2703},
+          {t:'Comfort',list:469900,loanBase:459900,lease:[3690,3819,4293],gain:'100 km på el i stället för 50 km',opl:[6594,6795,7195,7495,7895],fv:2900}]},
   {id:'sealion-7', name:'BYD SEALION 7', cat:'el', desc:'Helelektrisk SUV med sportig prestanda', keys:['Elbil','SUV'],
    img:HD+'sealion7.webp',
    tillval:{'Färgtillägg':316,'Vinterhjul friktion':608,'Vinterhjul dubb':608,'Dragkrok avtagbar':485},
-   trims:[{t:'Comfort',list:569900,loanBase:569900,lease:[5990,6155,6497],opl:[7295,7545,7895,8145,8645],fv:2604},
-          {t:'Excellence',list:639900,loanBase:639900,lease:[6190,6462,6931],gain:'Fyrhjulsdrift och 530 hk, 0–100 km/h på 4,5 s',tv:{'Vinterhjul friktion':702,'Vinterhjul dubb':702},opl:[8195,8495,8895,9195,9695],fv:2835}]},
+   trims:[{t:'Comfort',list:569900,loanBase:569900,lease:[5990,6155,6497],opl:[7695,8095,8395,8795,9195],fv:2604},
+          {t:'Excellence',list:639900,loanBase:639900,lease:[6190,6462,6931],gain:'Fyrhjulsdrift och 530 hk, 0–100 km/h på 4,5 s',tv:{'Vinterhjul friktion':702,'Vinterhjul dubb':702},opl:[8595,8995,9395,9795,10195],fv:2835}]},
   {id:'atto-3-evo', name:'BYD ATTO 3 EVO', cat:'el', desc:'Elektrisk SUV med 510 km räckvidd', keys:['Elbil','SUV','510 km räckvidd'],
    img:HD+'atto3-evo.webp',
    tillval:{'Färgtillägg':218,'Vinterhjul friktion':524,'Vinterhjul dubb':539},
-   trims:[{t:'Design',list:494900,loanBase:494900,lease:[4290,4453,4752],fv:2358},{t:'Excellence',list:524900,loanBase:524900,lease:[4690,4921,5337],gain:'Fyrhjulsdrift (AWD)',fv:2456}]},
+   trims:[{t:'Design',list:494900,loanBase:494900,lease:[4290,4453,4752],opl:[7095,7295,7395,7595,7995],fv:2358},{t:'Excellence',list:524900,loanBase:524900,lease:[4690,4921,5337],gain:'Fyrhjulsdrift (AWD)',opl:[7495,7695,7995,8195,8595],fv:2456}]},
   {id:'atto-2', name:'BYD ATTO 2', cat:'el', desc:'Elektrisk kompakt SUV', keys:['Elbil','Kompakt SUV'],
    img:HD+'atto2.webp',
    tillval:{'Färgtillägg':218,'Vinterhjul friktion':432,'Vinterhjul dubb':439},
-   trims:[{t:'Comfort',list:428900,loanBase:428900,lease:[3890,4014,4313],fv:2141}]},
+   trims:[{t:'Comfort',list:428900,loanBase:428900,lease:[3890,4014,4313],opl:[6195,6395,6595,6795,7095],fv:2141}]},
   {id:'atto-2-dmi', name:'BYD ATTO 2 DM-i', cat:'hybrid', desc:'Kompakt hybrid-SUV', keys:['Laddhybrid','Kompakt SUV'],
    img:HD+'atto2-dm-i.webp',
    tillval:{'Färgtillägg':218,'Vinterhjul friktion':432,'Vinterhjul dubb':447},
-   trims:[{t:'Boost',list:369900,loanBase:369900,lease:[3490,3632,4167],fv:2242}]},
+   trims:[{t:'Boost',list:369900,loanBase:369900,lease:[3490,3632,4167],opl:[5195,5395,5795,6095,6395],fv:2242}]},
   {id:'dolphin-g-dmi', name:'BYD DOLPHIN G DM-i', cat:'hybrid', desc:'Hybridhalvkombi med lång räckvidd', keys:['Laddhybrid','Halvkombi'],
    img:HD+'dolphin-g-dm-i.webp',
    tillval:{'Färgtillägg':218,'Vinterhjul friktion':370,'Vinterhjul dubb':386},
-   trims:[{t:'Active',list:306900,loanBase:306900,lease:[2990,3133,3655],fv:1828},{t:'Boost',list:339900,loanBase:339900,lease:[3290,3457,4003],fv:2045},
-          {t:'Comfort',list:359900,loanBase:359900,lease:[3490,3667,4223],fv:2177},{t:'Sport',list:369900,loanBase:369900,lease:[3690,3872,4433],fv:2242}]}
+   trims:[{t:'Active',list:306900,loanBase:306900,lease:[2990,3133,3655],opl:[4395,4595,4995,5195,5495],fv:1828},{t:'Boost',list:339900,loanBase:339900,lease:[3290,3457,4003],opl:[4795,4995,5395,5695,5995],fv:2045},
+          {t:'Comfort',list:359900,loanBase:359900,lease:[3490,3667,4223],opl:[5095,5195,5695,5895,6195],fv:2177},{t:'Sport',list:369900,loanBase:369900,lease:[3690,3872,4433],opl:[5195,5395,5795,6095,6395],fv:2242}]}
 ];
-const OPL_TILLVAL={'seal-u-dmi':{'Färgtillägg':201,'Vinterhjul friktion':558,'Vinterhjul dubb':572,'Dragkrok avtagbar':203},
+const OPL_TILLVAL={'dolphin-g-dmi':{'Vinterhjul friktion':336,'Vinterhjul dubb':349},
+  'atto-2-dmi':{'Vinterhjul friktion':391,'Vinterhjul dubb':405},
+  'atto-2':{'Vinterhjul friktion':391,'Vinterhjul dubb':398},
+  'atto-3-evo':{'Vinterhjul friktion':474,'Vinterhjul dubb':488},
+  'seal-u-dmi':{'Färgtillägg':201,'Vinterhjul friktion':558,'Vinterhjul dubb':572,'Dragkrok avtagbar':203},
   'seal-6-dmi-touring':{'Färgtillägg':201,'Vinterhjul friktion':474,'Vinterhjul dubb':502,'Dragkrok avtagbar':441},
-  'sealion-7':{'Färgtillägg':201,'Vinterhjul friktion':731,'Vinterhjul dubb':731,'Dragkrok avtagbar':388}};
+  'sealion-7':{'Färgtillägg':201,'Vinterhjul friktion (Comfort)':551,'Vinterhjul dubb (Comfort)':551,'Vinterhjul friktion (Excellence)':636,'Vinterhjul dubb (Excellence)':636,'Dragkrok avtagbar':271}};
 /* Finansiell leasing (företag). Räntan finns inte i kampanjprogrammet: exempelvärde, bekräftas med finansbolaget. */
 const FINLEASE={rate:0.0495, months:36, vat:1.25, firstMax:80, resMin:10, resMax:55};
 function finLease(priceEx, firstPct, resPct){
@@ -2202,7 +2206,7 @@ function oplTable(id){
   const m=byId(id), tv=OPL_TILLVAL[id]||{};
   return `<div class="ptable"><table>
     <thead><tr><th>Version</th>${MIL_OPL.map((v,i)=>`<th class="${i===1?'hl':''}">${fmt(v)} mil/år</th>`).join('')}<th></th></tr></thead>
-    <tbody>${m.trims.filter(t=>t.opl).map((t,ti)=>`<tr><td><b>${t.t}</b></td>${t.opl.map((v,i)=>`<td class="${i===1?'hl':''}"><b>${fmt(v)}</b> kr/mån</td>`).join('')}
+    <tbody>${m.trims.filter(t=>t.opl).map((t,ti)=>`<tr><td><b>${t.t}</b></td>${t.opl.map((v,i)=>`<td class="${i===1?'hl':''}">${v?`<b>${fmt(v)}</b> kr/mån`:'–'}</td>`).join('')}
       <td><a href="#/ansok/${m.id}/foretag/${m.trims.indexOf(t)}">Begär offert</a></td></tr>`).join('')}</tbody></table></div>
     ${Object.keys(tv).length?`<p class="note">Tillval per månad ex. moms: ${Object.entries(tv).map(([k,v])=>`${k} ${v} kr`).join(' · ')}.</p>`:''}
     <p class="note">Markerad kolumn (1 500 mil/år) är kommunicerat från-pris.</p>`;
