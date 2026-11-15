@@ -2208,7 +2208,6 @@ function oplTable(id){
     <thead><tr><th>Version</th>${MIL_OPL.map((v,i)=>`<th class="${i===1?'hl':''}">${fmt(v)} mil/år</th>`).join('')}<th></th></tr></thead>
     <tbody>${m.trims.filter(t=>t.opl).map((t,ti)=>`<tr><td><b>${t.t}</b></td>${t.opl.map((v,i)=>`<td class="${i===1?'hl':''}">${v?`<b>${fmt(v)}</b> kr/mån`:'–'}</td>`).join('')}
       <td><a href="#/ansok/${m.id}/foretag/${m.trims.indexOf(t)}">Begär offert</a></td></tr>`).join('')}</tbody></table></div>
-    ${Object.keys(tv).length?`<p class="note">Tillval per månad ex. moms: ${Object.entries(tv).map(([k,v])=>`${k} ${v} kr`).join(' · ')}.</p>`:''}
     <p class="note">Markerad kolumn (1 500 mil/år) är kommunicerat från-pris.</p>`;
 }
 function bindFtg(){
