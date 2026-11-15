@@ -314,6 +314,7 @@
   .hm .row{display:flex;gap:8px;margin-top:auto}
   .hm .row span{flex:1;text-align:center;border:1.5px solid var(--ink);border-radius:999px;padding:8px 6px;font-size:13px;font-weight:600;color:var(--ink)}
   .hm .row span.d{background:var(--ink);color:#fff}
+  .hm img.st{display:none}
   .hm .tag{align-self:flex-start;margin-bottom:8px}
 
 
@@ -696,6 +697,59 @@
     .sticky-cta{padding:10px 16px}
     .sticky-cta .btn{padding:10px 14px;font-size:13px}
     body{padding-bottom:64px}
+  }
+
+  /* ---------- mobil enligt byd.com/de: stora bilder, en knapp i taget ---------- */
+  @media (max-width:600px){
+    /* menyn: liten provkörningsknapp bredvid hamburgaren, ingen fast knapprad i botten */
+    .nav .btn{display:inline-flex;padding:7px 14px;font-size:12.5px;white-space:nowrap}
+    .nav-inner{padding:8px 8px 8px 20px;gap:8px}
+    .sticky-cta{display:none!important}
+    body{padding-bottom:0}
+
+    /* startsidans hero: helskärm, centrerad text, en knapp */
+    .home-hero{min-height:100svh;display:flex;flex-direction:column}
+    .home-hero .wrap{padding-top:128px;padding-bottom:0;text-align:center;width:100%}
+    .home-hero h1{font-size:clamp(28px,8vw,34px);line-height:1.1}
+    .home-hero .slide-offer{margin:6px 0 22px}
+    .home-hero .slide-offer b{font-size:16px;font-weight:500}
+    .home-hero .ctas{justify-content:center}
+    .home-hero #slide-cta2{display:none}
+    .home-hero .ctas .btn,.steps .ctas .btn{flex:0 0 auto;width:auto}
+    .home-hero #slide-cta{padding:14px 34px;font-size:14px;letter-spacing:.04em}
+    .dots{bottom:118px;background:none;backdrop-filter:none}
+
+    /* genvägar: en flytande rad med ikon och etikett */
+    .home-quick{margin-top:-100px;padding-bottom:16px}
+    .home-quick ul{overflow:visible;gap:0;margin:0;padding:8px 6px;border-radius:999px;background:rgba(60,66,76,.5);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.35)}
+    .home-quick li{flex:1 1 0;min-width:0}
+    .home-quick a{flex-direction:column;align-items:center;gap:6px;min-height:0;padding:4px 2px;background:none;border:0;backdrop-filter:none;border-radius:0;text-align:center}
+    .home-quick .ic{width:38px;height:38px;border-radius:50%}
+    .home-quick small{font-size:11.5px;opacity:1;font-weight:500}
+    .home-quick h2,.home-quick p,.home-quick .go{display:none}
+
+    /* modellkort: en bil i taget, stor bild, centrerad text */
+    .head{flex-direction:column;align-items:center;text-align:center;gap:14px}
+    .home-models{grid-auto-columns:100%;gap:12px}
+    .hm{align-items:center;text-align:center;padding:26px 20px 24px;border-radius:28px}
+    .hm .tag{align-self:center}
+    .hm img{display:none}
+    .hm img.st{display:block;width:100%;aspect-ratio:16/10;object-fit:contain;background:none;border-radius:0;margin:6px 0 10px}
+    .hm small{order:1;min-height:0;font-size:13.5px;color:var(--text)}
+    .hm b{order:2;min-height:0;font-size:26px;letter-spacing:-.01em;margin-top:4px}
+    .hm-price{order:3;border-top:0;padding-top:0;margin:10px 0 18px;font-size:14px}
+    .hm-price strong{font-size:22px}
+    .hm .row{order:4;width:100%}
+    .hm .row span{padding:13px 6px;font-size:14px}
+
+    /* teknik: större bilder */
+    .tcard{aspect-ratio:4/5;border-radius:24px}
+    .tcard span{font-size:20px;padding:22px}
+
+    /* avslutande band: en knapp */
+    .steps .wrap{text-align:center;justify-content:center!important}
+    .steps .ctas{justify-content:center;width:100%}
+    .steps .ctas .btn-ghost{display:none}
   }
   @media (max-width:960px){ .pk-sum:not(:has(img)){display:none} }
 </style>
@@ -1727,7 +1781,7 @@ document.getElementById('dots').addEventListener('click',e=>{const b=e.target.cl
 go(0);
 document.getElementById('home-models').innerHTML=models.map(m=>`<a class="hm" href="#/modell/${m.id}">
   ${Object.keys(m.offers).length?'<span class="tag dark">Kampanj</span>':'<span class="tag" style="visibility:hidden">–</span>'}
-  <img src="${m.img}" alt="" loading="lazy">
+  <img src="${m.img}" alt="" loading="lazy"><img class="st" src="media/studio/${m.id}.webp" alt="" loading="lazy">
   <b>${m.name}</b><small>${m.desc}</small>
   <p class="hm-price">${minLease(m)?`Privatleasing från <strong>${fmt(minLease(m))} kr/mån</strong>`:`Billån från <strong>${fmt(minLoan(m))} kr/mån</strong>`}</p>
   <div class="row"><span class="d">${Object.keys(m.offers).length?'Se erbjudanden':'Läs mer'}</span></div></a>`).join('');
