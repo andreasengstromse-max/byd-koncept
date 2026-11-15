@@ -2348,7 +2348,7 @@ function pkRender(){
   document.getElementById('pk-sum').innerHTML=`<div class="s-img">${m?`<img src="${m.img}" alt="">`:''}</div>
     <h2 style="font-size:18px;margin:0 0 12px">Din provkörning</h2>
     <dl>${row('Bil',m&&m.name)}${row('Återförsäljare',pk.dealer&&dealerById(pk.dealer).name)}${pk.dealer?row('Adress',dealerById(pk.dealer).addr+', '+dealerById(pk.dealer).city):''}${row('Tid','Återförsäljaren kontaktar dig')}</dl>
-    ${m&&Object.keys(m.offers).length?`<p class="fine-s">${minLease(m)?'Privatleasing ':'Kampanj t.o.m. '+DEADLINE+': '}${m.name.replace('BYD ','')}${minLease(m)?' från '+fmt(minLease(m))+'\u00a0kr/mån':'billån från '+fmt(minLoan(m))+' kr/mån · 0,95 % ränta'}. <a href="#/modell/${m.id}">Se erbjudanden</a></p>`:''}`;
+    ${m&&Object.keys(m.offers).length?`<p class="fine-s">${minLease(m)?'Privatleasing ':''}${m.name.replace('BYD ','')}${minLease(m)?' från '+fmt(minLease(m))+'\u00a0kr/mån':' billån från '+fmt(minLoan(m))+' kr/mån · 0,95 % ränta'}. <a href="#/modell/${m.id}">Se erbjudanden</a></p>`:''}`;
 }
 function bindPk(){
   const v=document.getElementById('pk-view');
