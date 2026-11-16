@@ -591,6 +591,10 @@
   .lad-card b{font-size:clamp(18px,1.6vw,23px);line-height:1.25;color:var(--ink);letter-spacing:-.01em;white-space:nowrap}
   .lad-card small{font-size:13px;color:var(--muted)}
   .lad-card a{margin-top:auto;padding-top:12px;font-size:13.5px;font-weight:600;color:var(--ink)}
+  .lad-eq-h{margin-top:12px;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+  .lad-eq{list-style:none;margin:6px 0 4px;padding:0;display:flex;flex-direction:column;gap:4px;font-size:12.5px;line-height:1.35;color:var(--text)}
+  .lad-eq li{padding-left:12px;position:relative}
+  .lad-eq li::before{content:"";position:absolute;left:0;top:.55em;width:4px;height:4px;border-radius:50%;background:#9aa1ab}
   .lad-step{flex:0 0 128px;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:0 10px;text-align:center}
   .lad-step::before{content:"";position:absolute;left:0;right:0;top:50%;border-top:2px dashed #c5cad1}
   .lad-plus{position:relative;background:var(--ink);color:#fff;border-radius:999px;padding:6px 12px;font-weight:700;font-size:13.5px;white-space:nowrap}
@@ -602,6 +606,8 @@
     .lad-card,.ladder.one .lad-card{flex:none;flex-direction:row;flex-wrap:wrap;align-items:baseline;column-gap:12px;padding:14px 16px}
     .lad-name{flex:1 0 100%}
     .lad-card small{flex:1 0 100%;order:3}
+    .lad-eq-h,.lad-eq{flex:1 0 100%;order:4}
+    .lad-card a{order:2}
     .lad-card a{margin-left:auto;padding-top:0}
     .lad-step{flex:none;flex-direction:row;justify-content:flex-start;align-items:center;gap:12px;padding:12px 0 12px 14px;text-align:left}
     .lad-step::before{left:28px;right:auto;top:0;bottom:0;border-top:0;border-left:2px dashed #c5cad1}
@@ -1165,39 +1171,39 @@ const DEADLINE='30 november', DEADLINE_FULL='30/11 2026';
 const MIL=[1000,1500,2000], MIL_OPL=[1000,1500,2000,2500,3000];
 const PL={setup:995, avi:58, overmil:15, months:36};
 const models=[
-  {id:'seal-u-dmi', name:'BYD SEAL U DM-i', cat:'hybrid', desc:'Europas mest sålda laddhybrid', keys:['Laddhybrid','SUV'],
+  {id:'seal-u-dmi', name:'BYD SEAL U DM-i', cat:'hybrid', desc:'Europas mest sålda laddhybrid', keys:['Laddhybrid','SUV','Upp till 125 km på el'],
    img:HD+'sealu-dm-i.webp',
    tillval:{'Färgtillägg':316,'Vinterhjul friktion':616,'Vinterhjul dubb':631,'Dragkrok avtagbar':254},
-   trims:[{t:'Boost',list:469900,loanBase:459900,lease:[4190,4312,4760],el:'80 km på el',opl:[6495,6695,7195,7495,7895],fv:2900},
-          {t:'Comfort',list:499900,loanBase:489900,lease:[4290,4470,4975],gain:'125 km på el i stället för 80 km',opl:[6895,7095,7595,7895,8295],fv:3097},
-          {t:'Design',list:529900,loanBase:519900,lease:[4490,4691,5263],gain:'Fyrhjulsdrift (AWD)',opl:[7295,7595,8095,8395,8895],fv:3295}]},
-  {id:'seal-6-dmi-touring', name:'BYD SEAL 6 DM-i TOURING', cat:'hybrid', desc:'En av få laddhybridkombis på marknaden', keys:['Laddhybrid','Kombi'],
+   trims:[{t:'Boost',el:'80 km på el · 218 hk',eq:['Panoramatak','15,6-tums roterbar pekskärm','Ventilerade och uppvärmda framstolar','Head-up display','360-kamera','Elmanövrerad baklucka'],list:469900,loanBase:459900,lease:[4190,4312,4760],opl:[6495,6695,7195,7495,7895],fv:2900},
+          {t:'Comfort',el:'125 km på el · 218 hk',gain:'125 km på el i stället för 80 km',eq:['Större batteri, 26,6 kWh','Samma utrustning som Boost'],list:499900,loanBase:489900,lease:[4290,4470,4975],opl:[6895,7095,7595,7895,8295],fv:3097},
+          {t:'Design',el:'70 km på el · 324 hk · fyrhjulsdrift',gain:'Fyrhjulsdrift och 324 hk',eq:['Fyrhjulsdrift (AWD)','0–100 km/h på 5,9 s','Släpvagnsvikt 1 500 kg','Körlägen för sand och lera','Batteri 18,3 kWh som i Boost'],list:529900,loanBase:519900,lease:[4490,4691,5263],opl:[7295,7595,8095,8395,8895],fv:3295}]},
+  {id:'seal-6-dmi-touring', name:'BYD SEAL 6 DM-i TOURING', cat:'hybrid', desc:'En av få laddhybridkombis på marknaden', keys:['Laddhybrid','Kombi','Upp till 100 km på el'],
    img:HD+'seal6-dm-i-touring.webp',
    tillval:{'Färgtillägg':316,'Vinterhjul friktion':524,'Vinterhjul dubb':554,'Dragkrok avtagbar':551},
-   trims:[{t:'Boost',list:439900,loanBase:439900,lease:[3490,3605,4061],opl:[6195,6395,6795,7095,null],fv:2703},
-          {t:'Comfort',list:469900,loanBase:459900,lease:[3690,3819,4293],gain:'100 km på el i stället för 50 km',opl:[6594,6795,7195,7495,7895],fv:2900}]},
-  {id:'sealion-7', name:'BYD SEALION 7', cat:'el', desc:'Helelektrisk SUV med sportig prestanda', keys:['Elbil','SUV'],
+   trims:[{t:'Boost',el:'50 km på el · 184 hk',eq:['Panoramasoltak','Elmanövrerad baklucka','12,8-tums pekskärm','Adaptiv farthållare','Backkamera','17-tumsfälgar'],list:439900,loanBase:439900,lease:[3490,3605,4061],opl:[6195,6395,6795,7095,null],fv:2703},
+          {t:'Comfort',el:'100 km på el · 212 hk',gain:'100 km på el i stället för 50 km',eq:['Större batteri, 19 kWh','Snabbladdning (DC)','Ventilerade och uppvärmda framstolar','Uppvärmd ratt','15,6-tums pekskärm','360-kamera'],list:469900,loanBase:459900,lease:[3690,3819,4293],opl:[6594,6795,7195,7495,7895],fv:2900}]},
+  {id:'sealion-7', name:'BYD SEALION 7', cat:'el', desc:'Helelektrisk SUV med sportig prestanda', keys:['Elbil','SUV','Upp till 502 km räckvidd'],
    img:HD+'sealion7.webp',
    tillval:{'Färgtillägg':316,'Vinterhjul friktion':608,'Vinterhjul dubb':608,'Dragkrok avtagbar':485},
-   trims:[{t:'Comfort',list:569900,loanBase:569900,lease:[5990,6155,6497],opl:[7695,8095,8395,8795,9195],fv:2604},
-          {t:'Excellence',list:639900,loanBase:639900,lease:[6190,6462,6931],gain:'Fyrhjulsdrift och 530 hk, 0–100 km/h på 4,5 s',tv:{'Vinterhjul friktion':702,'Vinterhjul dubb':702},opl:[8595,8995,9395,9795,10195],fv:2835}]},
+   trims:[{t:'Comfort',el:'482 km räckvidd · 313 hk · bakhjulsdrift',eq:['Panoramatak','15,6-tums roterbar pekskärm','Ventilerade och uppvärmda framstolar','360-kamera','Värmepump','Elmanövrerad baklucka'],list:569900,loanBase:569900,lease:[5990,6155,6497],opl:[7695,8095,8395,8795,9195],fv:2604},
+          {t:'Excellence',el:'502 km räckvidd · 530 hk · fyrhjulsdrift',gain:'Fyrhjulsdrift och 530 hk',eq:['Fyrhjulsdrift (AWD)','0–100 km/h på 4,5 s','Snabbladdning upp till 230 kW','Läderklädsel','Head-up display','20-tumsfälgar'],list:639900,loanBase:639900,lease:[6190,6462,6931],tv:{'Vinterhjul friktion':702,'Vinterhjul dubb':702},opl:[8595,8995,9395,9795,10195],fv:2835}]},
   {id:'atto-3-evo', name:'BYD ATTO 3 EVO', cat:'el', desc:'Elektrisk SUV med 510 km räckvidd', keys:['Elbil','SUV','510 km räckvidd'],
    img:HD+'atto3-evo.webp',
    tillval:{'Färgtillägg':218,'Vinterhjul friktion':524,'Vinterhjul dubb':539},
-   trims:[{t:'Design',list:494900,loanBase:494900,lease:[4290,4453,4752],opl:[7095,7295,7395,7595,7995],fv:2358},{t:'Excellence',list:524900,loanBase:524900,lease:[4690,4921,5337],gain:'Fyrhjulsdrift (AWD)',opl:[7495,7695,7995,8195,8595],fv:2456}]},
-  {id:'atto-2', name:'BYD ATTO 2', cat:'el', desc:'Elektrisk kompakt SUV', keys:['Elbil','Kompakt SUV'],
+   trims:[{t:'Design',el:'510 km räckvidd · 313 hk · bakhjulsdrift',eq:['15,6-tums pekskärm','Ventilerade och uppvärmda framstolar','Elmanövrerad baklucka','360-kamera','Värmepump','Snabbladdning upp till 220 kW'],list:494900,loanBase:494900,lease:[4290,4453,4752],opl:[7095,7295,7395,7595,7995],fv:2358},{t:'Excellence',el:'470 km räckvidd · 449 hk · fyrhjulsdrift',gain:'Fyrhjulsdrift och 449 hk',eq:['Fyrhjulsdrift (AWD)','0–100 km/h på 3,9 s','Panoramasoltak','Head-up display','Uppvärmda ytterplatser bak'],list:524900,loanBase:524900,lease:[4690,4921,5337],opl:[7495,7695,7995,8195,8595],fv:2456}]},
+  {id:'atto-2', name:'BYD ATTO 2', cat:'el', desc:'Elektrisk kompakt SUV', keys:['Elbil','Kompakt SUV','430 km räckvidd'],
    img:HD+'atto2.webp',
    tillval:{'Färgtillägg':218,'Vinterhjul friktion':432,'Vinterhjul dubb':439},
-   trims:[{t:'Comfort',list:428900,loanBase:428900,lease:[3890,4014,4313],opl:[6195,6395,6595,6795,7095],fv:2141}]},
-  {id:'atto-2-dmi', name:'BYD ATTO 2 DM-i', cat:'hybrid', desc:'Kompakt hybrid-SUV', keys:['Laddhybrid','Kompakt SUV'],
+   trims:[{t:'Comfort',el:'430 km räckvidd · 204 hk',eq:['Panoramasoltak','Värmepump','12,8-tums pekskärm','Uppvärmda framstolar och ratt','360-kamera','Adaptiv farthållare'],list:428900,loanBase:428900,lease:[3890,4014,4313],opl:[6195,6395,6595,6795,7095],fv:2141}]},
+  {id:'atto-2-dmi', name:'BYD ATTO 2 DM-i', cat:'hybrid', desc:'Kompakt hybrid-SUV', keys:['Laddhybrid','Kompakt SUV','90 km på el'],
    img:HD+'atto2-dm-i.webp',
    tillval:{'Färgtillägg':218,'Vinterhjul friktion':432,'Vinterhjul dubb':447},
-   trims:[{t:'Boost',list:369900,loanBase:369900,lease:[3490,3632,4167],opl:[5195,5395,5795,6095,6395],fv:2242}]},
-  {id:'dolphin-g-dmi', name:'BYD DOLPHIN G DM-i', cat:'hybrid', desc:'Hybridhalvkombi med lång räckvidd', keys:['Laddhybrid','Halvkombi'],
+   trims:[{t:'Boost',el:'90 km på el · 212 hk',eq:['Panoramasoltak','12,8-tums pekskärm','Uppvärmda framstolar och ratt','360-kamera','Adaptiv farthållare','Trådlös mobilladdning'],list:369900,loanBase:369900,lease:[3490,3632,4167],opl:[5195,5395,5795,6095,6395],fv:2242}]},
+  {id:'dolphin-g-dmi', name:'BYD DOLPHIN G DM-i', cat:'hybrid', desc:'Hybridhalvkombi med lång räckvidd', keys:['Laddhybrid','Halvkombi','Upp till 105 km på el'],
    img:HD+'dolphin-g-dm-i.webp',
    tillval:{'Färgtillägg':218,'Vinterhjul friktion':370,'Vinterhjul dubb':386},
-   trims:[{t:'Active',list:306900,loanBase:306900,lease:[2990,3133,3655],opl:[4395,4595,4995,5195,5495],fv:1828},{t:'Boost',list:339900,loanBase:339900,lease:[3290,3457,4003],opl:[4795,4995,5395,5695,5995],fv:2045},
-          {t:'Comfort',list:359900,loanBase:359900,lease:[3490,3667,4223],opl:[5095,5195,5695,5895,6195],fv:2177},{t:'Sport',list:369900,loanBase:369900,lease:[3690,3872,4433],opl:[5195,5395,5795,6095,6395],fv:2242}]}
+   trims:[{t:'Active',el:'40 km på el · 175 hk',eq:['16-tumsfälgar','10,1-tums pekskärm','Apple CarPlay och Android Auto','Adaptiv farthållare','Backkamera'],list:306900,loanBase:306900,lease:[2990,3133,3655],opl:[4395,4595,4995,5195,5495],fv:1828},{t:'Boost',el:'105 km på el · 212 hk',gain:'105 km på el i stället för 40 km',eq:['Större batteri, 18,3 kWh','Snabbladdning (DC)','Uppvärmda framstolar och ratt','12,8-tums pekskärm','Trådlös mobilladdning'],list:339900,loanBase:339900,lease:[3290,3457,4003],opl:[4795,4995,5395,5695,5995],fv:2045},
+          {t:'Comfort',el:'105 km på el · 212 hk',gain:'Panoramatak och 360-kamera',eq:['Panoramatak','360-kamera','Head-up display','Elmanövrerad förarstol','18-tumsfälgar'],list:359900,loanBase:359900,lease:[3490,3667,4223],opl:[5095,5195,5695,5895,6195],fv:2177},{t:'Sport',el:'105 km på el · 212 hk',gain:'Sportigare utseende',eq:['Klädsel i suede','Svarta 18-tumsfälgar','Interiör i svart/orange eller svart/blå'],list:369900,loanBase:369900,lease:[3690,3872,4433],opl:[5195,5395,5795,6095,6395],fv:2242}]}
 ];
 const OPL_TILLVAL={'dolphin-g-dmi':{'Vinterhjul friktion':336,'Vinterhjul dubb':349},
   'atto-2-dmi':{'Vinterhjul friktion':391,'Vinterhjul dubb':405},
@@ -1258,7 +1264,7 @@ document.getElementById('cards').innerHTML = models.map(m=>`
     <div class="img"><img src="${m.img}" alt="" loading="lazy"></div>
     <h3>${m.name}</h3>
     <p class="desc">${m.desc}</p>
-    <div class="keys">${m.keys.map(k=>`<span>${k}</span>`).join('')}${m.keys.length<3?'<span><mark>räckvidd</mark></span>':''}</div>
+    <div class="keys">${m.keys.map(k=>`<span>${k}</span>`).join('')}</div>
     <div class="price">${priceBlock(m)}</div>
     <div class="go">Se erbjudanden<span>${arrow}</span></div>
   </a>`).join('');
@@ -1280,6 +1286,7 @@ document.getElementById('menu-hybrid').innerHTML=models.filter(m=>m.cat==='hybri
 document.getElementById('menu-offers').innerHTML=models.map(m=>`<a href="#/modell/${m.id}">${m.name.replace('BYD ','')}</a>`).join('');
 
 /* ---------- Privatleasing: versionstrappa, miltrappa, villkor ---------- */
+const PB={'dolphin-g-dmi':'https://www.byd.com/material/__EU/byd-site/se/pdfs/DOLPHIN%20G%20DM-i-0926-BPS-SWE-V3-web-new.pdf','atto-2':'https://www.byd.com/material/byd-site/se/pdfs/ATTO%202-0326-BPS-SWE-20260317.pdf','atto-2-dmi':'https://www.byd.com/material/byd-site/se/pdfs/ATTO%202%20DM-i-0426-BPS-SWE-V3-web.pdf','atto-3-evo':'https://www.byd.com/material/byd-site/se/pdfs/ATTO%203%20EVO-0326-BPS-SWE-20260317.pdf','seal-6-dmi-touring':'https://www.byd.com/material/byd-site/se/pdfs/Seal%206%20dmi%20touring-0526-BPS-SWE-V2-web.pdf','seal-u-dmi':'https://www.byd.com/material/byd-site/se/pdfs/Seal%20U%20Dmi-0626-BPS-SWE-V3-web.pdf','sealion-7':'https://www.byd.com/material/byd-site/se/pdfs/SEALION%207-1125-BPS-SWE-V1_Web.pdf'};
 const tvFor = (m,t) => ({...(m.tillval||{}), ...((t&&t.tv)||{})});
 const plTotal = v => v*PL.months + PL.avi*PL.months + PL.setup;
 function plLadder(m){
@@ -1288,7 +1295,7 @@ function plLadder(m){
   const items=ts.map((t,i)=>{
     const prev=ts[i-1];
     const step=prev?`<li class="lad-step"><span class="lad-plus">+${fmt(t.lease[0]-prev.lease[0])}\u00a0kr/mån</span><span class="lad-gain">${t.gain||'<mark>Fyll i vad som tillkommer</mark>'}</span></li>`:'';
-    return step+`<li class="lad-card"><span class="lad-name">${t.t}</span><b>${fmt(t.lease[0])}\u00a0kr/mån</b>${t.el?`<small>${t.el}</small>`:''}<a href="#/ansok/${m.id}/leasing/${m.trims.indexOf(t)}/0/0">Begär offert</a></li>`;
+    return step+`<li class="lad-card"><span class="lad-name">${t.t}</span><b>${fmt(t.lease[0])}\u00a0kr/mån</b>${t.el?`<small>${t.el}</small>`:''}${t.eq?`<span class="lad-eq-h">${prev?'Utöver '+prev.t+', i urval':'Utrustning i urval'}</span><ul class="lad-eq">${t.eq.map(e=>`<li>${e}</li>`).join('')}</ul>`:''}<a href="#/ansok/${m.id}/leasing/${m.trims.indexOf(t)}/0/0">Begär offert</a></li>`;
   }).join('');
   const tv=tvFor(m,ts[0]);
   const tvTxt=Object.entries(tv).map(([k,v])=>`${k.toLowerCase()} ${fmt(v)}\u00a0kr`).join(', ');
@@ -1296,6 +1303,7 @@ function plLadder(m){
     <h2 class="title">${one?'Privatleasing':'Vad kostar nästa version?'}</h2>
     <p class="sub">Privatleasing i 36 månader med 1 000 mil/år och ingen kontantinsats. Service ingår.${one?` ${m.name.replace('BYD ','')} finns i en version i Sverige.`:' Så här mycket mer kostar varje steg uppåt.'}</p>
     <ol class="ladder${one?' one':''}">${items}</ol>
+    <p class="fine-s" style="margin-top:14px">Utrustningen visas i urval. Räckvidd enligt WLTP. Fullständig specifikation finns i <a href="${PB[m.id]}" target="_blank" rel="noopener">produktbladet (PDF)</a>.</p>
     <h3 class="sub-h">Kör du mer än 1 000 mil om året?</h3>
     <div class="ptable"><table><thead><tr><th>Version</th>${MIL.map(v=>`<th>${fmt(v)}\u00a0mil/år</th>`).join('')}</tr></thead><tbody>
       ${ts.map(t=>`<tr><td><b>${t.t}</b></td>${t.lease.map((v,i)=>`<td><b>${fmt(v)}\u00a0kr/mån</b>${i?`<small>+${fmt(v-t.lease[0])}\u00a0kr mot 1\u00a0000 mil</small>`:''}</td>`).join('')}</tr>`).join('')}
@@ -1652,7 +1660,7 @@ function bindForm(start){
       <div class="check"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
       <h2>Tack, ${esc($('q-fn').value.trim())}! Din förfrågan om ${what} är skickad.</h2>
       <p class="sub">${m.name}${tr?' '+tr.t:''}${k==='offert'?'':', '+offerName[k].toLowerCase()}.</p>
-      <ol><li>Du får en bekräftelse till din e-post.</li><li>Återförsäljaren kontaktar dig med pris och leveranstid, <mark>inom X arbetsdagar</mark>.</li>${k==='billan'?'<li>Själva låneansökan gör du tillsammans med återförsäljaren via Santander.</li>':''}<li>Vill du provköra först kan du boka en tid redan nu.</li></ol>
+      <ol><li>Du får en bekräftelse till din e-post.</li><li>Återförsäljaren kontaktar dig med pris och leveranstid.</li>${k==='billan'?'<li>Själva låneansökan gör du tillsammans med återförsäljaren via Santander.</li>':''}<li>Vill du provköra först kan du boka en tid redan nu.</li></ol>
       <div class="ctas"><a class="btn btn-dark" href="#/provkorning">Boka provkörning</a><a class="btn btn-line" href="#/erbjudanden">Tillbaka till erbjudanden</a></div>
       <p class="fine-s" style="margin-top:20px">Konceptskiss: inget skickas i den här testversionen.</p></div>`;
     window.scrollTo({top:0,behavior:'instant'});
@@ -2379,7 +2387,7 @@ function bindPk(){
       <div class="check"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
       <h2 style="justify-content:center;font-size:28px">Tack, ${name}! Din förfrågan är skickad.</h2>
       <p class="sub">Provkörning av ${m.name} hos ${dealerById(pk.dealer).name}, ${dealerById(pk.dealer).addr}, ${dealerById(pk.dealer).city}.</p>
-      <ol><li>Du får en bekräftelse till din e-post.</li><li>Återförsäljaren kontaktar dig för att boka en tid som passar, <mark>inom X arbetsdagar</mark>.</li><li>Ta med giltigt körkort till provkörningen.</li></ol>
+      <ol><li>Du får en bekräftelse till din e-post.</li><li>Återförsäljaren kontaktar dig för att boka en tid som passar.</li><li>Ta med giltigt körkort till provkörningen.</li></ol>
       <div class="ctas"><a class="btn btn-dark" href="#/modell/${m.id}">Se erbjudanden för ${m.name.replace('BYD ','')}</a><a class="btn btn-line" href="#/">Till startsidan</a></div>
       <p class="fine-s" style="margin-top:20px">Konceptskiss: ingen förfrågan skickas i den här testversionen.</p></div>`;
     document.querySelectorAll('#pk-steps li').forEach(li=>li.className='done');
