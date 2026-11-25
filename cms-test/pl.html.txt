@@ -1,0 +1,102 @@
+<div id="bk-pl"><section class="pl-fam"><div class="wrap">
+    <div class="fam-row"><a class="fam" href="https://www.byd.com/se/leasing/dolphin-g-dm-i"><span class="car"><img src="https://andreasengstromse-max.github.io/byd-koncept/media/cars/dolphin-g-dmi.webp" alt="BYD DOLPHIN G DM-i"></span><span class="n">DOLPHIN G DM-i</span><span class="f">från</span><span class="p">2&nbsp;990</span><span class="u">kr/mån</span></a><a class="fam" href="https://www.byd.com/se/leasing/atto-2-dm-i"><span class="car"><img src="https://andreasengstromse-max.github.io/byd-koncept/media/cars/atto-2-dmi.webp" alt="BYD ATTO 2 DM-i"></span><span class="n">ATTO 2 DM-i</span><span class="f">från</span><span class="p">3&nbsp;490</span><span class="u">kr/mån</span></a><a class="fam" href="https://www.byd.com/se/leasing/atto-2"><span class="car"><img src="https://andreasengstromse-max.github.io/byd-koncept/media/cars/atto-2.webp" alt="BYD ATTO 2"></span><span class="n">ATTO 2</span><span class="f">från</span><span class="p">3&nbsp;890</span><span class="u">kr/mån</span></a><a class="fam" href="https://www.byd.com/se/leasing/seal-6-dm-i-touring"><span class="car"><img src="https://andreasengstromse-max.github.io/byd-koncept/media/cars/seal-6-dmi-touring.webp" alt="BYD SEAL 6 DM-i TOURING"></span><span class="n">SEAL 6 DM-i TOURING</span><span class="f">från</span><span class="p">3&nbsp;490</span><span class="u">kr/mån</span></a><a class="fam" href="https://www.byd.com/se/leasing/atto-3-evo"><span class="car"><img src="https://andreasengstromse-max.github.io/byd-koncept/media/cars/atto-3-evo.webp" alt="BYD ATTO 3 EVO"></span><span class="n">ATTO 3 EVO</span><span class="f">från</span><span class="p">4&nbsp;290</span><span class="u">kr/mån</span></a><a class="fam" href="https://www.byd.com/se/leasing/seal-u-dm-i"><span class="car"><img src="https://andreasengstromse-max.github.io/byd-koncept/media/cars/seal-u-dmi.webp" alt="BYD SEAL U DM-i"></span><span class="n">SEAL U DM-i</span><span class="f">från</span><span class="p">4&nbsp;190</span><span class="u">kr/mån</span></a><a class="fam" href="https://www.byd.com/se/leasing/sealion-7"><span class="car"><img src="https://andreasengstromse-max.github.io/byd-koncept/media/cars/sealion-7.webp" alt="BYD SEALION 7"></span><span class="n">SEALION 7</span><span class="f">från</span><span class="p">5&nbsp;990</span><span class="u">kr/mån</span></a></div>
+  </div></section>
+  <div class="pl-crumbs"><div class="wrap"><nav class="crumbs" aria-label="Brödsmulor"><a href="https://www.byd.com/se">BYD</a><i>/</i><a href="https://www.byd.com/se/kampanj">Erbjudanden</a><i>/</i><span aria-current="page">Privatleasing</span></nav></div></div>
+  <section class="pl-intro"><div class="wrap">
+    <h1>Privatleasing</h1>
+    <p class="pl-q">Funderar du på hur du ska skaffa din nästa BYD?</p>
+    <p>Kör en ny <b>elbil</b> eller <b>laddhybrid</b> utan kontantinsats. Service ingår. Från 2&nbsp;990&nbsp;kr/mån.</p>
+    <a class="btn btn-dark" href="#pl-modeller">Se erbjudandena</a>
+  </div></section>
+  <section class="pl-offers" id="pl-modeller"><div class="wrap">
+    <h2 class="title">Aktuella privatleasingerbjudanden</h2>
+    <div class="pl-chips" role="group" aria-label="Filtrera modeller">
+      <button type="button" aria-pressed="true" data-f="alla">Alla modeller <span>7</span></button>
+      <button type="button" aria-pressed="false" data-f="el">Elbilar <span>3</span></button>
+      <button type="button" aria-pressed="false" data-f="hybrid">Laddhybrider <span>4</span></button>
+    </div>
+  </div>
+  <div class="pl-band"><div class="wrap"><div class="pl-grid"><article class="plc" data-cat="hybrid">
+      <a class="plc-img" href="https://www.byd.com/se/leasing/dolphin-g-dm-i" tabindex="-1" aria-hidden="true"><img src="https://andreasengstromse-max.github.io/byd-koncept/media/studio/dolphin-g-dmi.webp" alt="" loading="lazy"></a>
+      <p class="plc-price"><b>2&nbsp;990&nbsp;kr/mån<sup>1</sup></b><span>36 mån · 1&nbsp;000 mil/år · privatleasing</span></p>
+      <h3>BYD DOLPHIN G DM-i</h3><p class="plc-desc">Hybridhalvkombi med lång räckvidd</p>
+      <div class="plc-btns"><a class="btn btn-dark btn-sm" href="https://www.byd.com/se/leasing/dolphin-g-dm-i">Se versioner och priser</a><a class="btn btn-line btn-sm" href="#offert" data-model="dolphin-g-dmi">Begär offert</a></div>
+    </article><article class="plc" data-cat="hybrid">
+      <a class="plc-img" href="https://www.byd.com/se/leasing/seal-6-dm-i-touring" tabindex="-1" aria-hidden="true"><img src="https://andreasengstromse-max.github.io/byd-koncept/media/studio/seal-6-dmi-touring.webp" alt="" loading="lazy"></a>
+      <p class="plc-price"><b>3&nbsp;490&nbsp;kr/mån<sup>1</sup></b><span>36 mån · 1&nbsp;000 mil/år · privatleasing</span></p>
+      <h3>BYD SEAL 6 DM-i TOURING</h3><p class="plc-desc">En av få laddhybridkombis på marknaden</p>
+      <div class="plc-btns"><a class="btn btn-dark btn-sm" href="https://www.byd.com/se/leasing/seal-6-dm-i-touring">Se versioner och priser</a><a class="btn btn-line btn-sm" href="#offert" data-model="seal-6-dmi-touring">Begär offert</a></div>
+    </article><article class="plc" data-cat="hybrid">
+      <a class="plc-img" href="https://www.byd.com/se/leasing/atto-2-dm-i" tabindex="-1" aria-hidden="true"><img src="https://andreasengstromse-max.github.io/byd-koncept/media/studio/atto-2-dmi.webp" alt="" loading="lazy"></a>
+      <p class="plc-price"><b>3&nbsp;490&nbsp;kr/mån<sup>1</sup></b><span>36 mån · 1&nbsp;000 mil/år · privatleasing</span></p>
+      <h3>BYD ATTO 2 DM-i</h3><p class="plc-desc">Kompakt hybrid-SUV</p>
+      <div class="plc-btns"><a class="btn btn-dark btn-sm" href="https://www.byd.com/se/leasing/atto-2-dm-i">Se versioner och priser</a><a class="btn btn-line btn-sm" href="#offert" data-model="atto-2-dmi">Begär offert</a></div>
+    </article><article class="plc" data-cat="el">
+      <a class="plc-img" href="https://www.byd.com/se/leasing/atto-2" tabindex="-1" aria-hidden="true"><img src="https://andreasengstromse-max.github.io/byd-koncept/media/studio/atto-2.webp" alt="" loading="lazy"></a>
+      <p class="plc-price"><b>3&nbsp;890&nbsp;kr/mån<sup>1</sup></b><span>36 mån · 1&nbsp;000 mil/år · privatleasing</span></p>
+      <h3>BYD ATTO 2</h3><p class="plc-desc">Elektrisk kompakt SUV</p>
+      <div class="plc-btns"><a class="btn btn-dark btn-sm" href="https://www.byd.com/se/leasing/atto-2">Se versioner och priser</a><a class="btn btn-line btn-sm" href="#offert" data-model="atto-2">Begär offert</a></div>
+    </article><article class="plc" data-cat="hybrid">
+      <a class="plc-img" href="https://www.byd.com/se/leasing/seal-u-dm-i" tabindex="-1" aria-hidden="true"><img src="https://andreasengstromse-max.github.io/byd-koncept/media/studio/seal-u-dmi.webp" alt="" loading="lazy"></a>
+      <p class="plc-price"><b>4&nbsp;190&nbsp;kr/mån<sup>1</sup></b><span>36 mån · 1&nbsp;000 mil/år · privatleasing</span></p>
+      <h3>BYD SEAL U DM-i</h3><p class="plc-desc">Europas mest sålda laddhybrid</p>
+      <div class="plc-btns"><a class="btn btn-dark btn-sm" href="https://www.byd.com/se/leasing/seal-u-dm-i">Se versioner och priser</a><a class="btn btn-line btn-sm" href="#offert" data-model="seal-u-dmi">Begär offert</a></div>
+    </article><article class="plc" data-cat="el">
+      <a class="plc-img" href="https://www.byd.com/se/leasing/atto-3-evo" tabindex="-1" aria-hidden="true"><img src="https://andreasengstromse-max.github.io/byd-koncept/media/studio/atto-3-evo.webp" alt="" loading="lazy"></a>
+      <p class="plc-price"><b>4&nbsp;290&nbsp;kr/mån<sup>1</sup></b><span>36 mån · 1&nbsp;000 mil/år · privatleasing</span></p>
+      <h3>BYD ATTO 3 EVO</h3><p class="plc-desc">Elektrisk SUV med 510 km räckvidd</p>
+      <div class="plc-btns"><a class="btn btn-dark btn-sm" href="https://www.byd.com/se/leasing/atto-3-evo">Se versioner och priser</a><a class="btn btn-line btn-sm" href="#offert" data-model="atto-3-evo">Begär offert</a></div>
+    </article><article class="plc" data-cat="el">
+      <a class="plc-img" href="https://www.byd.com/se/leasing/sealion-7" tabindex="-1" aria-hidden="true"><img src="https://andreasengstromse-max.github.io/byd-koncept/media/studio/sealion-7.webp" alt="" loading="lazy"></a>
+      <p class="plc-price"><b>5&nbsp;990&nbsp;kr/mån<sup>1</sup></b><span>36 mån · 1&nbsp;000 mil/år · privatleasing</span></p>
+      <h3>BYD SEALION 7</h3><p class="plc-desc">Helelektrisk SUV med sportig prestanda</p>
+      <div class="plc-btns"><a class="btn btn-dark btn-sm" href="https://www.byd.com/se/leasing/sealion-7">Se versioner och priser</a><a class="btn btn-line btn-sm" href="#offert" data-model="sealion-7">Begär offert</a></div>
+    </article></div></div></div></section>
+  <section class="block"><div class="wrap"><div class="pl-split">
+    <div class="pl-img"><img src="https://www.byd.com/material/byd-site/super-dm/benefit.jpg" alt="" loading="lazy"></div>
+    <div><h2 class="title">Vad är privatleasing?</h2>
+      <p class="sub"><b>Privatleasing är ett enkelt sätt att köra en ny bil utan att köpa den.</b> Du betalar en månadskostnad under 36 månader och lämnar sedan tillbaka bilen. Det finns ingen kontantinsats och service ingår.</p>
+      <p class="sub">Månadskostnaden beror på modell, version och hur långt du kör. Du väljer 1&nbsp;000, 1&nbsp;500 eller 2&nbsp;000 mil per år. Kör du längre än avtalet tillkommer en kostnad för övermil.</p></div>
+  </div></div></section>
+  <section class="block" style="padding-top:0"><div class="wrap"><div class="pl-how">
+    <h2 class="title">Så fungerar privatleasing hos BYD</h2>
+    <p class="sub">Det är enkelt att privatleasa en BYD, och du gör det i tre steg.</p>
+    <ol>
+      <li><span class="n">1</span><h3>Välj din BYD</h3><p>Välj modell, version och tillval som vinterhjul.</p><p>Välj hur långt du kör per år så ser du din månadskostnad direkt.</p></li>
+      <li><span class="n">2</span><h3>Få ditt erbjudande</h3><p>Återförsäljaren skickar ett erbjudande och Santander gör en kreditprövning.</p><p>När allt är klart hämtar du ut din nya BYD.</p></li>
+      <li><span class="n">3</span><h3>När avtalet tar slut</h3><p>Efter 36 månader lämnar du tillbaka bilen och kan börja om med en ny BYD.</p></li>
+    </ol>
+  </div></div></section>
+  <section class="block" style="padding-top:0"><div class="wrap"><div class="pl-split rev">
+    <div><h2 class="title">Fördelar med privatleasing</h2>
+      <ul class="ticks">
+        <li><b>Ingen kontantinsats.</b> Du behöver inte binda pengar i bilen.</li>
+        <li><b>Service ingår.</b> Den ordinarie servicen under avtalet finns redan i månadskostnaden.</li>
+        <li><b>Inget andrahandsvärde att oroa sig för.</b> Du lämnar tillbaka bilen och behöver inte sälja den själv.</li>
+        <li><b>Ny teknik oftare.</b> Efter tre år kan du byta till en nyare BYD.</li>
+      </ul></div>
+    <div class="pl-img"><img src="https://www.byd.com/material/byd-site/eu/about-byd-new/Promotion-banner-with-seal-u-dm-i-pc.jpg" alt="" loading="lazy"></div>
+  </div></div></section>
+  <section class="block" style="padding-top:0"><div class="wrap">
+    <h2 class="title">Privatleasing, billån eller köp?</h2>
+    <p class="sub" style="margin-bottom:22px">Alla tre fungerar. Det som passar dig beror på om du vill äga bilen och hur mycket du vill betala i början.</p>
+    <div class="ptable"><table><thead><tr><th></th><th>Privatleasing</th><th>Billån 0,95 %</th><th>Kontant</th></tr></thead><tbody>
+      <tr><td><b>Betala i början</b></td><td data-label="Privatleasing">Ingen kontantinsats</td><td data-label="Billån 0,95 %">Från 20 % av priset</td><td data-label="Kontant">Hela priset</td></tr>
+      <tr><td><b>Äger du bilen?</b></td><td data-label="Privatleasing">Nej, du lämnar tillbaka den</td><td data-label="Billån 0,95 %">Ja</td><td data-label="Kontant">Ja</td></tr>
+      <tr><td><b>Service</b></td><td data-label="Privatleasing">Ingår</td><td data-label="Billån 0,95 %">Betalar du själv</td><td data-label="Kontant">Betalar du själv</td></tr>
+      <tr><td><b>Andrahandsvärdet</b></td><td data-label="Privatleasing">Inte din risk</td><td data-label="Billån 0,95 %">Din risk</td><td data-label="Kontant">Din risk</td></tr>
+      <tr><td><b>Passar dig som</b></td><td data-label="Privatleasing">vill byta bil vart tredje år</td><td data-label="Billån 0,95 %">vill äga men dela upp betalningen</td><td data-label="Kontant">vill äga direkt</td></tr>
+    </tbody></table></div>
+  </div></section>
+  <section class="block" style="padding-top:0"><div class="wrap">
+    <h2 class="title" style="margin-bottom:8px">Vanliga frågor om privatleasing</h2>
+    <p class="sub" style="margin-bottom:22px">Här hittar du svar på det vi oftast får frågor om.</p>
+    <div class="faq"><details><summary>Vad ingår i månadskostnaden?</summary><p>Bilen och service under hela avtalet. Försäkring ingår inte, den tecknar du själv.</p></details><details><summary>Hur lång är avtalstiden?</summary><p>36 månader.</p></details><details><summary>Hur långt får jag köra?</summary><p>Du väljer 1&nbsp;000, 1&nbsp;500 eller 2&nbsp;000 mil per år. Kör du längre än avtalet kostar övermil 15&nbsp;kr per mil.</p></details><details><summary>Behöver jag betala en kontantinsats?</summary><p>Nej. Det går inte heller att betala en förhöjd första hyra för att sänka månadskostnaden.</p></details><details><summary>Vilka avgifter tillkommer?</summary><p>En uppläggningsavgift på 995&nbsp;kr när avtalet startar och en aviavgift på 58&nbsp;kr per månad.</p></details><details><summary>Är månadskostnaden fast?</summary><p>Nej. Santander tillämpar rörlig ränta, så månadskostnaden kan ändras under avtalstiden.</p></details><details><summary>Kan jag lägga till vinterhjul och andra tillval?</summary><p>Ja. Färgtillägg och vinterhjul finns för alla modeller och läggs på månadskostnaden. Dragkrok finns på Seal 6 DM-i Touring, Seal U DM-i och Sealion 7.</p></details><details><summary>Får någon annan än jag köra bilen?</summary><p>Ja. Det regleras av bilens försäkring.</p></details><details><summary>Vad händer när avtalet tar slut?</summary><p>Du lämnar tillbaka bilen hos återförsäljaren och kan välja en ny BYD. Vill du behålla bilen har återförsäljaren förtur att köpa den och kan då sälja den vidare till dig.</p></details></div>
+  </div></section>
+  <section class="steps"><div class="wrap" style="display:flex;justify-content:space-between;gap:24px;align-items:center;flex-wrap:wrap">
+    <div><h2 class="title">Hitta din nästa BYD</h2><p class="sub">Provkör hos din närmaste återförsäljare eller begär ett erbjudande direkt.</p></div>
+    <div class="ctas"><a class="btn btn-white" href="https://www.byd.com/se/test-drive">Boka provkörning</a><a class="btn btn-ghost" href="#offert" data-model="">Begär offert</a></div></div></section>
+  <section class="fine"><div class="wrap"><h2>Villkor</h2>
+    <p><sup>1</sup> Privatleasing via Santander Consumer Bank. 36 månader, 1&nbsp;000 mil/år och ingen kontantinsats. Service ingår, försäkring ingår inte. Priser inkl. moms. Uppläggningsavgift 995&nbsp;kr och aviavgift 58&nbsp;kr/mån tillkommer. Övermil 15&nbsp;kr/mil. Månadskostnaden följer en rörlig ränta och kan ändras under avtalstiden. Sedvanlig kreditprövning. Begränsat antal bilar. Bilderna kan visa extrautrustning. Gäller nybeställning t.o.m. 30/11 2026.</p>
+    <p>Totalt att betala under avtalstiden inklusive avgifter, lägsta version per modell: BYD DOLPHIN G DM-i Active: 2&nbsp;990&nbsp;kr/mån, totalt 110&nbsp;723&nbsp;kr. BYD SEAL 6 DM-i TOURING Boost: 3&nbsp;490&nbsp;kr/mån, totalt 128&nbsp;723&nbsp;kr. BYD ATTO 2 DM-i Boost: 3&nbsp;490&nbsp;kr/mån, totalt 128&nbsp;723&nbsp;kr. BYD ATTO 2 Comfort: 3&nbsp;890&nbsp;kr/mån, totalt 143&nbsp;123&nbsp;kr. BYD SEAL U DM-i Boost: 4&nbsp;190&nbsp;kr/mån, totalt 153&nbsp;923&nbsp;kr. BYD ATTO 3 EVO Design: 4&nbsp;290&nbsp;kr/mån, totalt 157&nbsp;523&nbsp;kr. BYD SEALION 7 Comfort: 5&nbsp;990&nbsp;kr/mån, totalt 218&nbsp;723&nbsp;kr.</p>
+  </div></section></div>
