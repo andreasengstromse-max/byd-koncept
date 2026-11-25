@@ -22,9 +22,7 @@ var setv=function(t,v){Object.getOwnPropertyDescriptor(HTMLTextAreaElement.proto
 var jump=function(){var box=document.querySelector('.receive-form-container')||document.querySelector('.pro-receive-form-container');if(!box)return false;
  window.scrollTo({top:box.getBoundingClientRect().top+window.pageYOffset-40,behavior:'smooth'});return true};
 root.addEventListener('click',function(e){var a=e.target.closest('a[href="#offert"]');if(!a||!root.contains(a))return;e.preventDefault();
- var m=M[a.getAttribute('data-model')],t=ta(),txt;
- txt=m?'Privatleasing '+m[0]+' '+m[1]+'. 36 mån, 1 000 mil/år, service ingår. Från '+fmt(m[2])+' kr/mån. Jag vill ha ett erbjudande.':'Privatleasing. Jag vill ha ett erbjudande.';
- if(t&&(t.value===''||t.value===lastAuto)){setv(t,txt.slice(0,500));lastAuto=t.value}
+ var m=M[a.getAttribute('data-model')];
  if(m){pick('.series-select',m[0]);setTimeout(pickType,600)}else{setTimeout(pickType,0)}
  jump()});
 };if(document.readyState!=='loading')go();else document.addEventListener('DOMContentLoaded',go)})();
