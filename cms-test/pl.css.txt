@@ -185,3 +185,9 @@
 @media (max-width:760px){#bk-pl .pl-fam{padding-top:96px}}
 #bk-pl .ptable td{color:var(--ink);font-weight:400}
 #bk-pl .ptable th{color:var(--text);font-weight:600}
+/* vit bakgrund: grått bara i toppen med bilarna */
+#bk-pl{background:#fff}
+#bk-pl .pl-band{background:#fff;padding-top:12px}
+#bk-pl .plc,#bk-pl .ptable,#bk-pl .faq details,#bk-pl .pl-how{border:1px solid var(--line)}
+#bk-pl .fine{background:#fff}
+@media (max-width:760px){#bk-pl .ptable{border:0}#bk-pl .ptable tr{border:1px solid var(--line)}}
