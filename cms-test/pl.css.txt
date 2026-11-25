@@ -183,3 +183,5 @@
 #bk-pl .fam,#bk-pl .fam *{text-decoration:none}
 #bk-pl .pl-fam{padding-top:118px}
 @media (max-width:760px){#bk-pl .pl-fam{padding-top:96px}}
+#bk-pl .ptable td{color:var(--ink);font-weight:400}
+#bk-pl .ptable th{color:var(--text);font-weight:600}
