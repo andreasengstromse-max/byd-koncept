@@ -1,0 +1,87 @@
+<div id="bk-s7"><header class="hero light"><div class="wrap">
+      <nav class="crumbs" aria-label="Brödsmulor"><a href="https://www.byd.com/se/kampanj">Erbjudanden</a><i>/</i><span aria-current="page">BYD SEALION 7</span></nav>
+      <div class="hero-split">
+        <div>
+          <h1>BYD SEALION 7</h1><p class="lead">Helelektrisk SUV med sportig prestanda. Här ser du alla aktuella erbjudanden för modellen.</p>
+          <div class="ctas"><a class="btn btn-dark" href="https://www.byd.com/se/test-drive">Boka provkörning</a><a class="btn btn-line" href="https://www.byd.com/se/konfiguration/sealion-7">Bygg din bil</a></div></div>
+        <img src="https://www.byd.com/material/__EU/byd-site/europe-public/navigation/sealion7.webp" alt="BYD SEALION 7">
+      </div></div></header>
+    <section class="block" style="padding-top:28px;padding-bottom:0"><div class="wrap"><div class="otiles"><div class="otile"><span class="tag dark">Privatleasing</span>
+    <h3>Privatleasing från 5&nbsp;990 kr/mån</h3><p>Ett månadspris utan kontantinsats, via Santander.</p>
+    <ul><li>36 månader, 1 000 mil/år</li><li>Service ingår</li><li>Ingen kontantinsats</li><li>Se vad nästa version kostar</li></ul>
+    <div class="ctas"><a class="btn btn-dark" href="https://www.byd.com/se/leasing/sealion-7">Begär leasingoffert</a><a class="btn btn-line" href="#privatleasing">Jämför versioner</a></div></div><div class="otile"><span class="tag">Billån 0,95 %</span>
+    <h3>Billån från 2&nbsp;658&nbsp;kr/mån · 0,95 % ränta</h3><p>Äg bilen, med rörlig ränta via Santander Consumer Bank.</p>
+    <ul><li>Rörlig ränta 0,95 %, effektiv ränta enligt villkor</li><li>Kontantinsats från 20 %</li><li>Löptid 36 månader</li><li>Restvärde upp till 55 %</li></ul>
+    <div class="ctas"><a class="btn btn-dark" href="https://www.byd.com/se/kampanj/sealion-7">Begär låneoffert</a><a class="btn btn-line" href="#kalkyl">Räkna på ditt lån</a></div></div><div class="otile"><span class="tag">Kontantrabatt</span>
+    <h3>20&nbsp;000&nbsp;kr rabatt vid kontantköp</h3><p>För dig som betalar bilen direkt.</p>
+    <ul><li>Kampanjpris från 549&nbsp;900&nbsp;kr</li><li>Begränsat antal bilar</li><li>Kan inte kombineras med privatleasing eller billån</li></ul>
+    <div class="ctas"><a class="btn btn-dark" href="https://www.byd.com/se/kampanj/sealion-7">Begär offert</a></div></div></div></div></section>
+    <section class="block" style="padding-bottom:0"><div class="wrap">
+    <h2 class="title">Priser per utrustningsnivå</h2><p class="sub" style="margin-bottom:22px">Alla priser inklusive moms.</p>
+    <div class="ptable"><table><thead><tr><th>Utrustningsnivå</th><th>Listpris</th><th>Privatleasing</th><th>Billån 0,95 %</th><th>Kontantrabatt</th></tr></thead><tbody>
+    <tr><td data-label="Utrustningsnivå"><b>Comfort</b></td><td data-label="Listpris">569&nbsp;900 kr</td><td data-label="Privatleasing"><span class="v"><b>5&nbsp;990&nbsp;kr/mån</b><small>1 000 mil/år, service ingår</small></span></td><td data-label="Billån 0,95 %"><span class="v"><b>2&nbsp;658&nbsp;kr/mån</b><small>30 % insats, 55 % restvärde</small></span></td><td data-label="Kontantrabatt"><span class="v"><b>549&nbsp;900 kr</b><small>efter rabatt</small></span></td></tr><tr><td data-label="Utrustningsnivå"><b>Excellence</b></td><td data-label="Listpris">639&nbsp;900 kr</td><td data-label="Privatleasing"><span class="v"><b>6&nbsp;190&nbsp;kr/mån</b><small>1 000 mil/år, service ingår</small></span></td><td data-label="Billån 0,95 %"><span class="v"><b>2&nbsp;984&nbsp;kr/mån</b><small>30 % insats, 55 % restvärde</small></span></td><td data-label="Kontantrabatt"><span class="v"><b>619&nbsp;900 kr</b><small>efter rabatt</small></span></td></tr>
+    </tbody></table></div></div></section><section class="block" id="privatleasing" style="padding-bottom:0"><div class="wrap">
+    <h2 class="title">Vad kostar nästa version?</h2>
+    <p class="sub">Privatleasing i 36 månader med 1 000 mil/år och ingen kontantinsats. Service ingår. Så här mycket mer kostar varje steg uppåt.</p>
+    <ol class="ladder"><li class="lad-card"><span class="lad-name">Comfort</span><b>5&nbsp;990&nbsp;kr/mån</b><small>482 km räckvidd · 313 hk · bakhjulsdrift</small><span class="lad-eq-h">Utrustning i urval</span><ul class="lad-eq"><li>Panoramatak</li><li>15,6-tums roterbar pekskärm</li><li>Ventilerade och uppvärmda framstolar</li><li>360-kamera</li><li>Värmepump</li><li>Elmanövrerad baklucka</li></ul><a href="https://www.byd.com/se/leasing/sealion-7">Begär offert</a></li><li class="lad-step"><span class="lad-plus">+200&nbsp;kr/mån</span><span class="lad-gain">Fyrhjulsdrift och 530 hk</span></li><li class="lad-card"><span class="lad-name">Excellence</span><b>6&nbsp;190&nbsp;kr/mån</b><small>502 km räckvidd · 530 hk · fyrhjulsdrift</small><span class="lad-eq-h">Utöver Comfort, i urval</span><ul class="lad-eq"><li>Fyrhjulsdrift (AWD)</li><li>0–100 km/h på 4,5 s</li><li>Snabbladdning upp till 230 kW</li><li>Läderklädsel</li><li>Head-up display</li><li>20-tumsfälgar</li></ul><a href="https://www.byd.com/se/leasing/sealion-7">Begär offert</a></li></ol>
+    <p class="fine-s" style="margin-top:14px">Utrustningen visas i urval. Räckvidd enligt WLTP. Fullständig specifikation finns i <a href="https://www.byd.com/material/byd-site/se/pdfs/SEALION%207-1125-BPS-SWE-V1_Web.pdf" target="_blank" rel="noopener">produktbladet (PDF)</a>.</p>
+    <h3 class="sub-h">Kör du mer än 1 000 mil om året?</h3>
+    <div class="ptable"><table><thead><tr><th>Version</th><th>1&nbsp;000&nbsp;mil/år</th><th>1&nbsp;500&nbsp;mil/år</th><th>2&nbsp;000&nbsp;mil/år</th></tr></thead><tbody>
+      <tr><td data-label="Version"><b>Comfort</b></td><td data-label="1&nbsp;000&nbsp;mil/år"><b>5&nbsp;990&nbsp;kr/mån</b></td><td data-label="1&nbsp;500&nbsp;mil/år"><span class="v"><b>6&nbsp;155&nbsp;kr/mån</b><small>+165&nbsp;kr mot 1&nbsp;000 mil</small></span></td><td data-label="2&nbsp;000&nbsp;mil/år"><span class="v"><b>6&nbsp;497&nbsp;kr/mån</b><small>+507&nbsp;kr mot 1&nbsp;000 mil</small></span></td></tr><tr><td data-label="Version"><b>Excellence</b></td><td data-label="1&nbsp;000&nbsp;mil/år"><b>6&nbsp;190&nbsp;kr/mån</b></td><td data-label="1&nbsp;500&nbsp;mil/år"><span class="v"><b>6&nbsp;462&nbsp;kr/mån</b><small>+272&nbsp;kr mot 1&nbsp;000 mil</small></span></td><td data-label="2&nbsp;000&nbsp;mil/år"><span class="v"><b>6&nbsp;931&nbsp;kr/mån</b><small>+741&nbsp;kr mot 1&nbsp;000 mil</small></span></td></tr>
+    </tbody></table></div>
+    <p class="note">Kör du längre än avtalet kostar övermil 15&nbsp;kr/mil. Tillval per månad: färgtillägg 316&nbsp;kr, vinterhjul friktion 608&nbsp;kr, vinterhjul dubb 608&nbsp;kr, dragkrok avtagbar 485&nbsp;kr.</p>
+  </div></section><section class="block" id="leasingkalkyl" style="padding-bottom:0"><div class="wrap">
+    <h2 class="title">Räkna på privatleasing</h2><p class="sub" style="margin-bottom:22px">Välj version, körsträcka och tillval. Service ingår alltid.</p>
+    <div class="calc">
+      <div class="card">
+        <div class="field" style="margin-bottom:20px"><label for="l-trim">Utrustningsnivå</label><select id="l-trim"><option value="0">Comfort</option><option value="1">Excellence</option></select></div>
+        <div class="field" style="margin-bottom:20px"><label>Körsträcka per år</label>
+          <div class="choice" id="l-mil"><label><input type="radio" name="lmil" value="0" checked=""> 1&nbsp;000 mil</label><label><input type="radio" name="lmil" value="1"> 1&nbsp;500 mil</label><label><input type="radio" name="lmil" value="2"> 2&nbsp;000 mil</label></div></div>
+        <div class="field"><label>Tillval</label>
+          <div class="choice" id="l-tv"><label><input type="checkbox" value="0"> Färgtillägg <span style="color:var(--muted)" data-tv="Färgtillägg">+316&nbsp;kr/mån</span></label><label><input type="checkbox" value="1"> Vinterhjul friktion <span style="color:var(--muted)" data-tv="Vinterhjul friktion">+608&nbsp;kr/mån</span></label><label><input type="checkbox" value="2"> Vinterhjul dubb <span style="color:var(--muted)" data-tv="Vinterhjul dubb">+608&nbsp;kr/mån</span></label><label><input type="checkbox" value="3"> Dragkrok avtagbar <span style="color:var(--muted)" data-tv="Dragkrok avtagbar">+485&nbsp;kr/mån</span></label></div></div>
+      </div>
+      <div class="card calc-out" aria-live="polite">
+        <div class="lbl">Din månadskostnad</div><div class="monthly" id="l-month">5&nbsp;990 kr/mån</div>
+        <dl><div><dt>Avtalstid</dt><dd>36 månader</dd></div><div><dt>Körsträcka</dt><dd id="l-milout">1&nbsp;000 mil/år</dd></div>
+          <div><dt>Ingår</dt><dd>Service</dd></div><div><dt>Tillval</dt><dd id="l-tvout">Inga</dd></div></dl>
+        <div class="ctas"><a class="btn btn-dark" id="lease-apply" href="https://www.byd.com/se/leasing/sealion-7">Begär leasingoffert</a><a class="btn btn-line" href="https://www.byd.com/se/konfiguration/sealion-7">Bygg din bil</a></div>
+        <p class="fine-s">Pris inkl. moms. Ingen kontantinsats. Uppläggningsavgift 995 kr och aviavgift 58 kr/mån tillkommer. Försäkring ingår inte. Begränsat antal bilar.</p>
+      </div>
+    </div></div></section><section class="block" id="kalkyl" style="padding-bottom:0"><div class="wrap">
+    <h2 class="title">Räkna på ditt billån</h2><p class="sub" style="margin-bottom:22px">Ändra kontantinsats och restvärde och se din månadskostnad.</p>
+    <div class="calc">
+      <div class="card">
+        <div class="field" style="margin-bottom:22px"><label for="c-trim">Utrustningsnivå</label><select id="c-trim"><option value="0">Comfort – kampanjpris 569&nbsp;900&nbsp;kr</option><option value="1">Excellence – kampanjpris 639&nbsp;900&nbsp;kr</option></select>
+</div>
+        <div class="range"><div class="row"><label for="c-down">Kontantinsats</label><output id="o-down">30 %<small>170&nbsp;970&nbsp;kr</small></output></div>
+          <input type="range" id="c-down" min="20" max="60" step="5" value="30"><div class="ends"><span>20 %</span><span>60 %</span></div></div>
+        <div class="range"><div class="row"><label for="c-res">Restvärde</label><output id="o-res">55 %<small>313&nbsp;445&nbsp;kr</small></output></div>
+          <input type="range" id="c-res" min="0" max="55" step="5" value="55"><div class="ends"><span>0 %</span><span>55 %</span></div></div>
+        <div class="field"><label for="c-term">Löptid</label><select id="c-term" disabled=""><option>36 månader</option></select>
+          <p class="help">Kampanjräntan gäller vid 36 månaders löptid.</p></div>
+      </div>
+      <div class="card calc-out" aria-live="polite">
+        <div class="lbl">Din månadskostnad</div><div class="monthly" id="o-month">2&nbsp;658 kr/mån</div>
+        <dl>
+          <div><dt>Lånebelopp</dt><dd id="o-loan">398&nbsp;930 kr</dd></div>
+          <div><dt>Restvärde efter 36 mån</dt><dd id="o-ball">313&nbsp;445 kr</dd></div>
+          <div><dt>Rörlig ränta</dt><dd>0,95 %</dd></div>
+          <div><dt>Avgifter</dt><dd>592&nbsp;kr + 59&nbsp;kr/mån</dd></div>
+        </dl>
+        <div class="ctas"><a class="btn btn-dark" id="calc-apply" href="https://www.byd.com/se/kampanj/sealion-7">Begär låneoffert</a><a class="btn btn-line" href="https://www.byd.com/se/konfiguration/sealion-7">Bygg din bil</a></div>
+        <p class="fine-s">Exempel för privatperson. Avgifter tillkommer. Sedvanlig kreditprövning via Santander Consumer Bank. Räntan är rörlig.</p>
+      </div>
+    </div></div></section><section class="block" id="foretag" style="padding-bottom:0"><div class="wrap">
+    <h2 class="title">För företag</h2><p class="sub" style="margin-bottom:22px">Erbjudanden för dig som kör SEALION 7 i tjänsten. <a href="#foretag">Räkna på finansiell leasing</a></p>
+    <div class="otiles">
+      <div class="otile"><span class="tag">Finansiell leasing</span><h3>0,95&nbsp;% ränta</h3><p>Räkna på din månadshyra och välj upplägg själv.</p>
+        <ul><li>36 månader</li><li>Välj förhöjd första hyra och restvärde</li><li>Gäller alla versioner</li></ul>
+        <div class="ctas"><a class="btn btn-dark" href="#foretag">Räkna på finansiell leasing</a></div></div>
+      <div class="otile"><span class="tag">Business Lease</span><h3>Från 8&nbsp;095&nbsp;kr/mån ex. moms</h3><p>Fast månadskostnad för företaget.</p>
+        <ul><li>36 månader, 1&nbsp;500 mil/år</li><li>Service och försäkring ingår</li><li>Fler mil går att välja</li></ul>
+        <div class="ctas"><a class="btn btn-line" href="https://www.byd.com/se/contact-us">Kontakta företagssäljare</a></div></div>
+      <div class="otile"><span class="tag">Förmånsvärde</span><h3>Från 2&nbsp;604&nbsp;kr/mån netto</h3><p>Kostnad för föraren vid 50 % marginalskatt.</p>
+        <ul><li>Comfort: 2&nbsp;604&nbsp;kr/mån</li><li>Excellence: 2&nbsp;835&nbsp;kr/mån</li></ul>
+        <div class="ctas"><a class="btn btn-line" href="https://www.byd.com/se/contact-us">Kontakta företagssäljare</a></div></div>
+    </div></div></section>
+    <section class="fine" style="padding-top:56px"><div class="wrap"><h2>Villkor</h2><p><b>Privatleasing</b> via Santander Consumer Bank. 36 månader, 1&nbsp;000 mil/år och ingen kontantinsats. Service ingår, försäkring ingår inte. Priser inkl. moms. Uppläggningsavgift 995&nbsp;kr och aviavgift 58&nbsp;kr/mån tillkommer. Övermil 15&nbsp;kr/mil. Fler mil och tillval ger en annan månadskostnad. Månadskostnaden följer en rörlig ränta och kan ändras under avtalstiden. Sedvanlig kreditprövning. Begränsat antal bilar. Gäller nybeställning t.o.m. 30/11 2026. Exempel: BYD SEALION 7 Comfort, 5&nbsp;990&nbsp;kr/mån, totalt 218&nbsp;723&nbsp;kr under avtalstiden inklusive avgifter.</p><p><b>Billån</b> via Santander Consumer Bank. Rörlig ränta 0,95 % (effektiv ränta 1,18–1,21 % beroende på version). Kontantinsats 30 %, 36 månader, restvärde 55 %. Uppläggningsavgift 592&nbsp;kr och administrationsavgift 59&nbsp;kr/mån tillkommer. Räntan är rörlig och kan förändras med Santanders upplåningskostnader, men understiger aldrig 0 %. Sedvanlig kreditprövning. Icke-bindande finansieringsförslag. Kan inte kombineras med kampanjrabatt. Gäller nybeställning t.o.m. 30/11 2026, begränsat antal. Representativt exempel: BYD SEALION 7 Comfort, kampanjpris 569&nbsp;900&nbsp;kr, kontantinsats 170&nbsp;970&nbsp;kr, lånebelopp 398&nbsp;930&nbsp;kr, 2&nbsp;658&nbsp;kr/mån, restvärde 313&nbsp;445&nbsp;kr, effektiv ränta 1,21 %, totalt att återbetala 411&nbsp;837&nbsp;kr.</p><p><b>Kampanjrabatt</b> 20&nbsp;000&nbsp;kr gäller vid kontantköp av ny bil, ett begränsat antal bilar. Kan inte kombineras med privatleasing, billån eller andra kampanjer. Gäller nybeställning t.o.m. 30/11 2026.</p><p><b>Företag:</b> Finansiell leasing via Santander Consumer Bank, rörlig ränta 0,95&nbsp;%. Business Lease (operationell leasing) 36 månader, 1&nbsp;500 mil/år, service och försäkring ingår, priser ex. moms. Förmånsvärde netto beräknat vid 50 % marginalskatt.</p></div></section></div>

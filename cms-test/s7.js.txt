@@ -1,0 +1,21 @@
+(function(){var go=function(){
+var m={"tillval": {"F\u00e4rgtill\u00e4gg": 316, "Vinterhjul friktion": 608, "Vinterhjul dubb": 608, "Dragkrok avtagbar": 485}, "trims": [{"t": "Comfort", "el": "482 km r\u00e4ckvidd \u00b7 313 hk \u00b7 bakhjulsdrift", "eq": ["Panoramatak", "15,6-tums roterbar peksk\u00e4rm", "Ventilerade och uppv\u00e4rmda framstolar", "360-kamera", "V\u00e4rmepump", "Elman\u00f6vrerad baklucka"], "list": 569900, "loanBase": 569900, "lease": [5990, 6155, 6497], "opl": [7695, 8095, 8395, 8795, 9195], "fv": 2604}, {"t": "Excellence", "el": "502 km r\u00e4ckvidd \u00b7 530 hk \u00b7 fyrhjulsdrift", "gain": "Fyrhjulsdrift och 530 hk", "eq": ["Fyrhjulsdrift (AWD)", "0\u2013100 km/h p\u00e5 4,5 s", "Snabbladdning upp till 230 kW", "L\u00e4derkl\u00e4dsel", "Head-up display", "20-tumsf\u00e4lgar"], "list": 639900, "loanBase": 639900, "lease": [6190, 6462, 6931], "tv": {"Vinterhjul friktion": 702, "Vinterhjul dubb": 702}, "opl": [8595, 8995, 9395, 9795, 10195], "fv": 2835}]};
+var RATE=0.0095,N=36,MIL=[1000,1500,2000];
+var fmt=function(n){return Math.round(n).toLocaleString('sv-SE').replace(/,/g,' ')};
+var $=function(i){return document.getElementById(i)};
+function loanMonthly(price,downPct,resPct){var r=RATE/12,P=price*(1-downPct/100),B=price*resPct/100,f=Math.pow(1+r,N);return (P-B/f)*r/(1-1/f)}
+var t=$('l-trim');if(t){var tvK=Object.keys(m.tillval);
+var upd=function(){var tr=m.trims[t.value],mi=+document.querySelector('#bk-s7 input[name=lmil]:checked').value;
+var tv=Object.assign({},m.tillval,tr.tv||{}),tvV=tvK.map(function(k){return tv[k]});
+document.querySelectorAll('#l-tv [data-tv]').forEach(function(x){x.textContent='+'+fmt(tv[x.dataset.tv])+'\u00a0kr/m\u00e5n'});
+var sel=[].slice.call(document.querySelectorAll('#l-tv input:checked')).map(function(x){return +x.value});
+var tot=tr.lease[mi]+sel.reduce(function(a,i){return a+tvV[i]},0);
+$('l-month').textContent=fmt(tot)+' kr/m\u00e5n';$('l-milout').textContent=fmt(MIL[mi])+' mil/\u00e5r';
+$('l-tvout').textContent=sel.length?sel.map(function(i){return tvK[i]}).join(', '):'Inga'};
+$('leasingkalkyl').addEventListener('input',upd);upd()}
+var c=$('c-trim');if(c){var d=$('c-down'),r=$('c-res');
+var u2=function(){var price=m.trims[c.value].loanBase,dp=+d.value,rp=+r.value;
+$('o-down').innerHTML=dp+' %<small>'+fmt(price*dp/100)+' kr</small>';$('o-res').innerHTML=rp+' %<small>'+fmt(price*rp/100)+' kr</small>';
+$('o-month').textContent=fmt(loanMonthly(price,dp,rp))+' kr/m\u00e5n';$('o-loan').textContent=fmt(price*(1-dp/100))+' kr';$('o-ball').textContent=fmt(price*rp/100)+' kr'};
+[c,d,r].forEach(function(x){x.addEventListener('input',u2)});u2()}
+};if(document.getElementById('bk-s7'))go();else document.addEventListener('DOMContentLoaded',go)})();
