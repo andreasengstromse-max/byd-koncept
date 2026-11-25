@@ -57,7 +57,7 @@
 }
 #bk-pl .ticks{list-style: none; padding: 0px; margin: 16px 0px 0px; font-size: 15px;}
 #bk-pl .ticks li{padding: 8px 0px 8px 28px; position: relative; border-top: 1px solid var(--line);}
-#bk-pl .ticks li::before{content: ""; position: absolute; left: 4px; top: 15px; width: 11px; height: 6px; border-top-color: ; border-top-style: ; border-right-color: ; border-right-style: ; border-bottom-color: ; border-bottom-style: ; border-left-color: ; border-left-style: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-width: 0px 0px 2px 2px; transform: rotate(-45deg);}
+#bk-pl .ticks li::before{content:"";position:absolute;left:4px;top:15px;width:11px;height:6px;border:solid var(--ink);border-width:0 0 2px 2px;transform:rotate(-45deg)}
 #bk-pl .faq{display: grid; gap: 10px; max-width: 860px;}
 #bk-pl .faq details{background: rgb(255, 255, 255); border-radius: var(--r-md); padding: 4px 22px;}
 #bk-pl .faq summary{cursor: pointer; list-style: none; padding: 16px 0px; font-weight: 600; color: var(--ink); display: flex; justify-content: space-between; gap: 16px;}
@@ -181,3 +181,5 @@
 #bk-pl h1,#bk-pl h2,#bk-pl h3{font-weight:700}
 #bk-pl a:not(.btn):not(.crumbs a):not(.fam):not(.plc-img){text-decoration:underline}
 #bk-pl .fam,#bk-pl .fam *{text-decoration:none}
+#bk-pl .pl-fam{padding-top:118px}
+@media (max-width:760px){#bk-pl .pl-fam{padding-top:96px}}
