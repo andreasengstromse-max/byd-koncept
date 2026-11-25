@@ -10,6 +10,14 @@ var M={'dolphin-g-dmi':['BYD DOLPHIN G DM-i','Active',2990],'atto-2-dmi':['BYD A
 var fmt=function(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,' ')};
 var ta=function(){return document.querySelector('.pro-receive-form-container textarea')};
 var lastAuto='';
+var pick=function(sel,label){var w=document.querySelector('.pro-receive-form-container '+sel+' .el-select__wrapper');if(!w)return;
+ w.dispatchEvent(new MouseEvent('mousedown',{bubbles:true}));w.click();
+ setTimeout(function(){var it=[].filter.call(document.querySelectorAll('.el-select-dropdown__item'),function(li){return li.offsetParent&&li.textContent.trim()===label})[0];
+  if(it)it.click();else document.body.click()},250)};
+var pickType=function(){var ss=[].slice.call(document.querySelectorAll('.pro-receive-form-container .el-select')).filter(function(s){return /Privatperson|företag/i.test(s.textContent)})[0];
+ if(!ss)return;var w=ss.querySelector('.el-select__wrapper');w.dispatchEvent(new MouseEvent('mousedown',{bubbles:true}));w.click();
+ setTimeout(function(){var it=[].filter.call(document.querySelectorAll('.el-select-dropdown__item'),function(li){return li.offsetParent&&li.textContent.trim()==='Privatperson'})[0];if(it)it.click();else document.body.click()},250)};
+
 var setv=function(t,v){Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype,'value').set.call(t,v);t.dispatchEvent(new Event('input',{bubbles:true}));t.dispatchEvent(new Event('change',{bubbles:true}))};
 var jump=function(){var box=document.querySelector('.receive-form-container')||document.querySelector('.pro-receive-form-container');if(!box)return false;
  window.scrollTo({top:box.getBoundingClientRect().top+window.pageYOffset-40,behavior:'smooth'});return true};
@@ -17,5 +25,6 @@ root.addEventListener('click',function(e){var a=e.target.closest('a[href="#offer
  var m=M[a.getAttribute('data-model')],t=ta(),txt;
  txt=m?'Privatleasing '+m[0]+' '+m[1]+'. 36 mån, 1 000 mil/år, service ingår. Från '+fmt(m[2])+' kr/mån. Jag vill ha ett erbjudande.':'Privatleasing. Jag vill ha ett erbjudande.';
  if(t&&(t.value===''||t.value===lastAuto)){setv(t,txt.slice(0,500));lastAuto=t.value}
+ if(m){pick('.series-select',m[0]);setTimeout(pickType,600)}else{setTimeout(pickType,0)}
  jump()});
 };if(document.readyState!=='loading')go();else document.addEventListener('DOMContentLoaded',go)})();
