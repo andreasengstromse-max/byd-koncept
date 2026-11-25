@@ -18,4 +18,38 @@ var u2=function(){var price=m.trims[c.value].loanBase,dp=+d.value,rp=+r.value;
 $('o-down').innerHTML=dp+' %<small>'+fmt(price*dp/100)+' kr</small>';$('o-res').innerHTML=rp+' %<small>'+fmt(price*rp/100)+' kr</small>';
 $('o-month').textContent=fmt(loanMonthly(price,dp,rp))+' kr/m\u00e5n';$('o-loan').textContent=fmt(price*(1-dp/100))+' kr';$('o-ball').textContent=fmt(price*rp/100)+' kr'};
 [c,d,r].forEach(function(x){x.addEventListener('input',u2)});u2()}
+
+/* --- lead form: write the chosen calculation into BYD's form message field --- */
+var NAME='BYD SEALION 7',lastAuto='',lastKind='';
+var ta=function(){return document.querySelector('.pro-receive-form-container textarea')};
+var leaseTxt=function(ti,mi,sel){var tr=m.trims[ti],tv=Object.assign({},m.tillval,tr.tv||{}),ks=Object.keys(m.tillval);
+ var tot=tr.lease[mi]+sel.reduce(function(a,i){return a+tv[ks[i]]},0);
+ return 'Privatleasing '+NAME+' '+tr.t+'. 36 mån, '+fmt(MIL[mi])+' mil/år. Tillval: '+(sel.length?sel.map(function(i){return ks[i]+' (+'+fmt(tv[ks[i]])+' kr/mån)'}).join(', '):'inga')+'. Månadskostnad enligt kalkyl: '+fmt(tot)+' kr/mån.'};
+var loanTxt=function(ti,dp,rp){var tr=m.trims[ti],p=tr.loanBase;
+ return 'Billån 0,95 % '+NAME+' '+tr.t+', kampanjpris '+fmt(p)+' kr. Kontantinsats '+dp+' % ('+fmt(p*dp/100)+' kr), restvärde '+rp+' % ('+fmt(p*rp/100)+' kr), 36 mån. Månadskostnad enligt kalkyl: '+fmt(loanMonthly(p,dp,rp))+' kr/mån.'};
+var cur=function(kind){
+ if(kind==='lease'){var mi=+document.querySelector('#bk-s7 input[name=lmil]:checked').value;var sel=[].slice.call(document.querySelectorAll('#l-tv input:checked')).map(function(x){return +x.value});return leaseTxt(+$('l-trim').value,mi,sel)}
+ if(kind==='loan')return loanTxt(+$('c-trim').value,+$('c-down').value,+$('c-res').value);
+ return ''};
+var fill=function(txt,kind,jump){var t=ta();if(!t)return false;
+ if(t.value===''||t.value===lastAuto){var set=Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype,'value').set;set.call(t,txt.slice(0,500));t.dispatchEvent(new Event('input',{bubbles:true}));t.dispatchEvent(new Event('change',{bubbles:true}));lastAuto=t.value;lastKind=kind}
+ if(jump){var box=document.querySelector('.pro-receive-form-container');var y=box.getBoundingClientRect().top+window.pageYOffset-110;window.scrollTo({top:y,behavior:'smooth'})}
+ return true};
+var root=$('bk-s7');
+root.addEventListener('click',function(e){var a=e.target.closest('a');if(!a||!root.contains(a))return;
+ var txt=null,kind='';var tile=a.closest('.otile'),tag=tile?(tile.querySelector('.tag')||{}).textContent||'':'';
+ if(a.id==='lease-apply'){kind='lease';txt=cur('lease')}
+ else if(a.id==='calc-apply'){kind='loan';txt=cur('loan')}
+ else if(a.closest('.lad-card')){var cards=[].slice.call(root.querySelectorAll('.lad-card'));kind='ladder';txt=leaseTxt(cards.indexOf(a.closest('.lad-card')),0,[])}
+ else if(tile&&a.classList.contains('btn')&&(a.getAttribute('href')||'').charAt(0)!=='#'){
+  if(/Privatleasing/.test(tag)){kind='static';txt=leaseTxt(0,0,[])}
+  else if(/Bill/.test(tag)){kind='static';txt=loanTxt(0,30,55)}
+  else if(/Kontant/.test(tag)){kind='static';txt='Kontantköp '+NAME+'. Kampanjrabatt 20 000 kr, kampanjpris från '+fmt(Math.min.apply(null,m.trims.map(function(t){return t.list}))-20000)+' kr.'}
+  else if(/Business Lease/.test(tag)){kind='static';txt='Företag: Business Lease '+NAME+', 36 mån, 1 500 mil/år. Önskar offert.'}
+  else if(/Förmånsvärde/.test(tag)){kind='static';txt='Företag: tjänstebil '+NAME+'. Önskar offert och förmånsvärde.'}}
+ if(txt===null)return;
+ if(ta()){e.preventDefault();var t=ta();if(t.value===lastAuto)lastAuto=t.value;/* overwrite earlier auto text */
+  var set=Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype,'value').set;if(t.value===lastAuto){set.call(t,'');lastAuto=''}
+  fill(txt,kind,true)}});
+root.addEventListener('input',function(){if(lastKind==='lease'||lastKind==='loan'){var t=ta();if(t&&t.value===lastAuto){var k=lastKind,set=Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype,'value').set;set.call(t,'');lastAuto='';fill(cur(k),k,false)}}});
 };if(document.getElementById('bk-s7'))go();else document.addEventListener('DOMContentLoaded',go)})();

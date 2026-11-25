@@ -178,3 +178,8 @@
 @media (max-width: 600px){
 #bk-s7{padding-bottom: 0px;}
 }
+#bk-s7 h1,#bk-s7 h2,#bk-s7 h3{font-weight:700}
+#bk-s7 a:not(.btn):not(.crumbs a):not(.lad-cta){text-decoration:underline}
+#bk-s7 input[type=radio]{margin:3px 3px 0 5px}
+#bk-s7 input[type=checkbox]{margin:3px 3px 3px 4px}
+#bk-s7 input[type=range]{margin:2px}
